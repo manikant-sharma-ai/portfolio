@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark">
+<title>Contact — Manikant Lab</title>
+<meta name="description" content="I can build a product with AI — and it actually works. Prompt, context, loop and graph engineering, automation and agent building, by Manikant Sharma.">
+<meta property="og:title" content="Manikant Lab — AI generalist">
+<meta property="og:description" content="I can build a product with AI — and it actually works. Prompt, context, loop and graph engineering, automation and agent building, by Manikant Sharma.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="icon" href="assets/img/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="assets/img/favicon.png">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+<a class="skiplink" href="#main">Skip to content</a>
+<header class="nav" id="nav">
+  <div class="container nav__in">
+    <a class="brand" href="index.html" aria-label="Manikant Lab — home">
+      <img class="brand__mark" src="assets/img/logo-mark.webp" alt="" width="320" height="320">
+      <span>Manikant<i>&nbsp;Lab</i></span>
+    </a>
+    <nav class="nav__links" aria-label="Main">
+      <a href="about.html">About</a>
+      <a href="libraries.html">Libraries</a>
+      <a href="tools.html">Tools</a>
+      <a href="work.html">Work</a>
+      <a href="about.html#journey">Journey</a>
+      <a href="build.html">How I build</a>
+      <a href="contact.html" aria-current="page">Contact</a>
+    </nav>
+    <button class="nav__toggle" aria-expanded="false" aria-controls="nav">Menu</button>
+  </div>
+</header>
+<main id="main">
+
+<section class="pagehead">
+  <div class="container">
+    <a class="crumb" href="index.html">&larr; Home</a>
+    <span class="num" style="display:block;margin-top:22px">07 &mdash; Contact</span>
+    <h1>I'm not taking work. Ask me anything <em>anyway</em>.</h1>
+    <p>Everything here I built for myself, to learn what AI can and cannot be trusted with. If you want to know how one of these was made, ask.</p>
+  </div>
+</section>
+<section class="contact" id="contact" style="padding-top:0;border-top:0">
+  <div class="container">
+    <div class="links">
+      <a class="link" href="mailto:manikantsharma.com@zoho.in">Email &nearr;</a>
+      <a class="link" href="https://github.com/manikant-sharma-ai" rel="noopener">GitHub &nearr;</a>
+      <a class="link" href="https://x.com/ManikantSharmaX" rel="noopener">X &nearr;</a>
+      <a class="link" href="https://www.instagram.com/manikantsharma.ai" rel="noopener">Instagram &nearr;</a>
+      <a class="link" href="https://www.reddit.com/user/ManikantSharma/" rel="noopener">Reddit &nearr;</a>
+      <a class="link" href="https://facebook.com/people/Manikant-Sharma/61595821115608/" rel="noopener">Facebook &nearr;</a>
+    </div>
+  </div>
+</section>
+<section class="subscribe" id="subscribe">
+  <div class="container subscribe__in">
+    <div class="subscribe__txt">
+      <span class="num">Subscribe</span>
+      <h2 style="margin-top:14px">One email when something new is <em>built</em>.</h2>
+      <p>No weekly newsletter, no drip sequence, no tracking pixels. When a project ships or a
+      discipline page gets a new example, you get one short email. That is the whole promise.</p>
+    </div>
+    <form class="subscribe__form" id="subForm" novalidate>
+      <label class="subscribe__label" for="subEmail">Your email</label>
+      <div class="subscribe__row">
+        <input id="subEmail" name="email" type="email" inputmode="email" autocomplete="email"
+               placeholder="you@example.com" required>
+        <button class="btn" type="submit">Subscribe</button>
+      </div>
+      <p class="subscribe__note" id="subNote">This opens your mail app with a one-line message to me.
+      You press send. No list, no third party, nothing stored on this site.</p>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="container foot__in">
+    <span class="foot__brand">
+      <img src="assets/img/logo-full.webp" alt="Manikant Lab — AI engineer, agent systems"
+           width="1000" height="193" loading="lazy">
+      <em>&copy; 2026 &middot; Manikant Sharma</em>
+    </span>
+    <span><a href="mailto:manikantsharma.com@zoho.in">Email</a> &middot;
+          <a href="https://github.com/manikant-sharma-ai" rel="noopener">GitHub</a> &middot;
+          <a href="https://x.com/ManikantSharmaX" rel="noopener">X</a> &middot;
+          <a href="https://www.instagram.com/manikantsharma.ai" rel="noopener">Instagram</a> &middot;
+          <a href="https://www.reddit.com/user/ManikantSharma/" rel="noopener">Reddit</a> &middot;
+          <a href="https://facebook.com/people/Manikant-Sharma/61595821115608/" rel="noopener">Facebook</a></span>
+  </div>
+</footer>
+<script src="assets/site.js"></script>
+<script>
+(function(){
+  document.documentElement.classList.add('js');
+  var frames = Array.prototype.slice.call(document.querySelectorAll('.hero__frame'));
+  var hero = document.getElementById('hero');
+  if(!hero || !frames.length) return;
+  var pct = document.getElementById('heroPct');
+  var copy = document.getElementById('heroCopy');
+  var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var current = 0, target = 0, eased = 0, raf = null;
+
+  function paint(i){
+    if(i === current) return;
+    frames[current].classList.remove('on');
+    frames[i].classList.add('on');
+    current = i;
+    if(pct) pct.textContent = ('0' + (i + 1)).slice(-2);
+  }
+  function progress(){
+    var track = hero.offsetHeight - hero.querySelector('.hero__sticky').offsetHeight;
+    if(track <= 0) return 0;
+    var top = hero.getBoundingClientRect().top;
+    var y = -top + (parseInt(getComputedStyle(hero.querySelector('.hero__sticky')).top, 10) || 0);
+    return Math.min(1, Math.max(0, y / track));
+  }
+  function tick(){
+    eased += (target - eased) * 0.22;
+    if(Math.abs(target - eased) < 0.0015) eased = target;
+    paint(Math.round(eased * (frames.length - 1)));
+    if(copy && getComputedStyle(copy).position === 'absolute'){
+      var f = Math.min(1, Math.max(0, (eased - 0.16) / 0.34));
+      copy.style.opacity = String(1 - f);
+    }
+    if(eased !== target){ raf = requestAnimationFrame(tick); } else { raf = null; }
+  }
+  function onScroll(){
+    target = progress();
+    if(reduce){ paint(Math.round(target * (frames.length - 1))); return; }
+    if(!raf) raf = requestAnimationFrame(tick);
+  }
+  addEventListener('scroll', onScroll, {passive:true});
+  addEventListener('resize', onScroll);
+  frames.forEach(function(im){ if(im.decode) im.decode().catch(function(){}); });
+  onScroll();
+})();
+</script>
+<script>
+  // subscribe: build a mailto and let the visitor send it themselves
+  var form = document.getElementById('subForm');
+  if(form){
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      var input = document.getElementById('subEmail');
+      var note = document.getElementById('subNote');
+      var v = (input.value || '').trim();
+      if(!v || v.indexOf('@') < 1){
+        note.textContent = 'That does not look like an email address. Try again.';
+        note.classList.add('warn');
+        input.focus();
+        return;
+      }
+      note.classList.remove('warn');
+      var subject = encodeURIComponent('Subscribe — Manikant Lab');
+      var body = encodeURIComponent('Please add me to the list.\n\nMy email: ' + v + '\n');
+      window.location.href = 'mailto:manikantsharma.com@zoho.in?subject=' + subject + '&body=' + body;
+      note.textContent = 'Your mail app should be open. Send it and you are on the list.';
+    });
+  }
+</script>
+</body>
+</html>

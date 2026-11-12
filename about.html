@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark">
+<title>About — Manikant Lab</title>
+<meta name="description" content="I can build a product with AI — and it actually works. Prompt, context, loop and graph engineering, automation and agent building, by Manikant Sharma.">
+<meta property="og:title" content="Manikant Lab — AI generalist">
+<meta property="og:description" content="I can build a product with AI — and it actually works. Prompt, context, loop and graph engineering, automation and agent building, by Manikant Sharma.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="icon" href="assets/img/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="assets/img/favicon.png">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+<a class="skiplink" href="#main">Skip to content</a>
+<header class="nav" id="nav">
+  <div class="container nav__in">
+    <a class="brand" href="index.html" aria-label="Manikant Lab — home">
+      <img class="brand__mark" src="assets/img/logo-mark.webp" alt="" width="320" height="320">
+      <span>Manikant<i>&nbsp;Lab</i></span>
+    </a>
+    <nav class="nav__links" aria-label="Main">
+      <a href="about.html" aria-current="page">About</a>
+      <a href="libraries.html">Libraries</a>
+      <a href="tools.html">Tools</a>
+      <a href="work.html">Work</a>
+      <a href="about.html#journey">Journey</a>
+      <a href="build.html">How I build</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <button class="nav__toggle" aria-expanded="false" aria-controls="nav">Menu</button>
+  </div>
+</header>
+<main id="main">
+
+<section class="pagehead">
+  <div class="container">
+    <a class="crumb" href="index.html">&larr; Home</a>
+    <span class="num" style="display:block;margin-top:22px">01 &mdash; About</span>
+    <h1>I don't write the code. I make sure it is <em>right</em>.</h1>
+    <p>An AI generalist from Chhapra, Bihar: what the work actually is, how I started, why I took a Python course I never intend to use, and a running log of what I learned and when.</p>
+  </div>
+</section>
+<section class="section" id="about" style="padding-top:0">
+  <div class="container">
+    <div class="about">
+      <div class="rv">
+        <p>I'm an AI generalist. That is not a borrowed job title, it is what the work actually is:
+        moving between prompt, context, loop and graph depending on what the job needs, and picking
+        whichever free tool tests best for that job.</p>
+        <p>I started a year ago with ordinary chat. The first thing I built was my own agent: a
+        scheduled worker that checks whether the job is actually done, creates follow-up tasks when
+        it needs more time, wakes itself and keeps going, and writes notes into a GitHub repo so the
+        next run starts with context instead of from zero. It ran on free models with no API key and
+        cost me nothing.</p>
+        <p>I don't write code and I don't intend to. I direct it, and I took a Python course for one
+        reason: so I can describe a job well enough that the AI cannot fill the gaps with guesses,
+        read the structure it hands back, and catch its mistakes. A team leader who cannot do the
+        work cannot get the work done. Same rule here.</p>
+        <p>For now I build for myself, not for clients. <b>Feedfy</b> is next: instead of scrolling
+        for an hour to find content worth keeping, a feed that goes and finds it, in about two
+        minutes.</p>
+      </div>
+
+      <div class="side rv">
+      <dl class="facts">
+        <div><dt>Role</dt><dd>AI generalist</dd></div>
+        <div><dt>Focus</dt><dd>Prompt &middot; context &middot; loop &middot; graph<br>Automation &middot; agent building</dd></div>
+        <div><dt>Stack</dt><dd>Whichever free tools test best for the job</dd></div>
+        <div><dt>Location</dt><dd>Chhapra, Bihar &middot; India<br>IST (UTC+5:30)</dd></div>
+        <div><dt>Status</dt><dd>Building for myself</dd></div>
+      </dl>
+      </div>
+    </div>
+  </div>
+</section><section class="section" id="journey" style="padding-top:0">
+  <div class="container">
+    <div class="section__head rv">
+      <span class="num">05 &mdash; Journey</span>
+      <h2>What I learned, when, and what I <em>built</em> with it.</h2>
+      <p>A running log, newest at the bottom. Every entry names the thing I learned and the tools I
+      actually used to make it, because "I know AI" means nothing without the receipts.</p>
+    </div>
+
+    <div class="journey">
+      <div class="jrow rv">
+        <div class="jdate">Late 2025</div>
+        <div class="jbody">
+          <h3>Started with plain chat</h3>
+          <p>No agents, no connectors, no code. Just asking, reading the answer, and noticing how often
+          the confident answer was the wrong one.</p>
+          <div class="chips"><span class="built">Built with</span><span class="chip">ChatGPT</span>
+            <span class="chip">Claude</span></div>
+        </div>
+      </div>
+
+      <div class="jrow rv">
+        <div class="jdate">Early 2026</div>
+        <div class="jbody">
+          <h3>My first agent &mdash; a scheduled worker that kept its own notes</h3>
+          <p>It checks whether the job is done, creates follow-up tasks when it needs more time, wakes
+          itself and continues, and writes what it learned into a GitHub repo so the next run starts
+          with context instead of from zero. Free models, no API key, no VPS.</p>
+          <div class="chips"><span class="built">Built with</span><span class="chip">Claude</span>
+            <span class="chip">GitHub</span><span class="chip">Scheduled tasks</span>
+            <span class="chip">Free models</span></div>
+        </div>
+      </div>
+
+      <div class="jrow rv">
+        <div class="jdate">16 Oct 2026</div>
+        <div class="jbody">
+          <h3>TruePick &mdash; my first real product</h3>
+          <p>A nine-page affiliate storefront driven entirely by JSON, with a blog that reads itself
+          aloud and YouTube reviews on product pages. It taught me that data outlives design.</p>
+          <div class="chips"><span class="built">Built with</span><span class="chip">HTML / CSS / JS</span>
+            <span class="chip">Netlify</span><span class="chip">JSON data</span></div>
+        </div>
+      </div>
+
+      <div class="jrow rv">
+        <div class="jdate">18 Oct 2026</div>
+        <div class="jbody">
+          <h3>Social Media Manager &mdash; my first public skill</h3>
+          <p>An agent skill that discovers which connectors actually work before it promises anything,
+          then keeps a knowledge base of brand voice so the writing sounds like the person, not the
+          model. MIT licensed, because a skill nobody can fork is a brochure.</p>
+          <div class="chips"><span class="built">Built with</span><span class="chip">Agent skills</span>
+            <span class="chip">Markdown</span><span class="chip">Connectors</span></div>
+        </div>
+      </div>
+
+      <div class="jrow rv">
+        <div class="jdate">20 Oct 2026</div>
+        <div class="jbody">
+          <h3>One small tool a day</h3>
+          <p>Twenty days, twenty tools: timezone overlap, CSV triage, SQL guard, SLA clock, contract
+          drift, spec ambiguity. None of them impressive alone. All of them together are a habit, and
+          habit is what I was actually building.</p>
+          <div class="chips"><span class="built">Built with</span><span class="chip">Python</span>
+            <span class="chip">Claude</span><span class="chip">GitHub</span></div>
+        </div>
+      </div>
+
+      <div class="jrow rv">
+        <div class="jdate">31 Oct 2026</div>
+        <div class="jbody">
+          <h3>Employee Hub &mdash; AI employees with a written standard</h3>
+          <p>The biggest thing I have built: five new AI employees every morning, 577 skill documents,
+          and one rule that matters more than the rest &mdash; never fake the part you cannot do.</p>
+          <div class="chips"><span class="built">Built with</span><span class="chip">Claude plugin</span>
+            <span class="chip">Python</span><span class="chip">Skill files</span></div>
+        </div>
+      </div>
+
+      <div class="jrow rv">
+        <div class="jdate">Nov 2026</div>
+        <div class="jbody">
+          <h3>This site</h3>
+          <p>Nine pages became eight, one hero video became 47 frames, and every word on it came out of
+          a conversation rather than a template. The scroll animation is the only clever thing here,
+          and it exists because a still image felt dead.</p>
+          <div class="chips"><span class="built">Built with</span><span class="chip">HTML / CSS / JS</span>
+            <span class="chip">47 WebP frames</span><span class="chip">No framework</span></div>
+        </div>
+      </div>
+
+      <div class="jrow jrow--next rv">
+        <div class="jdate">Next</div>
+        <div class="jbody">
+          <h3>Feedfy &mdash; designed, not built yet</h3>
+          <p>Instead of scrolling for an hour to find content worth keeping, a feed that goes and finds
+          it in about two minutes. I have the data and the plan. When it exists, this line gets a date.</p>
+          <div class="chips"><span class="built">Planned with</span><span class="chip">Web scraping</span>
+            <span class="chip">Agents</span><span class="chip">My own Instagram archive</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="container foot__in">
+    <span class="foot__brand">
+      <img src="assets/img/logo-full.webp" alt="Manikant Lab — AI engineer, agent systems"
+           width="1000" height="193" loading="lazy">
+      <em>&copy; 2026 &middot; Manikant Sharma</em>
+    </span>
+    <span><a href="mailto:manikantsharma.com@zoho.in">Email</a> &middot;
+          <a href="https://github.com/manikant-sharma-ai" rel="noopener">GitHub</a> &middot;
+          <a href="https://x.com/ManikantSharmaX" rel="noopener">X</a> &middot;
+          <a href="https://www.instagram.com/manikantsharma.ai" rel="noopener">Instagram</a> &middot;
+          <a href="https://www.reddit.com/user/ManikantSharma/" rel="noopener">Reddit</a> &middot;
+          <a href="https://facebook.com/people/Manikant-Sharma/61595821115608/" rel="noopener">Facebook</a></span>
+  </div>
+</footer>
+<script src="assets/site.js"></script>
+<script>
+(function(){
+  document.documentElement.classList.add('js');
+  var frames = Array.prototype.slice.call(document.querySelectorAll('.hero__frame'));
+  var hero = document.getElementById('hero');
+  if(!hero || !frames.length) return;
+  var pct = document.getElementById('heroPct');
+  var copy = document.getElementById('heroCopy');
+  var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var current = 0, target = 0, eased = 0, raf = null;
+
+  function paint(i){
+    if(i === current) return;
+    frames[current].classList.remove('on');
+    frames[i].classList.add('on');
+    current = i;
+    if(pct) pct.textContent = ('0' + (i + 1)).slice(-2);
+  }
+  function progress(){
+    var track = hero.offsetHeight - hero.querySelector('.hero__sticky').offsetHeight;
+    if(track <= 0) return 0;
+    var top = hero.getBoundingClientRect().top;
+    var y = -top + (parseInt(getComputedStyle(hero.querySelector('.hero__sticky')).top, 10) || 0);
+    return Math.min(1, Math.max(0, y / track));
+  }
+  function tick(){
+    eased += (target - eased) * 0.22;
+    if(Math.abs(target - eased) < 0.0015) eased = target;
+    paint(Math.round(eased * (frames.length - 1)));
+    if(copy && getComputedStyle(copy).position === 'absolute'){
+      var f = Math.min(1, Math.max(0, (eased - 0.16) / 0.34));
+      copy.style.opacity = String(1 - f);
+    }
+    if(eased !== target){ raf = requestAnimationFrame(tick); } else { raf = null; }
+  }
+  function onScroll(){
+    target = progress();
+    if(reduce){ paint(Math.round(target * (frames.length - 1))); return; }
+    if(!raf) raf = requestAnimationFrame(tick);
+  }
+  addEventListener('scroll', onScroll, {passive:true});
+  addEventListener('resize', onScroll);
+  frames.forEach(function(im){ if(im.decode) im.decode().catch(function(){}); });
+  onScroll();
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark">
+<title>How I build — Manikant Lab</title>
+<meta name="description" content="I can build a product with AI — and it actually works. Prompt, context, loop and graph engineering, automation and agent building, by Manikant Sharma.">
+<meta property="og:title" content="Manikant Lab — AI generalist">
+<meta property="og:description" content="I can build a product with AI — and it actually works. Prompt, context, loop and graph engineering, automation and agent building, by Manikant Sharma.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="icon" href="assets/img/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="assets/img/favicon.png">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+<a class="skiplink" href="#main">Skip to content</a>
+<header class="nav" id="nav">
+  <div class="container nav__in">
+    <a class="brand" href="index.html" aria-label="Manikant Lab — home">
+      <img class="brand__mark" src="assets/img/logo-mark.webp" alt="" width="320" height="320">
+      <span>Manikant<i>&nbsp;Lab</i></span>
+    </a>
+    <nav class="nav__links" aria-label="Main">
+      <a href="about.html">About</a>
+      <a href="libraries.html">Libraries</a>
+      <a href="tools.html">Tools</a>
+      <a href="work.html">Work</a>
+      <a href="about.html#journey">Journey</a>
+      <a href="build.html" aria-current="page">How I build</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <button class="nav__toggle" aria-expanded="false" aria-controls="nav">Menu</button>
+  </div>
+</header>
+<main id="main">
+
+<section class="pagehead">
+  <div class="container">
+    <a class="crumb" href="index.html">&larr; Home</a>
+    <span class="num" style="display:block;margin-top:22px">06 &mdash; How I build</span>
+    <h1>Five things I do before I trust anything an AI <em>built</em>.</h1>
+    <p>Not gates for a launch, gates for my own conscience. Skip one and the work goes back in the drawer.</p>
+  </div>
+</section>
+<section class="section" id="build" style="padding-top:0">
+  <div class="container">
+    <div class="gates">
+      <div class="gate rv">
+        <div class="gate__n">01</div>
+        <div>
+          <h3>Describe the job until guessing is impossible</h3>
+          <p>Role, situation, constraint, and exactly what should come back. If I cannot describe it,
+          the AI fills the gap with invention, and the fault is mine, not the model's.</p>
+        </div>
+      </div>
+      <div class="gate rv">
+        <div class="gate__n">02</div>
+        <div>
+          <h3>Hand over the material, not just the words</h3>
+          <p>The thumbnails that got clicks, the real posts, the live numbers through a connector.
+          Context is what stops it designing for a customer who does not exist.</p>
+        </div>
+      </div>
+      <div class="gate rv">
+        <div class="gate__n">03</div>
+        <div>
+          <h3>Give it a loop with a stop condition</h3>
+          <p>Repeat until the condition is met, not until it feels finished. Write the condition down
+          before you start, or you will accept whatever comes back.</p>
+        </div>
+      </div>
+      <div class="gate rv">
+        <div class="gate__n">04</div>
+        <div>
+          <h3>Put the examiner outside the loop</h3>
+          <p>A separate step with its own rules, that the writer cannot instruct, and a human holding
+          the final call. A writer that grades its own work grades itself generously.</p>
+        </div>
+      </div>
+      <div class="gate rv">
+        <div class="gate__n">05</div>
+        <div>
+          <h3>Keep the notes</h3>
+          <p>What worked goes back into the repo so the next run starts ahead of the last one, and
+          nothing ships that I did not read myself.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="container foot__in">
+    <span class="foot__brand">
+      <img src="assets/img/logo-full.webp" alt="Manikant Lab — AI engineer, agent systems"
+           width="1000" height="193" loading="lazy">
+      <em>&copy; 2026 &middot; Manikant Sharma</em>
+    </span>
+    <span><a href="mailto:manikantsharma.com@zoho.in">Email</a> &middot;
+          <a href="https://github.com/manikant-sharma-ai" rel="noopener">GitHub</a> &middot;
+          <a href="https://x.com/ManikantSharmaX" rel="noopener">X</a> &middot;
+          <a href="https://www.instagram.com/manikantsharma.ai" rel="noopener">Instagram</a> &middot;
+          <a href="https://www.reddit.com/user/ManikantSharma/" rel="noopener">Reddit</a> &middot;
+          <a href="https://facebook.com/people/Manikant-Sharma/61595821115608/" rel="noopener">Facebook</a></span>
+  </div>
+</footer>
+<script src="assets/site.js"></script>
+<script>
+(function(){
+  document.documentElement.classList.add('js');
+  var frames = Array.prototype.slice.call(document.querySelectorAll('.hero__frame'));
+  var hero = document.getElementById('hero');
+  if(!hero || !frames.length) return;
+  var pct = document.getElementById('heroPct');
+  var copy = document.getElementById('heroCopy');
+  var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var current = 0, target = 0, eased = 0, raf = null;
+
+  function paint(i){
+    if(i === current) return;
+    frames[current].classList.remove('on');
+    frames[i].classList.add('on');
+    current = i;
+    if(pct) pct.textContent = ('0' + (i + 1)).slice(-2);
+  }
+  function progress(){
+    var track = hero.offsetHeight - hero.querySelector('.hero__sticky').offsetHeight;
+    if(track <= 0) return 0;
+    var top = hero.getBoundingClientRect().top;
+    var y = -top + (parseInt(getComputedStyle(hero.querySelector('.hero__sticky')).top, 10) || 0);
+    return Math.min(1, Math.max(0, y / track));
+  }
+  function tick(){
+    eased += (target - eased) * 0.22;
+    if(Math.abs(target - eased) < 0.0015) eased = target;
+    paint(Math.round(eased * (frames.length - 1)));
+    if(copy && getComputedStyle(copy).position === 'absolute'){
+      var f = Math.min(1, Math.max(0, (eased - 0.16) / 0.34));
+      copy.style.opacity = String(1 - f);
+    }
+    if(eased !== target){ raf = requestAnimationFrame(tick); } else { raf = null; }
+  }
+  function onScroll(){
+    target = progress();
+    if(reduce){ paint(Math.round(target * (frames.length - 1))); return; }
+    if(!raf) raf = requestAnimationFrame(tick);
+  }
+  addEventListener('scroll', onScroll, {passive:true});
+  addEventListener('resize', onScroll);
+  frames.forEach(function(im){ if(im.decode) im.decode().catch(function(){}); });
+  onScroll();
+})();
+</script>
+</body>
+</html>
