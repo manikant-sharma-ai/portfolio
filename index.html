@@ -27,6 +27,7 @@
       <a href="index.html#disciplines">Disciplines</a>
       <a href="index.html#tools">Tools</a>
       <a href="index.html#work">Work</a>
+      <a href="index.html#journey">Journey</a>
       <a href="index.html#build">How I build</a>
       <a href="index.html#contact">Contact</a>
     </nav>
@@ -128,13 +129,19 @@
         minutes.</p>
       </div>
 
-      <dl class="facts rv">
+      <div class="side rv">
+      <figure class="portrait">
+        <img src="assets/img/about.webp" alt="Manikant Sharma at his desk" width="800" height="1000">
+        <figcaption>Manikant Sharma &middot; Chhapra, Bihar</figcaption>
+      </figure>
+      <dl class="facts">
         <div><dt>Role</dt><dd>AI generalist</dd></div>
         <div><dt>Focus</dt><dd>Prompt &middot; context &middot; loop &middot; graph<br>Automation &middot; agent building</dd></div>
         <div><dt>Stack</dt><dd>Whichever free tools test best for the job</dd></div>
         <div><dt>Location</dt><dd>Chhapra, Bihar &middot; India<br>IST (UTC+5:30)</dd></div>
         <div><dt>Status</dt><dd>Building for myself</dd></div>
       </dl>
+      </div>
     </div>
   </div>
 </section>
@@ -325,12 +332,121 @@
   </div>
 </section>
 
+
+<hr class="rule">
+
+<section class="section" id="journey">
+  <div class="container">
+    <div class="section__head rv">
+      <span class="num">05 &mdash; Journey</span>
+      <h2>What I learned, when, and what I <em>built</em> with it.</h2>
+      <p>A running log, newest at the bottom. Every entry names the thing I learned and the tools I
+      actually used to make it, because "I know AI" means nothing without the receipts.</p>
+    </div>
+
+    <div class="journey">
+      <div class="jrow rv">
+        <div class="jdate">Late 2025</div>
+        <div class="jbody">
+          <h3>Started with plain chat</h3>
+          <p>No agents, no connectors, no code. Just asking, reading the answer, and noticing how often
+          the confident answer was the wrong one.</p>
+          <div class="chips"><span class="built">Built with</span><span class="chip">ChatGPT</span>
+            <span class="chip">Claude</span></div>
+        </div>
+      </div>
+
+      <div class="jrow rv">
+        <div class="jdate">Early 2026</div>
+        <div class="jbody">
+          <h3>My first agent &mdash; a scheduled worker that kept its own notes</h3>
+          <p>It checks whether the job is done, creates follow-up tasks when it needs more time, wakes
+          itself and continues, and writes what it learned into a GitHub repo so the next run starts
+          with context instead of from zero. Free models, no API key, no VPS.</p>
+          <div class="chips"><span class="built">Built with</span><span class="chip">Claude</span>
+            <span class="chip">GitHub</span><span class="chip">Scheduled tasks</span>
+            <span class="chip">Free models</span></div>
+        </div>
+      </div>
+
+      <div class="jrow rv">
+        <div class="jdate">16 Oct 2026</div>
+        <div class="jbody">
+          <h3>TruePick &mdash; my first real product</h3>
+          <p>A nine-page affiliate storefront driven entirely by JSON, with a blog that reads itself
+          aloud and YouTube reviews on product pages. It taught me that data outlives design.</p>
+          <div class="chips"><span class="built">Built with</span><span class="chip">HTML / CSS / JS</span>
+            <span class="chip">Netlify</span><span class="chip">JSON data</span></div>
+        </div>
+      </div>
+
+      <div class="jrow rv">
+        <div class="jdate">18 Oct 2026</div>
+        <div class="jbody">
+          <h3>Social Media Manager &mdash; my first public skill</h3>
+          <p>An agent skill that discovers which connectors actually work before it promises anything,
+          then keeps a knowledge base of brand voice so the writing sounds like the person, not the
+          model. MIT licensed, because a skill nobody can fork is a brochure.</p>
+          <div class="chips"><span class="built">Built with</span><span class="chip">Agent skills</span>
+            <span class="chip">Markdown</span><span class="chip">Connectors</span></div>
+        </div>
+      </div>
+
+      <div class="jrow rv">
+        <div class="jdate">20 Oct 2026</div>
+        <div class="jbody">
+          <h3>One small tool a day</h3>
+          <p>Twenty days, twenty tools: timezone overlap, CSV triage, SQL guard, SLA clock, contract
+          drift, spec ambiguity. None of them impressive alone. All of them together are a habit, and
+          habit is what I was actually building.</p>
+          <div class="chips"><span class="built">Built with</span><span class="chip">Python</span>
+            <span class="chip">Claude</span><span class="chip">GitHub</span></div>
+        </div>
+      </div>
+
+      <div class="jrow rv">
+        <div class="jdate">31 Oct 2026</div>
+        <div class="jbody">
+          <h3>Employee Hub &mdash; AI employees with a written standard</h3>
+          <p>The biggest thing I have built: five new AI employees every morning, 577 skill documents,
+          and one rule that matters more than the rest &mdash; never fake the part you cannot do.</p>
+          <div class="chips"><span class="built">Built with</span><span class="chip">Claude plugin</span>
+            <span class="chip">Python</span><span class="chip">Skill files</span></div>
+        </div>
+      </div>
+
+      <div class="jrow rv">
+        <div class="jdate">Nov 2026</div>
+        <div class="jbody">
+          <h3>This site</h3>
+          <p>Nine pages became eight, one hero video became 47 frames, and every word on it came out of
+          a conversation rather than a template. The scroll animation is the only clever thing here,
+          and it exists because a still image felt dead.</p>
+          <div class="chips"><span class="built">Built with</span><span class="chip">HTML / CSS / JS</span>
+            <span class="chip">47 WebP frames</span><span class="chip">No framework</span></div>
+        </div>
+      </div>
+
+      <div class="jrow jrow--next rv">
+        <div class="jdate">Next</div>
+        <div class="jbody">
+          <h3>Feedfy &mdash; designed, not built yet</h3>
+          <p>Instead of scrolling for an hour to find content worth keeping, a feed that goes and finds
+          it in about two minutes. I have the data and the plan. When it exists, this line gets a date.</p>
+          <div class="chips"><span class="built">Planned with</span><span class="chip">Web scraping</span>
+            <span class="chip">Agents</span><span class="chip">My own Instagram archive</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <hr class="rule">
 
 <section class="section" id="build">
   <div class="container">
     <div class="section__head rv">
-      <span class="num">05 &mdash; How I build</span>
+      <span class="num">06 &mdash; How I build</span>
       <h2>Five things I do before I trust anything an AI <em>built</em>.</h2>
       <p>Not gates for a launch, gates for my own conscience. Skip one and the work goes back in the
       drawer.</p>
@@ -383,7 +499,7 @@
 
 <section class="contact" id="contact">
   <div class="container">
-    <span class="num">06 &mdash; Contact</span>
+    <span class="num">07 &mdash; Contact</span>
     <h2 style="margin-top:18px">I'm not taking work.<br>Ask me anything <em>anyway</em>.</h2>
     <p>Everything here I built for myself, to learn what AI can and cannot be trusted with. If you
     want to know how one of these was made, ask &mdash; I will tell you the honest version, including
