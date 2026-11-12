@@ -36,4 +36,72 @@
       }
     });
   });
+
+  // ---------- text to speech ----------
+  (function(){
+    if(!('speechSynthesis' in window)) return;
+    var synth = window.speechSynthesis;
+    var current = null;
+    var ICON = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9H4zm12.5 3a4.5 4.5 0 0 0-2.5-4v8a4.5 4.5 0 0 0 2.5-4z"/></svg>';
+
+    function makeBtn(){
+      var b = document.createElement('button');
+      b.className = 'speak'; b.type = 'button';
+      b.innerHTML = ICON + '<span>Listen</span>';
+      b.setAttribute('aria-label', 'Read this section aloud');
+      return b;
+    }
+    function reset(btn){
+      if(!btn) return;
+      btn.classList.remove('on');
+      var sp = btn.querySelector('span'); if(sp) sp.textContent = 'Listen';
+    }
+    function speak(el, btn){
+      var wasOn = btn.classList.contains('on');
+      synth.cancel();
+      if(current) reset(current);
+      current = null;
+      if(wasOn) return;
+      var clone = el.cloneNode(true);
+      clone.querySelectorAll('.speak, script, style').forEach(function(n){ n.remove(); });
+      var text = (clone.innerText || '').replace(/\s+/g, ' ').trim();
+      if(!text) return;
+      var u = new SpeechSynthesisUtterance(text);
+      u.lang = 'en-IN'; u.rate = 0.98;
+      u.onend = u.onerror = function(){ reset(btn); if(current === btn) current = null; };
+      btn.classList.add('on');
+      btn.querySelector('span').textContent = 'Stop';
+      current = btn;
+      synth.speak(u);
+    }
+
+    document.querySelectorAll('.prose[data-speak="sections"]').forEach(function(prose){
+      var kids = Array.prototype.slice.call(prose.children);
+      var group = null;
+      kids.forEach(function(node){
+        if(node.classList && node.classList.contains('pager')){ group = null; return; }
+        if(node.tagName === 'H2'){
+          group = document.createElement('div');
+          group.className = 'sblock';
+          prose.insertBefore(group, node);
+          group.appendChild(node);
+          var btn = makeBtn();
+          group.insertBefore(btn, group.firstChild);
+          btn.addEventListener('click', function(){ speak(group, btn); });
+        } else if(group){
+          group.appendChild(node);
+        }
+      });
+    });
+
+    document.querySelectorAll('.speakable').forEach(function(el){
+      if(el.querySelector(':scope > .speak')) return;
+      var btn = makeBtn();
+      el.insertBefore(btn, el.firstChild);
+      btn.addEventListener('click', function(){ speak(el, btn); });
+    });
+
+    addEventListener('beforeunload', function(){ synth.cancel(); });
+  })();
 })();
+
