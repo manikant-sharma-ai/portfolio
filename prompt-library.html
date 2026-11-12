@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark">
+<title>Prompt — the library</title>
+<meta name="description" content="Not a magic sentence. Role, situation, problem, and what you need back. Here is the idea, my own example, and a template you can copy.">
+<meta property="og:title" content="Prompt — the library">
+<meta property="og:description" content="Not a magic sentence. Role, situation, problem, and what you need back. Here is the idea, my own example, and a template you can copy.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+<a class="skiplink" href="#main">Skip to content</a>
+<header class="nav" id="nav">
+  <div class="container nav__in">
+    <a class="brand" href="index.html" aria-label="Manikant Sharma — home">
+      <span class="mark" aria-hidden="true">MS</span>
+      <span>Manikant<i>&nbsp;Sharma</i></span>
+    </a>
+    <nav class="nav__links" aria-label="Main">
+      <a href="index.html#about">About</a>
+      <a href="index.html#disciplines">Disciplines</a>
+      <a href="index.html#tools">Tools</a>
+      <a href="index.html#work">Work</a>
+      <a href="index.html#build">How I build</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+    <button class="nav__toggle" aria-expanded="false" aria-controls="nav">Menu</button>
+  </div>
+</header>
+<main id="main">
+
+<section class="pagehead">
+  <div class="container">
+    <a class="crumb" href="index.html#disciplines">&larr; All disciplines</a>
+    <h1>A prompt is the four things you would tell a <em>person</em>.</h1>
+    <p>Not a magic sentence. Role, situation, problem, and what you need back. Here is the idea, my own example, and a template you can copy.</p>
+  </div>
+</section>
+<section class="section">
+  <div class="container">
+    <div class="prose">
+
+      <h2>The idea, in one scene</h2>
+      <p>You hand someone a scene from a film and ask what they would do in that character's place.
+      They answer well, because they know four things: <b>who they are</b>, <b>what is going on</b>,
+      <b>what the problem is</b>, and <b>what you want back</b>. Take any one of those away and the
+      answer goes vague.</p>
+      <p>That is the whole of prompting. When an AI answer feels generic, it is almost never the model
+      being weak &mdash; it is one of those four missing.</p>
+
+      <h2>What I actually write</h2>
+      <p>Role first, because it sets the vocabulary. Then the situation, in plain sentences, with the
+      real constraint in it. Then the problem, stated as one question. Then the shape of the answer:
+      how long, what format, what to do when it does not know.</p>
+      <p>The last line is the one people skip, and it is the one that saves the most time:
+      <b>say what to do when the information is missing.</b> Without it, the model fills the gap with
+      something that sounds right.</p>
+
+      <h2>A template to copy</h2>
+      <div class="prompt">
+  <div class="prompt__bar"><span>Template — fill the brackets</span><button class="copy" type="button">Copy</button></div>
+  <pre>You are a [role] with [X years] of experience in [field].
+
+Situation: [what is actually going on, in plain sentences].
+Constraint: [the real limit — budget, time, audience, tone, tools I have].
+The problem: [one question, stated once].
+
+Give me back:
+- [format — a list of 5, a table, 200 words, a script]
+- [what each item must contain]
+- If you do not know something, say "unknown" and tell me what you would need to find out.
+Do not invent numbers, names or sources.</pre>
+</div>
+
+      <h2>Where it goes wrong</h2>
+      <ul>
+        <li><b>A role with no vocabulary.</b> "You are a helpful assistant" changes nothing. "You are
+        a Bihar-based seller of surplus clothing talking to a wholesale buyer" changes everything.</li>
+        <li><b>Two problems in one prompt.</b> The model answers the easier one and quietly drops the
+        other.</li>
+        <li><b>No output shape.</b> You get an essay when you needed three bullets you could paste
+        into a sheet.</li>
+        <li><b>No permission to be unsure.</b> This is how invented numbers get into a document that
+        goes out with your name on it.</li>
+      </ul>
+
+      <div class="callout"><b>My rule:</b> if I cannot describe the job well enough that a competent
+      stranger could do it without asking me a question, I am not ready to prompt yet.</div>
+
+      <div class="pager">
+        <a href="index.html#disciplines">&larr; Disciplines</a>
+        <a href="context-library.html">Context &rarr;</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+<footer class="foot">
+  <div class="container foot__in">
+    <span>&copy; 2026 Manikant Sharma &middot; AI generalist</span>
+    <span><a href="mailto:manikantsharma.com@zoho.in">Email</a> &middot;
+          <a href="https://github.com/manikant-sharma-ai" rel="noopener">GitHub</a> &middot;
+          <a href="https://x.com/ManikantSharmaX" rel="noopener">X</a> &middot;
+          <a href="https://www.instagram.com/manikantsharma.ai" rel="noopener">Instagram</a> &middot;
+          <a href="https://www.reddit.com/user/ManikantSharma/" rel="noopener">Reddit</a> &middot;
+          <a href="https://facebook.com/people/Manikant-Sharma/61595821115608/" rel="noopener">Facebook</a></span>
+  </div>
+</footer>
+<script src="assets/site.js"></script>
+
+</body>
+</html>

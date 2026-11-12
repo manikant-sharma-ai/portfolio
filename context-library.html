@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark">
+<title>Context — the library</title>
+<meta name="description" content="A designer does not guess your style. You show them the thumbnails you like and the ones that earned clicks. Context engineering is handing that over ">
+<meta property="og:title" content="Context — the library">
+<meta property="og:description" content="A designer does not guess your style. You show them the thumbnails you like and the ones that earned clicks. Context engineering is handing that over ">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+<a class="skiplink" href="#main">Skip to content</a>
+<header class="nav" id="nav">
+  <div class="container nav__in">
+    <a class="brand" href="index.html" aria-label="Manikant Sharma — home">
+      <span class="mark" aria-hidden="true">MS</span>
+      <span>Manikant<i>&nbsp;Sharma</i></span>
+    </a>
+    <nav class="nav__links" aria-label="Main">
+      <a href="index.html#about">About</a>
+      <a href="index.html#disciplines">Disciplines</a>
+      <a href="index.html#tools">Tools</a>
+      <a href="index.html#work">Work</a>
+      <a href="index.html#build">How I build</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+    <button class="nav__toggle" aria-expanded="false" aria-controls="nav">Menu</button>
+  </div>
+</header>
+<main id="main">
+
+<section class="pagehead">
+  <div class="container">
+    <a class="crumb" href="index.html#disciplines">&larr; All disciplines</a>
+    <h1>Show before you <em>tell</em>.</h1>
+    <p>A designer does not guess your style. You show them the thumbnails you like and the ones that earned clicks. Context engineering is handing that over before the work starts.</p>
+  </div>
+</section>
+<section class="section">
+  <div class="container">
+    <div class="prose">
+
+      <h2>The idea, in one hire</h2>
+      <p>You have hired a graphic designer for thumbnails. You do not say "make it nice". You show the
+      ones you like, the ones that got clicks, the ones that flopped, and you say what your channel is
+      about. Then the first draft is close, instead of the fifth.</p>
+      <p>Context engineering is exactly that, done deliberately: <b>the material, before the work</b>.
+      The model cannot know your audience, your past work, your taste, or last month's numbers unless
+      you hand them over.</p>
+
+      <h2>What counts as context</h2>
+      <ul>
+        <li><b>Examples of good output</b> &mdash; three or four, with a line on why each one worked.</li>
+        <li><b>Examples of bad output</b> &mdash; more useful than the good ones, and almost nobody
+        supplies them.</li>
+        <li><b>Real numbers</b> &mdash; pulled through a connector, not remembered by me.</li>
+        <li><b>The audience</b> &mdash; who they are, what they already believe, what they are tired of.</li>
+        <li><b>The constraints of the platform</b> &mdash; length, format, what gets suppressed.</li>
+      </ul>
+
+      <h2>The prompt I use to test content before it goes out</h2>
+      <p>This is the one I actually run. Claude writes the thing; Meta AI tests whether the audience
+      would accept it. Two tools, two jobs.</p>
+      <div class="prompt">
+  <div class="prompt__bar"><span>Testing a script against a real audience</span><button class="copy" type="button">Copy</button></div>
+  <pre>You are a social media growth specialist with more than five years of experience.
+
+I will share my profile ID. Analyse every post and tell me which ones work and which do not,
+look at my followers, and build a virtual simulation of my audience: what they care about,
+what they scroll past, what makes them comment.
+
+Then I will paste a script. Judge it as that audience would, not as a writer would.
+Give me the top 10 problems with it, in order of how much they cost me.
+If something is fine, say nothing about it.</pre>
+</div>
+
+      <h2>Where it goes wrong</h2>
+      <ul>
+        <li><b>Context with no filter.</b> Dumping forty pages into the window is not context, it is
+        noise. Five good examples beat forty average ones.</li>
+        <li><b>Context the model cannot use.</b> A screenshot of a table is worse than the table.</li>
+        <li><b>Stale context.</b> Last quarter's numbers presented as current. Connectors exist so
+        this does not happen.</li>
+      </ul>
+
+      <div class="callout"><b>My rule:</b> if the work needs to sound like me, the model needs to see
+      me &mdash; my old posts, my audience, my last month. Otherwise it writes for an average nobody.</div>
+
+      <div class="pager">
+        <a href="prompt-library.html">&larr; Prompt</a>
+        <a href="loop-library.html">Loop &rarr;</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+<footer class="foot">
+  <div class="container foot__in">
+    <span>&copy; 2026 Manikant Sharma &middot; AI generalist</span>
+    <span><a href="mailto:manikantsharma.com@zoho.in">Email</a> &middot;
+          <a href="https://github.com/manikant-sharma-ai" rel="noopener">GitHub</a> &middot;
+          <a href="https://x.com/ManikantSharmaX" rel="noopener">X</a> &middot;
+          <a href="https://www.instagram.com/manikantsharma.ai" rel="noopener">Instagram</a> &middot;
+          <a href="https://www.reddit.com/user/ManikantSharma/" rel="noopener">Reddit</a> &middot;
+          <a href="https://facebook.com/people/Manikant-Sharma/61595821115608/" rel="noopener">Facebook</a></span>
+  </div>
+</footer>
+<script src="assets/site.js"></script>
+
+</body>
+</html>

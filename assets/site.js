@@ -1,0 +1,39 @@
+
+(function(){
+  document.documentElement.classList.add('js');
+  // mobile nav
+  var nav = document.querySelector('.nav');
+  var t = document.querySelector('.nav__toggle');
+  if(t && nav){ t.addEventListener('click', function(){
+    nav.classList.toggle('open');
+    t.setAttribute('aria-expanded', nav.classList.contains('open') ? 'true' : 'false');
+  }); }
+
+  // reveal
+  var rv = document.querySelectorAll('.rv');
+  if('IntersectionObserver' in window && rv.length){
+    var io = new IntersectionObserver(function(es){
+      es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, {rootMargin:'0px 0px -8% 0px', threshold:0.08});
+    rv.forEach(function(el){ io.observe(el); });
+    // safety net: nothing stays hidden for longer than a second
+    setTimeout(function(){ rv.forEach(function(el){ el.classList.add('in'); }); }, 1200);
+  } else { rv.forEach(function(el){ el.classList.add('in'); }); }
+
+  // copy prompt buttons
+  document.querySelectorAll('.copy').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var box = btn.closest('.prompt').querySelector('pre');
+      var text = box.innerText;
+      var done = function(){ btn.textContent='Copied'; btn.classList.add('done');
+        setTimeout(function(){ btn.textContent='Copy'; btn.classList.remove('done'); }, 1600); };
+      if(navigator.clipboard && navigator.clipboard.writeText){
+        navigator.clipboard.writeText(text).then(done).catch(function(){ fallback(); });
+      } else { fallback(); }
+      function fallback(){
+        var ta=document.createElement('textarea'); ta.value=text; document.body.appendChild(ta);
+        ta.select(); try{ document.execCommand('copy'); }catch(e){} document.body.removeChild(ta); done();
+      }
+    });
+  });
+})();

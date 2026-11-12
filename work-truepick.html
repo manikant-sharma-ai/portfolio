@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark">
+<title>TruePick &mdash; an affiliate storefront with an <em>admin</em> — Manikant Sharma</title>
+<meta name="description" content="A fully virtual affiliate shop: products with affiliate links, a blog that reads itself aloud, YouTube reviews on product pages, and a WordPress-style">
+<meta property="og:title" content="TruePick &mdash; an affiliate storefront with an <em>admin</em> — Manikant Sharma">
+<meta property="og:description" content="A fully virtual affiliate shop: products with affiliate links, a blog that reads itself aloud, YouTube reviews on product pages, and a WordPress-style">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+<a class="skiplink" href="#main">Skip to content</a>
+<header class="nav" id="nav">
+  <div class="container nav__in">
+    <a class="brand" href="index.html" aria-label="Manikant Sharma — home">
+      <span class="mark" aria-hidden="true">MS</span>
+      <span>Manikant<i>&nbsp;Sharma</i></span>
+    </a>
+    <nav class="nav__links" aria-label="Main">
+      <a href="index.html#about">About</a>
+      <a href="index.html#disciplines">Disciplines</a>
+      <a href="index.html#tools">Tools</a>
+      <a href="index.html#work">Work</a>
+      <a href="index.html#build">How I build</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+    <button class="nav__toggle" aria-expanded="false" aria-controls="nav">Menu</button>
+  </div>
+</header>
+<main id="main">
+
+<section class="pagehead">
+  <div class="container">
+    <a class="crumb" href="index.html#work">&larr; All work</a>
+    <h1>TruePick &mdash; an affiliate storefront with an <em>admin</em></h1>
+    <p>A fully virtual affiliate shop: products with affiliate links, a blog that reads itself aloud, YouTube reviews on product pages, and a WordPress-style admin panel behind it on Netlify.</p>
+    <div class="chips" style="margin-top:26px"><span class="chip">HTML / JS</span><span class="chip">Netlify Functions</span><span class="chip">Blobs</span><span class="chip">JSON data</span></div>
+    <div class="stats" style="max-width:620px"><div><strong>9</strong>Pages</div><div><strong>70</strong>Files with admin</div><div><strong>29</strong>SVG assets</div><div><strong>3</strong>JSON data files</div></div>
+  </div>
+</section>
+<section class="section">
+  <div class="container">
+    <div class="prose">
+
+      <h2>What it is</h2>
+      <p>You add a product with its affiliate link, the site shows it, and every buy button sends the
+      visitor straight to the store. No login on the storefront, no cart to maintain &mdash; the whole
+      catalogue lives in three JSON files.</p>
+
+      <h2>What is in the build</h2>
+      <ul>
+        <li><b>Nine pages</b> &mdash; home with a banner carousel, catalogue with filters and sorting,
+        product, blog, blog post, wishlist, account, about, terms.</li>
+        <li><b>Product pages that do work</b>: a "good for these people" block, a plus-icon accordion,
+        a callout, alternatives as pills, a details accordion, a rating widget, and embedded YouTube
+        reviews with an average reviewer rating.</li>
+        <li><b>A blog that reads itself aloud</b>, because not everyone wants to read on a phone.</li>
+        <li><b>The admin twin</b>: a second repository adds a WordPress-style panel at
+        <code>/co-admin</code> with login, a drag-and-drop editor, and product, banner and blog
+        management, running on Netlify Functions and Blobs.</li>
+      </ul>
+
+      <h2>What it taught me</h2>
+      <p>Data outlives design. Because every product, banner and post is a JSON entry, the site can be
+      re-skinned without touching content, and content can be added without touching code. It is also
+      the reason the tools table on my home page is a data file: I learned it here.</p>
+
+      <div class="callout" style="margin-top:44px"><b>Source:</b>
+        <a href="https://github.com/manikant-sharma-ai/truepick" rel="noopener" style="color:var(--cyan)">manikant-sharma-ai/truepick</a>
+        The admin panel lives in a separate private repository.</div>
+      <div class="pager">
+        <a href="index.html#work">&larr; All work</a>
+        <a href="index.html#contact">Get in touch &rarr;</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+<footer class="foot">
+  <div class="container foot__in">
+    <span>&copy; 2026 Manikant Sharma &middot; AI generalist</span>
+    <span><a href="mailto:manikantsharma.com@zoho.in">Email</a> &middot;
+          <a href="https://github.com/manikant-sharma-ai" rel="noopener">GitHub</a> &middot;
+          <a href="https://x.com/ManikantSharmaX" rel="noopener">X</a> &middot;
+          <a href="https://www.instagram.com/manikantsharma.ai" rel="noopener">Instagram</a> &middot;
+          <a href="https://www.reddit.com/user/ManikantSharma/" rel="noopener">Reddit</a> &middot;
+          <a href="https://facebook.com/people/Manikant-Sharma/61595821115608/" rel="noopener">Facebook</a></span>
+  </div>
+</footer>
+<script src="assets/site.js"></script>
+
+</body>
+</html>

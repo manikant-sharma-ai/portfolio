@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark">
+<title>Loop — the library</title>
+<meta name="description" content="Ten boxes, one trip each, until the last one is across. A loop is that pattern, with the condition written down before you start.">
+<meta property="og:title" content="Loop — the library">
+<meta property="og:description" content="Ten boxes, one trip each, until the last one is across. A loop is that pattern, with the condition written down before you start.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+<a class="skiplink" href="#main">Skip to content</a>
+<header class="nav" id="nav">
+  <div class="container nav__in">
+    <a class="brand" href="index.html" aria-label="Manikant Sharma — home">
+      <span class="mark" aria-hidden="true">MS</span>
+      <span>Manikant<i>&nbsp;Sharma</i></span>
+    </a>
+    <nav class="nav__links" aria-label="Main">
+      <a href="index.html#about">About</a>
+      <a href="index.html#disciplines">Disciplines</a>
+      <a href="index.html#tools">Tools</a>
+      <a href="index.html#work">Work</a>
+      <a href="index.html#build">How I build</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+    <button class="nav__toggle" aria-expanded="false" aria-controls="nav">Menu</button>
+  </div>
+</header>
+<main id="main">
+
+<section class="pagehead">
+  <div class="container">
+    <a class="crumb" href="index.html#disciplines">&larr; All disciplines</a>
+    <h1>Do the same thing until the job is <em>done</em>.</h1>
+    <p>Ten boxes, one trip each, until the last one is across. A loop is that pattern, with the condition written down before you start.</p>
+  </div>
+</section>
+<section class="section">
+  <div class="container">
+    <div class="prose">
+
+      <h2>The idea, in ten boxes</h2>
+      <p>You have ten boxes to move from one room to the other. You do not decide ten times whether to
+      continue. You carry one, come back, carry the next, and you stop when the last one is across.
+      The condition was never in doubt, so the work simply continued.</p>
+      <p>Loop engineering is writing that condition down for the AI: <b>repeat this step, check the
+      result, stop when this is true</b> &mdash; not when it feels finished.</p>
+
+      <h2>The four parts of a loop that behaves</h2>
+      <ul>
+        <li><b>The step</b> &mdash; one job, stated once.</li>
+        <li><b>The check</b> &mdash; how it knows whether the step worked.</li>
+        <li><b>The stop</b> &mdash; the exact condition, written before the first run.</li>
+        <li><b>The ceiling</b> &mdash; a maximum number of attempts, so a confident wrong loop cannot
+        run all night on your money.</li>
+      </ul>
+
+      <h2>A loop I actually run</h2>
+      <p>One instruction, several steps, and it ends with something in my inbox instead of a chat
+      reply I have to remember to read.</p>
+      <div class="prompt">
+  <div class="prompt__bar"><span>The fetch, file, email loop</span><button class="copy" type="button">Copy</button></div>
+  <pre>Do this every time I give you a topic:
+
+1. Find the content — from the sources I named, not from your memory.
+2. Write it into a Google Doc in my Drive, inside the folder "Inbox", dated in the title.
+3. Add a three-line summary at the top: what it is, why it matters to me, what to do next.
+4. Email me the link with the summary in the body.
+5. If a source fails, say which one failed and give me what you have. Do not fill the gap.
+
+Stop when the doc exists and the email is sent. Maximum 3 attempts per source.</pre>
+</div>
+
+      <h2>Where it goes wrong</h2>
+      <ul>
+        <li><b>No ceiling.</b> The most expensive bug in AI work is a loop that never terminates and
+        keeps billing.</li>
+        <li><b>A stop condition the model can satisfy by lying.</b> "Stop when the score is above 9"
+        invites a fake score. Which is exactly the next page.</li>
+        <li><b>A loop that repeats without learning.</b> If each pass does not change the input, you
+        have written a spin, not a loop.</li>
+      </ul>
+
+      <div class="callout"><b>My rule:</b> the condition goes in the prompt before the work starts.
+      Written after, it becomes whatever the output happened to be.</div>
+
+      <div class="pager">
+        <a href="context-library.html">&larr; Context</a>
+        <a href="graph-library.html">Graph &rarr;</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+<footer class="foot">
+  <div class="container foot__in">
+    <span>&copy; 2026 Manikant Sharma &middot; AI generalist</span>
+    <span><a href="mailto:manikantsharma.com@zoho.in">Email</a> &middot;
+          <a href="https://github.com/manikant-sharma-ai" rel="noopener">GitHub</a> &middot;
+          <a href="https://x.com/ManikantSharmaX" rel="noopener">X</a> &middot;
+          <a href="https://www.instagram.com/manikantsharma.ai" rel="noopener">Instagram</a> &middot;
+          <a href="https://www.reddit.com/user/ManikantSharma/" rel="noopener">Reddit</a> &middot;
+          <a href="https://facebook.com/people/Manikant-Sharma/61595821115608/" rel="noopener">Facebook</a></span>
+  </div>
+</footer>
+<script src="assets/site.js"></script>
+
+</body>
+</html>
