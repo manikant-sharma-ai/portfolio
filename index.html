@@ -25,19 +25,18 @@
       <span>Manikant<i>&nbsp;Lab</i></span>
     </a>
     <nav class="nav__links" aria-label="Main">
-      <a href="index.html#about">About</a>
-      <a href="index.html#disciplines">Disciplines</a>
-      <a href="index.html#tools">Tools</a>
-      <a href="index.html#work">Work</a>
-      <a href="index.html#journey">Journey</a>
-      <a href="index.html#build">How I build</a>
-      <a href="index.html#contact">Contact</a>
+      <a href="about.html">About</a>
+      <a href="libraries.html">Libraries</a>
+      <a href="tools.html">Tools</a>
+      <a href="work.html">Work</a>
+      <a href="about.html#journey">Journey</a>
+      <a href="build.html">How I build</a>
+      <a href="contact.html">Contact</a>
     </nav>
     <button class="nav__toggle" aria-expanded="false" aria-controls="nav">Menu</button>
   </div>
 </header>
 <main id="main">
-
 <section class="hero" id="hero">
   <div class="hero__sticky">
     <div class="hero__frames" aria-hidden="true">
@@ -126,44 +125,6 @@
   </div>
 </section>
 
-<section class="section" id="about">
-  <div class="container">
-    <div class="about">
-      <div class="rv">
-        <span class="num">01 &mdash; About</span>
-        <h2 style="margin-top:18px">I don't write the code.<br>I make sure it is <em>right</em>.</h2>
-        <p>I'm an AI generalist. That is not a borrowed job title, it is what the work actually is:
-        moving between prompt, context, loop and graph depending on what the job needs, and picking
-        whichever free tool tests best for that job.</p>
-        <p>I started a year ago with ordinary chat. The first thing I built was my own agent: a
-        scheduled worker that checks whether the job is actually done, creates follow-up tasks when
-        it needs more time, wakes itself and keeps going, and writes notes into a GitHub repo so the
-        next run starts with context instead of from zero. It ran on free models with no API key and
-        cost me nothing.</p>
-        <p>I don't write code and I don't intend to. I direct it, and I took a Python course for one
-        reason: so I can describe a job well enough that the AI cannot fill the gaps with guesses,
-        read the structure it hands back, and catch its mistakes. A team leader who cannot do the
-        work cannot get the work done. Same rule here.</p>
-        <p>For now I build for myself, not for clients. <b>Feedfy</b> is next: instead of scrolling
-        for an hour to find content worth keeping, a feed that goes and finds it, in about two
-        minutes.</p>
-      </div>
-
-      <div class="side rv">
-      <dl class="facts">
-        <div><dt>Role</dt><dd>AI generalist</dd></div>
-        <div><dt>Focus</dt><dd>Prompt &middot; context &middot; loop &middot; graph<br>Automation &middot; agent building</dd></div>
-        <div><dt>Stack</dt><dd>Whichever free tools test best for the job</dd></div>
-        <div><dt>Location</dt><dd>Chhapra, Bihar &middot; India<br>IST (UTC+5:30)</dd></div>
-        <div><dt>Status</dt><dd>Building for myself</dd></div>
-      </dl>
-      </div>
-    </div>
-  </div>
-</section>
-
-<hr class="rule">
-
 <section class="section" id="disciplines">
   <div class="container">
     <div class="section__head rv">
@@ -204,93 +165,7 @@
       </a>
     </div>
   </div>
-</section>
-
-<hr class="rule">
-
-<section class="section" id="tools">
-  <div class="container">
-    <div class="section__head rv">
-      <span class="num">03 &mdash; The tools</span>
-      <h2>I test the free tier of everything and keep what <em>earns</em> its place.</h2>
-      <p>The most useful column here is the third one. Almost nobody tells you which tools can reach
-      your repository on their own, and which leave you pasting code by hand.</p>
-    </div>
-
-    <div class="tablewrap rv">
-      <table>
-        <thead>
-          <tr><th>Tool</th><th>What I use it for</th><th>Reaches my repo?</th><th>When it can't</th></tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>ChatGPT</td>
-            <td>Where I start when the job is a conversation. Plain chat, no token ceiling to worry
-            about, good for thinking a job through.</td>
-            <td class="yes">Yes</td>
-            <td>&mdash;</td>
-          </tr>
-          <tr>
-            <td>Claude (Anthropic)</td>
-            <td>My coding pick. Strongest of the set for code, holds more context, writes content and
-            scripts well too.</td>
-            <td class="yes">Yes</td>
-            <td>&mdash;</td>
-          </tr>
-          <tr>
-            <td>Gemini</td>
-            <td>My learning pick. Explains things well, plugs into YouTube, fits the Google ecosystem.</td>
-            <td class="yes">Yes</td>
-            <td>&mdash;</td>
-          </tr>
-          <tr>
-            <td>Grok</td>
-            <td>Fastest expert opinion, and it reads X for me so I never scroll post by post.
-            Grok 4.7 Fast for quick answers, Grok 4.7 in Grok Build to build.</td>
-            <td class="yes">Yes</td>
-            <td>&mdash;</td>
-          </tr>
-          <tr>
-            <td>Kimi K3</td>
-            <td>Codes well and holds a huge context window.</td>
-            <td class="yes">Yes</td>
-            <td>&mdash;</td>
-          </tr>
-          <tr>
-            <td>DeepSeek</td>
-            <td>A genuinely strong free model for reasoning and code.</td>
-            <td class="no">No</td>
-            <td>Copy-paste into Claude or Grok</td>
-          </tr>
-          <tr>
-            <td>MiniMax</td>
-            <td>The all-rounder: front end and back end both, holds up on real builds.</td>
-            <td class="no">No</td>
-            <td>Copy-paste into Claude or Grok</td>
-          </tr>
-          <tr>
-            <td>Perplexity (Pro)</td>
-            <td>Deep research when I actually need it, paired with Apify for social media scraping.</td>
-            <td class="no">No</td>
-            <td>Hand the findings to Claude</td>
-          </tr>
-          <tr>
-            <td>Metricool</td>
-            <td>My social media manager. Scheduling and reporting for X, driven by a prompt.</td>
-            <td class="yes">Yes</td>
-            <td>&mdash;</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-    <p class="note">Free tiers change, so this table says what I use today. Checked November 2026.
-    Where a tool cannot reach the repository itself, the work goes through Claude or Grok, which can.</p>
-  </div>
-</section>
-
-<hr class="rule">
-
-<section class="section" id="work">
+</section><section class="section" id="work">
   <div class="container">
     <div class="section__head rv">
       <span class="num">04 &mdash; Selected work</span>
@@ -347,172 +222,26 @@
     </div>
   </div>
 </section>
-
-
-<hr class="rule">
-
-<section class="section" id="journey">
-  <div class="container">
-    <div class="section__head rv">
-      <span class="num">05 &mdash; Journey</span>
-      <h2>What I learned, when, and what I <em>built</em> with it.</h2>
-      <p>A running log, newest at the bottom. Every entry names the thing I learned and the tools I
-      actually used to make it, because "I know AI" means nothing without the receipts.</p>
+<section class="subscribe" id="subscribe">
+  <div class="container subscribe__in">
+    <div class="subscribe__txt">
+      <span class="num">Subscribe</span>
+      <h2 style="margin-top:14px">One email when something new is <em>built</em>.</h2>
+      <p>No weekly newsletter, no drip sequence, no tracking pixels. When a project ships or a
+      discipline page gets a new example, you get one short email. That is the whole promise.</p>
     </div>
-
-    <div class="journey">
-      <div class="jrow rv">
-        <div class="jdate">Late 2025</div>
-        <div class="jbody">
-          <h3>Started with plain chat</h3>
-          <p>No agents, no connectors, no code. Just asking, reading the answer, and noticing how often
-          the confident answer was the wrong one.</p>
-          <div class="chips"><span class="built">Built with</span><span class="chip">ChatGPT</span>
-            <span class="chip">Claude</span></div>
-        </div>
+    <form class="subscribe__form" id="subForm" novalidate>
+      <label class="subscribe__label" for="subEmail">Your email</label>
+      <div class="subscribe__row">
+        <input id="subEmail" name="email" type="email" inputmode="email" autocomplete="email"
+               placeholder="you@example.com" required>
+        <button class="btn" type="submit">Subscribe</button>
       </div>
-
-      <div class="jrow rv">
-        <div class="jdate">Early 2026</div>
-        <div class="jbody">
-          <h3>My first agent &mdash; a scheduled worker that kept its own notes</h3>
-          <p>It checks whether the job is done, creates follow-up tasks when it needs more time, wakes
-          itself and continues, and writes what it learned into a GitHub repo so the next run starts
-          with context instead of from zero. Free models, no API key, no VPS.</p>
-          <div class="chips"><span class="built">Built with</span><span class="chip">Claude</span>
-            <span class="chip">GitHub</span><span class="chip">Scheduled tasks</span>
-            <span class="chip">Free models</span></div>
-        </div>
-      </div>
-
-      <div class="jrow rv">
-        <div class="jdate">16 Oct 2026</div>
-        <div class="jbody">
-          <h3>TruePick &mdash; my first real product</h3>
-          <p>A nine-page affiliate storefront driven entirely by JSON, with a blog that reads itself
-          aloud and YouTube reviews on product pages. It taught me that data outlives design.</p>
-          <div class="chips"><span class="built">Built with</span><span class="chip">HTML / CSS / JS</span>
-            <span class="chip">Netlify</span><span class="chip">JSON data</span></div>
-        </div>
-      </div>
-
-      <div class="jrow rv">
-        <div class="jdate">18 Oct 2026</div>
-        <div class="jbody">
-          <h3>Social Media Manager &mdash; my first public skill</h3>
-          <p>An agent skill that discovers which connectors actually work before it promises anything,
-          then keeps a knowledge base of brand voice so the writing sounds like the person, not the
-          model. MIT licensed, because a skill nobody can fork is a brochure.</p>
-          <div class="chips"><span class="built">Built with</span><span class="chip">Agent skills</span>
-            <span class="chip">Markdown</span><span class="chip">Connectors</span></div>
-        </div>
-      </div>
-
-      <div class="jrow rv">
-        <div class="jdate">20 Oct 2026</div>
-        <div class="jbody">
-          <h3>One small tool a day</h3>
-          <p>Twenty days, twenty tools: timezone overlap, CSV triage, SQL guard, SLA clock, contract
-          drift, spec ambiguity. None of them impressive alone. All of them together are a habit, and
-          habit is what I was actually building.</p>
-          <div class="chips"><span class="built">Built with</span><span class="chip">Python</span>
-            <span class="chip">Claude</span><span class="chip">GitHub</span></div>
-        </div>
-      </div>
-
-      <div class="jrow rv">
-        <div class="jdate">31 Oct 2026</div>
-        <div class="jbody">
-          <h3>Employee Hub &mdash; AI employees with a written standard</h3>
-          <p>The biggest thing I have built: five new AI employees every morning, 577 skill documents,
-          and one rule that matters more than the rest &mdash; never fake the part you cannot do.</p>
-          <div class="chips"><span class="built">Built with</span><span class="chip">Claude plugin</span>
-            <span class="chip">Python</span><span class="chip">Skill files</span></div>
-        </div>
-      </div>
-
-      <div class="jrow rv">
-        <div class="jdate">Nov 2026</div>
-        <div class="jbody">
-          <h3>This site</h3>
-          <p>Nine pages became eight, one hero video became 47 frames, and every word on it came out of
-          a conversation rather than a template. The scroll animation is the only clever thing here,
-          and it exists because a still image felt dead.</p>
-          <div class="chips"><span class="built">Built with</span><span class="chip">HTML / CSS / JS</span>
-            <span class="chip">47 WebP frames</span><span class="chip">No framework</span></div>
-        </div>
-      </div>
-
-      <div class="jrow jrow--next rv">
-        <div class="jdate">Next</div>
-        <div class="jbody">
-          <h3>Feedfy &mdash; designed, not built yet</h3>
-          <p>Instead of scrolling for an hour to find content worth keeping, a feed that goes and finds
-          it in about two minutes. I have the data and the plan. When it exists, this line gets a date.</p>
-          <div class="chips"><span class="built">Planned with</span><span class="chip">Web scraping</span>
-            <span class="chip">Agents</span><span class="chip">My own Instagram archive</span></div>
-        </div>
-      </div>
-    </div>
+      <p class="subscribe__note" id="subNote">This opens your mail app with a one-line message to me.
+      You press send. No list, no third party, nothing stored on this site.</p>
+    </form>
   </div>
 </section>
-
-<hr class="rule">
-
-<section class="section" id="build">
-  <div class="container">
-    <div class="section__head rv">
-      <span class="num">06 &mdash; How I build</span>
-      <h2>Five things I do before I trust anything an AI <em>built</em>.</h2>
-      <p>Not gates for a launch, gates for my own conscience. Skip one and the work goes back in the
-      drawer.</p>
-    </div>
-
-    <div class="gates">
-      <div class="gate rv">
-        <div class="gate__n">01</div>
-        <div>
-          <h3>Describe the job until guessing is impossible</h3>
-          <p>Role, situation, constraint, and exactly what should come back. If I cannot describe it,
-          the AI fills the gap with invention, and the fault is mine, not the model's.</p>
-        </div>
-      </div>
-      <div class="gate rv">
-        <div class="gate__n">02</div>
-        <div>
-          <h3>Hand over the material, not just the words</h3>
-          <p>The thumbnails that got clicks, the real posts, the live numbers through a connector.
-          Context is what stops it designing for a customer who does not exist.</p>
-        </div>
-      </div>
-      <div class="gate rv">
-        <div class="gate__n">03</div>
-        <div>
-          <h3>Give it a loop with a stop condition</h3>
-          <p>Repeat until the condition is met, not until it feels finished. Write the condition down
-          before you start, or you will accept whatever comes back.</p>
-        </div>
-      </div>
-      <div class="gate rv">
-        <div class="gate__n">04</div>
-        <div>
-          <h3>Put the examiner outside the loop</h3>
-          <p>A separate step with its own rules, that the writer cannot instruct, and a human holding
-          the final call. A writer that grades its own work grades itself generously.</p>
-        </div>
-      </div>
-      <div class="gate rv">
-        <div class="gate__n">05</div>
-        <div>
-          <h3>Keep the notes</h3>
-          <p>What worked goes back into the repo so the next run starts ahead of the last one, and
-          nothing ships that I did not read myself.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
 <section class="contact" id="contact">
   <div class="container">
     <span class="num">07 &mdash; Contact</span>
@@ -530,8 +259,8 @@
     </div>
   </div>
 </section>
-
 </main>
+
 <footer class="foot">
   <div class="container foot__in">
     <span class="foot__brand">
@@ -593,6 +322,29 @@
   frames.forEach(function(im){ if(im.decode) im.decode().catch(function(){}); });
   onScroll();
 })();
+</script>
+<script>
+  // subscribe: build a mailto and let the visitor send it themselves
+  var form = document.getElementById('subForm');
+  if(form){
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      var input = document.getElementById('subEmail');
+      var note = document.getElementById('subNote');
+      var v = (input.value || '').trim();
+      if(!v || v.indexOf('@') < 1){
+        note.textContent = 'That does not look like an email address. Try again.';
+        note.classList.add('warn');
+        input.focus();
+        return;
+      }
+      note.classList.remove('warn');
+      var subject = encodeURIComponent('Subscribe — Manikant Lab');
+      var body = encodeURIComponent('Please add me to the list.\n\nMy email: ' + v + '\n');
+      window.location.href = 'mailto:manikantsharma.com@zoho.in?subject=' + subject + '&body=' + body;
+      note.textContent = 'Your mail app should be open. Send it and you are on the list.';
+    });
+  }
 </script>
 </body>
 </html>
