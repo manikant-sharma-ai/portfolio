@@ -274,6 +274,23 @@ td:nth-child(2){color:var(--dim)}
 .portrait figcaption{font-family:var(--mono);font-size:9px;letter-spacing:.12em;
   text-transform:uppercase;color:#8ea1b8;text-align:center;line-height:1.8}
 
+/* ---------- subscribe ---------- */
+.subscribe{border-top:1px solid var(--line);padding:84px 0;position:relative;z-index:2;
+  background:linear-gradient(180deg,rgba(14,165,233,.05),transparent 60%)}
+.subscribe__in{display:grid;grid-template-columns:1.1fr .9fr;gap:52px;align-items:center}
+.subscribe__txt h2{max-width:22ch}
+.subscribe__txt p{color:var(--dim);margin-top:16px;max-width:46ch;line-height:1.75}
+.subscribe__form{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);
+  padding:24px}
+.subscribe__label{display:block;font-family:var(--mono);font-size:9.5px;letter-spacing:.14em;
+  text-transform:uppercase;color:#8ea1b8;margin-bottom:10px}
+.subscribe__row{display:flex;gap:10px;flex-wrap:wrap}
+.subscribe__row input{flex:1 1 200px;min-width:0;background:var(--bg);border:1px solid var(--line);
+  border-radius:8px;padding:12px 14px;color:var(--text);font-family:var(--sans);font-size:.95rem}
+.subscribe__row input:focus{outline:none;border-color:var(--line-hi);box-shadow:0 0 0 3px rgba(14,165,233,.12)}
+.subscribe__note{color:#8ea1b8;font-size:.82rem;line-height:1.6;margin-top:14px}
+.subscribe__note.warn{color:#f0a6a6}
+
 /* reveal */
 .js .rv{opacity:0;transform:translateY(14px);transition:opacity .6s ease,transform .6s ease}
 .js .rv.in{opacity:1;transform:none}
@@ -288,6 +305,7 @@ td:nth-child(2){color:var(--dim)}
   .about{grid-template-columns:1fr;gap:36px}
   .band__in{grid-template-columns:1fr;gap:28px}
   .band__fig{max-width:100%}
+  .subscribe__in{grid-template-columns:1fr;gap:28px}
   .grid4{grid-template-columns:1fr 1fr}
   .work{grid-template-columns:1fr}
 }
