@@ -15,7 +15,11 @@ html{scroll-behavior:smooth;color-scheme:dark}
 body{
   margin:0;background:var(--bg);color:var(--text);font-family:var(--sans);
   font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;
+  /* overflow-x:hidden on <body> turns the body into a scroll container in Firefox,
+     which silently breaks every position:sticky child (the hero pin). clip does the
+     same visual job without creating a scroll container. hidden stays as a fallback. */
   overflow-x:hidden;
+  overflow-x:clip;
 }
 body::before{
   content:"";position:fixed;inset:0;z-index:0;pointer-events:none;
