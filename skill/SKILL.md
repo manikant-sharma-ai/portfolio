@@ -189,10 +189,12 @@ that says what changed and why, in plain words.
 
 - **No LinkedIn, no CV, no phone number, no "open to roles".** He cannot hold those accounts and the
   site is not a job-search asset.
-- **Do not publish his age** unless he asks in writing, and if he does, say plainly that it is public
-  for anyone to see and he may want a parent's view first.
-- **Keep the public footprint small.** Email, GitHub and X are enough. If he asks, suggest dropping
-  Facebook and Reddit from the site: a public minor with five contact channels is five doors.
+- **His age stays off the site — decided.** He wants the work to speak for itself. Do not add an age,
+  a birthday, a school, or a "youngest developer" style line anywhere, including the meta description.
+- **The links on the site are his professional accounts.** He keeps separate personal accounts for
+  personal use, and chose to publish these six: email, GitHub, X, Instagram, Reddit, Facebook. Do not
+  remove any of them "for safety" — he has already made that call. If a new link is added, ask
+  whether it is the professional account or the personal one.
 - **No payments, no domain purchases, no hosting plans in his name.** Those need an adult.
 - **Encourage the work, not the persona.** The honest line is that he builds real things and checks
   them; it does not need to be dressed as a career.
