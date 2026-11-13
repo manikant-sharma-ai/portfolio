@@ -107,41 +107,74 @@
   var pct = document.getElementById('heroPct');
   var copy = document.getElementById('heroCopy');
   var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
-  var current = 0, target = 0, eased = 0, raf = null;
+  var current = 0, target = 0, eased = 0, raf = null, visible = true;
 
   function paint(i){
     if(i === current) return;
-    frames[current].classList.remove('on');
+    if(frames[current]) frames[current].classList.remove('on');
     frames[i].classList.add('on');
     current = i;
     if(pct) pct.textContent = ('0' + (i + 1)).slice(-2);
   }
+
+  /* progress from the hero's own box, using the viewport height. No getComputedStyle,
+     no offsetHeight of the sticky element: both resolve differently across engines. */
   function progress(){
-    var track = hero.offsetHeight - hero.querySelector('.hero__sticky').offsetHeight;
-    if(track <= 0) return 0;
-    var top = hero.getBoundingClientRect().top;
-    var y = -top + (parseInt(getComputedStyle(hero.querySelector('.hero__sticky')).top, 10) || 0);
-    return Math.min(1, Math.max(0, y / track));
+    var rect = hero.getBoundingClientRect();
+    var vh = window.innerHeight || document.documentElement.clientHeight;
+    var total = hero.offsetHeight - vh;          // how far we can scroll inside the hero
+    if(total <= 0) return 0;
+    var scrolled = -rect.top;                    // how far the hero's top has gone past the viewport top
+    return Math.min(1, Math.max(0, scrolled / total));
   }
+
+  function apply(p){
+    paint(Math.round(p * (frames.length - 1)));
+    if(copy && copy.offsetParent !== null){
+      var f = Math.min(1, Math.max(0, (p - 0.16) / 0.34));
+      copy.style.opacity = String(1 - f);
+    }
+  }
+
   function tick(){
     eased += (target - eased) * 0.22;
     if(Math.abs(target - eased) < 0.0015) eased = target;
-    paint(Math.round(eased * (frames.length - 1)));
-    if(copy && getComputedStyle(copy).position === 'absolute'){
-      var f = Math.min(1, Math.max(0, (eased - 0.16) / 0.34));
-      copy.style.opacity = String(1 - f);
-    }
+    apply(eased);
     if(eased !== target){ raf = requestAnimationFrame(tick); } else { raf = null; }
   }
+
   function onScroll(){
     target = progress();
-    if(reduce){ paint(Math.round(target * (frames.length - 1))); return; }
+    if(reduce){ apply(target); return; }
     if(!raf) raf = requestAnimationFrame(tick);
   }
+
+  /* belt and braces: while the hero is on screen, recompute every frame. This covers
+     browsers that throttle scroll events, scroll in a nested container, or restore a
+     scroll position on reload without firing scroll at all. */
+  function loop(){
+    if(visible){
+      var p = progress();
+      if(Math.abs(p - target) > 0.0005){ onScroll(); }
+    }
+    requestAnimationFrame(loop);
+  }
+
   addEventListener('scroll', onScroll, {passive:true});
   addEventListener('resize', onScroll);
+  addEventListener('pageshow', onScroll);
+  document.addEventListener('visibilitychange', onScroll);
+
+  if('IntersectionObserver' in window){
+    new IntersectionObserver(function(es){
+      es.forEach(function(e){ visible = e.isIntersecting; });
+    }, {threshold: 0}).observe(hero);
+  }
+
   frames.forEach(function(im){ if(im.decode) im.decode().catch(function(){}); });
   onScroll();
+  requestAnimationFrame(loop);
+  setTimeout(onScroll, 120);
 })();
 </script>
 <script>
