@@ -178,10 +178,24 @@ that says what changed and why, in plain words.
 ## Notes to keep
 
 - `notes/changelog.md` — dated, one line per change, so he can see the history without reading git.
-- `notes/open-questions.md` — what is waiting on him (currently: the URL decision, the Mailchimp
-  form URL, his LinkedIn profile URL, and the CNAME decision).
+- `notes/open-questions.md` — what is waiting on him (currently: the Mailchimp form URL, and how
+  much of his age/audience to make public). No LinkedIn: the owner is 14 and LinkedIn does not
+  allow accounts at that age. Do not add a LinkedIn link, a CV, a phone number or a notice-period
+  line, and do not write the copy for recruiters — it is not a job-search site.
 - When a change lands, tell him in Hindi what you did and why, and update the Hindi notes document
   he reads.
+
+## The owner is 14 — read this before writing anything
+
+- **No LinkedIn, no CV, no phone number, no "open to roles".** He cannot hold those accounts and the
+  site is not a job-search asset.
+- **Do not publish his age** unless he asks in writing, and if he does, say plainly that it is public
+  for anyone to see and he may want a parent's view first.
+- **Keep the public footprint small.** Email, GitHub and X are enough. If he asks, suggest dropping
+  Facebook and Reddit from the site: a public minor with five contact channels is five doors.
+- **No payments, no domain purchases, no hosting plans in his name.** Those need an adult.
+- **Encourage the work, not the persona.** The honest line is that he builds real things and checks
+  them; it does not need to be dressed as a career.
 
 ## House style for the copy
 
