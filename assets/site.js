@@ -37,6 +37,60 @@
     });
   });
 
+
+  // ---------- ambient particle network (the background from the original design) ----------
+  (function(){
+    var c = document.getElementById('net');
+    if(!c || !c.getContext) return;
+    if(matchMedia('(prefers-reduced-motion: reduce)').matches){ c.style.display='none'; return; }
+    var ctx = c.getContext('2d'), w=0, h=0, dpr=1, pts=[], raf=null, running=true;
+    var COUNT = window.innerWidth < 700 ? 24 : 52;
+    var LINK = 19000; // squared distance limit
+
+    function size(){
+      dpr = Math.min(window.devicePixelRatio || 1, 2);
+      w = c.clientWidth || window.innerWidth;
+      h = c.clientHeight || window.innerHeight;
+      c.width = Math.round(w*dpr); c.height = Math.round(h*dpr);
+      ctx.setTransform(dpr,0,0,dpr,0,0);
+    }
+    function seed(){
+      pts = [];
+      for(var i=0;i<COUNT;i++){
+        pts.push({x:Math.random()*w, y:Math.random()*h,
+                  vx:(Math.random()-.5)*.22, vy:(Math.random()-.5)*.22,
+                  r:Math.random()*1.3+.7});
+      }
+    }
+    function draw(){
+      ctx.clearRect(0,0,w,h);
+      for(var i=0;i<pts.length;i++){
+        var p = pts[i];
+        p.x += p.vx; p.y += p.vy;
+        if(p.x < 0 || p.x > w) p.vx *= -1;
+        if(p.y < 0 || p.y > h) p.vy *= -1;
+        ctx.beginPath(); ctx.arc(p.x, p.y, p.r, 0, 6.2832);
+        ctx.fillStyle = 'rgba(14,165,233,.5)'; ctx.fill();
+        for(var j=i+1;j<pts.length;j++){
+          var q = pts[j], dx = p.x-q.x, dy = p.y-q.y, d2 = dx*dx + dy*dy;
+          if(d2 < LINK){
+            var a = (1 - d2/LINK) * 0.15;
+            ctx.strokeStyle = 'rgba(14,165,233,' + a.toFixed(3) + ')';
+            ctx.lineWidth = 1;
+            ctx.beginPath(); ctx.moveTo(p.x,p.y); ctx.lineTo(q.x,q.y); ctx.stroke();
+          }
+        }
+      }
+      if(running) raf = requestAnimationFrame(draw);
+    }
+    size(); seed(); draw();
+    addEventListener('resize', function(){ size(); seed(); }, {passive:true});
+    document.addEventListener('visibilitychange', function(){
+      if(document.hidden){ running = false; if(raf) cancelAnimationFrame(raf); }
+      else if(!running){ running = true; draw(); }
+    });
+  })();
+
   // ---------- text to speech ----------
   (function(){
     if(!('speechSynthesis' in window)) return;

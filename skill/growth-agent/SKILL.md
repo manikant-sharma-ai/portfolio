@@ -105,11 +105,84 @@ For each recommendation give: the query, why it matters (impressions or position
 land on, and the one change that would help. Never suggest a keyword the site has no honest content
 for — an empty page chasing a phrase is worse than no page.
 
-### 5. Report, in his language
+### 5. Report, in his language — the brief he wakes up to
+
+He reads this in the morning, on a phone, before anything else. So: no tables, no raw numbers, no
+jargon. Four lines at most.
+
+1. **What changed** since yesterday, in one sentence. If nothing changed, "nothing changed" is the
+   sentence.
+2. **The one thing to do today.** One, not a list.
+3. **A decision, if there is one** — the question, and the default you will take if he says nothing.
+4. **Anything broken**, if it is.
+
+If the honest answer is "still no traffic, this is normal, do nothing", say exactly that. A quiet
+morning is a real report.
+
 
 A short message, Hindi, no tables of raw numbers. Three parts: **what improved**, **what is stuck and
 why**, **the one thing to do next**. If there is nothing to do, say that — a quiet week is a real
 answer. Keep a dated copy in `notes/growth-log.md` so the next run has history.
+
+## Workflow B — the daily tool benchmark (free tools only)
+
+The owner wants to know what changed in AI before he reads about it somewhere else, and he will only
+use free tiers. Once a day, at most:
+
+1. Look for genuinely new or changed things in the last 24 hours: a model release, a free tier
+   opening, a connector becoming available, a tool that now does something it could not. Sources:
+   the vendors' own announcement pages and release notes first, news second.
+2. **Reject anything paid**, anything "free trial only", anything that needs a card, and anything that
+   needs a VPS. He works on free tiers by choice, not by accident.
+3. For each survivor, answer three things in one line each: what it does, what it replaces in his
+   current stack, and what it would change about this site or his workflow.
+4. Put it in the brief only if it passes one test: **would this change a decision he makes this week?**
+   If not, it is news, not a benchmark. Do not forward news.
+
+Never recommend a tool the site does not need. A tool list that grows every day is a tool list nobody
+trusts.
+
+## Workflow C — when traffic is low, and it will be
+
+A portfolio gets almost no search traffic, and pretending otherwise leads to bad decisions. If the
+numbers are flat for two weeks, do **not** propose more pages. Propose, in this order:
+
+1. **Depth on an existing library page** — one real worked example with the owner's own numbers: the
+   prompt, the output, what broke, how it was fixed. That is the only content here that can rank,
+   because nobody else could have written it.
+2. **Distribution, not creation** — turn that example into a post for X or Instagram, one idea per
+   post, linking back to the page. The library is the source; social is the distribution; the site is
+   where the trust is stored.
+3. **A new prompt from his own work** — see workflow D. The site is thin on prompts, and every prompt
+   he already uses is a page that does not exist yet.
+4. **A new project page** — only when the project actually exists.
+
+Say plainly that volume is not the game: a portfolio is found by name, not by topic. The library
+pages are the exception, and they are the whole strategy.
+
+## Workflow E — site health, every run
+
+Cheap checks that catch real breakage, in this order:
+
+- Fetch the live home page and one library page. Both must return content, not an error.
+- Confirm the GA tag (`G-QEKFFVFTN0`) and the canonical URL are still in the HTML.
+- Confirm `google5cfa33571dd91f98.html` and the IndexNow key file still exist at the root — deleting
+  either silently breaks verification.
+- Check every internal link on the page you touched; no 404s.
+- Check that `sitemap.xml` lists the current page set; a new page that is not in the sitemap is
+  invisible.
+- Note anything odd in the brief. Do not fix silently what the owner should know about.
+
+## Workflow F — the feedback form (Tally)
+
+The owner has a Tally connector and a free Tally account. Tally builds forms and surveys with no code
+and returns a public link or an embeddable iframe, which works on GitHub Pages because it is just a
+frame — no server needed.
+
+When he asks for it, the useful form is not a contact form. It is one question at the end of a library
+page: **"Was this prompt useful? What did you build with it?"** — three fields at most. Anything longer
+gets no answers. Add it to `prompt-library.html` and `skills.html` only, never to the home page, and
+only after he confirms the Tally form exists and gives the link.
 
 ## Workflow D — "save this prompt to my portfolio"
 
