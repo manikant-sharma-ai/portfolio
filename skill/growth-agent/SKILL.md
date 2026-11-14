@@ -32,10 +32,39 @@ updater skill first.
 | Slack | telling the owner something needs him | preferred channel for questions |
 | Google Drive | reading anything he drops for review | optional |
 
+**IndexNow — already wired, use it after every change.** The repo carries the key file
+`1bc18687cd0f7aae83fbeb3fb2a1e35b.txt` at its root, containing exactly that key. After any push that
+changes a page, tell Bing immediately instead of waiting for a crawl:
+
+```
+POST https://www.bing.com/indexnow
+Content-Type: application/json
+
+{"host":"manikantlab.devs.surf",
+ "key":"1bc18687cd0f7aae83fbeb3fb2a1e35b",
+ "keyLocation":"https://manikantlab.devs.surf/1bc18687cd0f7aae83fbeb3fb2a1e35b.txt",
+ "urlList":["https://manikantlab.devs.surf/", "..."]}
+```
+
+A **202** means accepted. `api.indexnow.org` is not reachable from the sandbox, `www.bing.com` is —
+use that endpoint. Never delete the key file; verification breaks without it. Google has no equivalent
+push API, so Google still waits for its own crawl (the sitemap plus the Search Console property are
+how you nudge it).
+
 **Prerequisite — analytics does not exist yet.** The site carries no GA4 tag. Until the measurement
 ID (`G-XXXXXXXXXX`) is added to every page's `<head>` and GA4 starts recording, this agent has
 Search Console data and nothing else. If he asks for traffic numbers before that, say so plainly
 instead of inventing a chart. Adding the tag is a change for `portfolio-updater`.
+
+The owner's half, which only he can do (it needs his Google login): analytics.google.com → Admin →
+Create → Account → Property (name it `Manikant Lab`, timezone India, currency INR) → choose **Web** as
+the platform → enter `https://manikantlab.devs.surf` → Create stream → copy the **Measurement ID**,
+which looks like `G-XXXXXXXXXX`. Send that ID here. The agent's half: insert the gtag snippet into the
+`<head>` of all fifteen pages, push assets-first, then confirm realtime traffic appears
+(`RUN_REALTIME_REPORT`) once he opens the site himself.
+
+The agent cannot create the property for him: listing GA properties needs an account ID that only
+exists after the account is created in the interface. Do not pretend otherwise.
 
 ## The weekly run, in order
 
