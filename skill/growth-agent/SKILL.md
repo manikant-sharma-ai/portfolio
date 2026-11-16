@@ -184,6 +184,38 @@ page: **"Was this prompt useful? What did you build with it?"** — three fields
 gets no answers. Add it to `prompt-library.html` and `skills.html` only, never to the home page, and
 only after he confirms the Tally form exists and gives the link.
 
+## Workflow G — the three channels that matter for an AI builder
+
+The owner asked for exactly three beyond LinkedIn (which he cannot use at 14): **GitHub, Reddit,
+Hugging Face**. Treat them as three different jobs, not three places to post the same link.
+
+**GitHub — the proof.** It is where a technical reader checks whether the work is real. Keep the
+profile README short and current; keep topics on every repo; pin the three that matter; make sure each
+README says what the thing does, how to run it, and what it does not do. Every repo README should link
+to the portfolio, and the portfolio should link back.
+
+**Reddit — the feedback.** It is where he can ask real practitioners whether something is any good,
+which is worth more than traffic. Rules that are not optional: read each subreddit's sidebar first;
+post only where the content answers a question people actually ask; never post "check out my
+portfolio"; never DM anyone; reply to comments honestly. Subreddits worth knowing: r/LocalLLaMA,
+r/PromptEngineering, r/AI_Agents, r/artificial, r/huggingface. The library pages are the only thing
+worth posting there — an explanation with a worked example, not a link drop.
+
+**Hugging Face — the demos.** This is the channel that fixes the portfolio's biggest weakness: the
+projects are not live, they sit in repositories. A **Space** is free, runs Python, and gives a public
+URL. One small Space — a demo of a tool from the daily-builds repo, or a prompt-tester that runs one
+of the library prompts — turns "here is my code" into "here, use it". A Space also gives the site
+something no portfolio has: a button that actually does something. His HF profile should carry a README
+linking back to `manikantlab.devs.surf`, and the portfolio should link to the profile once he supplies
+the URL.
+
+Career options this opens, in order of realism for a 14-year-old: a Space that people use (evidence of
+skill, no interview needed) → GitHub repos that a stranger can run → Reddit threads where he is known
+for the explanation, not the promotion. None of it requires a job title.
+
+**Never**: post the same link to several subreddits in a day, ask for upvotes, or argue with criticism.
+One bad week of self-promotion on Reddit closes the channel permanently.
+
 ## Workflow D — "save this prompt to my portfolio"
 
 He works in chat with AI all day. When a prompt works, he will say something like: *"you can save
