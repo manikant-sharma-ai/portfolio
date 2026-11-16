@@ -372,3 +372,20 @@ main{position:relative;z-index:1}
   .hero__frames{min-height:52vh}
   .btn:hover,.card:hover,.wcard:hover,.link:hover{transform:none}
 }
+
+/* ---------- employee index (skills page) ---------- */
+.emp-tools{display:flex;gap:14px;align-items:center;flex-wrap:wrap;margin-top:30px}
+.emp-search{flex:1 1 280px;min-width:220px;background:var(--surface);border:1px solid var(--line);
+  border-radius:9px;padding:12px 15px;color:var(--text);font-family:var(--mono);font-size:12px}
+.emp-search::placeholder{color:var(--dim2)}
+.emp-search:focus{outline:none;border-color:var(--cyan)}
+.emp-count{font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--dim)}
+.empgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(248px,1fr));gap:14px;margin-top:22px}
+.empcard{border:1px solid var(--line);border-radius:var(--r);background:var(--surface);padding:18px;
+  display:flex;flex-direction:column;gap:10px;transition:border-color .25s,transform .25s}
+.empcard:hover{border-color:var(--line-hi);transform:translateY(-2px)}
+.empcard[hidden]{display:none}
+.empcard h4{margin:0;font-size:.95rem;font-weight:600;letter-spacing:-.01em}
+.empcard p{margin:0;color:var(--dim);font-size:.79rem;line-height:1.55;flex:1}
+.empcard .btn{align-self:flex-start;margin-top:2px}
+@media(max-width:640px){.empgrid{grid-template-columns:1fr}}
