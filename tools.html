@@ -4,10 +4,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="dark">
-<title>Free AI models — benchmarks, tests, and the ones worth your time — Manikant Lab</title>
-<meta name="description" content="Eighteen open-weight models and seven free APIs, charted from published benchmarks with the source and date on every number — plus the twelve tests I run before I trust one.">
-<meta property="og:title" content="Free AI models — the numbers, and the tests behind them">
-<meta property="og:description" content="Eighteen open-weight models and seven free APIs, charted from published benchmarks with the source and date on every number.">
+<title>Tools — Manikant Lab</title>
+<meta name="description" content="I can build a product with AI — and it actually works. Prompt, context, loop and graph engineering, automation and agent building, by Manikant Sharma.">
+<meta property="og:title" content="Manikant Lab — AI generalist">
+<meta property="og:description" content="I can build a product with AI — and it actually works. Prompt, context, loop and graph engineering, automation and agent building, by Manikant Sharma.">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Manikant Lab">
 <meta property="og:url" content="https://manikantlab.devs.surf/tools.html">
@@ -61,464 +61,79 @@ gtag('config', 'G-QEKFFVFTN0');
     <a class="crumb" href="index.html">&larr; Home</a>
     <span class="num" style="display:block;margin-top:22px">03 &mdash; The tools</span>
     <h1>I test the free tier of everything and keep what <em>earns</em> its place.</h1>
-    <p>Eighteen open-weight models, seven free APIs, and the twelve tests I run before I trust any of
-    them. The charts below are built from published numbers, with the source and the date on every
-    one. The last table is empty on purpose &mdash; that part is my own testing, and I have not run it yet.</p>
-    <div class="stats stats--page">
-      <div><strong>46.5</strong>Best open index</div>
-      <div><strong>18</strong>Open-weight models</div>
-      <div><strong>7</strong>Free APIs, no card</div>
-      <div><strong>12</strong>Tests I run myself</div>
-    </div>
+    <p>The most useful column here is the third one. Almost nobody tells you which tools can reach your repository on their own, and which leave you pasting code by hand.</p>
   </div>
 </section>
-
-<section class="section" id="how-to-read" style="padding-top:0">
+<section class="section" id="tools" style="padding-top:0">
   <div class="container">
-    <div class="prose rv">
-      <h2 style="margin-top:0">Read a number like this, or do not read it at all</h2>
-      <p>Leaderboard numbers move when the harness, the checkpoint or the reasoning effort changes.
-      Kimi K3.1 Pro's Terminal-Bench 2.1 reads 88.3 on Moonshot's card and 85.0 on Meta's. That is the
-      same model, the same benchmark, three points apart. A one-point gap is noise.</p>
-      <div class="callout"><b>So every number here carries its benchmark version and who measured it,</b>
-      and no chart blends two harnesses to make a nicer shape. Where a maker only published some of
-      the numbers, the cell says so rather than filling the gap with a guess.</div>
-      <p>Two things no leaderboard shows: whether a model answers the same way twice, and whether it
-      will invent an answer rather than admit it does not know. Those are tests 3 and 10 below, and
-      the only way to get them is to run the model on your own work.</p>
-    </div>
-  </div>
-</section>
-
-<section class="section" id="benchmarks" style="padding-top:0">
-  <div class="container">
-    <div class="section__head rv">
-      <span class="eyebrow">Benchmarks</span>
-      <h2>Four charts, four questions.</h2>
-      <p>Who is smartest. What smart costs. How fast it talks. How much it actually knows. Each chart
-      is one source at one version, so the bars inside it are comparable and the bars between charts
-      are not.</p>
-    </div>
-
-    <figure class="figure rv">
-      <figcaption><span>01</span> Who is smartest &mdash; Artificial Analysis Intelligence Index v5.0.1, open weights</figcaption>
-      <div class="chartwrap"><svg class="chart" viewBox="0 0 760 462" role="img" aria-label="Artificial Analysis Intelligence Index for 14 open-weight models, Kimi K3.1 Pro highest at 46.5"><defs><linearGradient id="cg1" x1="0" x2="1"><stop offset="0" stop-color="#0ea5e9"/><stop offset="1" stop-color="#2a7fdc"/></linearGradient></defs><line class="cg" x1="228.0" y1="10" x2="228.0" y2="440.0"/><text class="cax" x="228.0" y="454" text-anchor="middle">0</text><line class="cg" x1="345.5" y1="10" x2="345.5" y2="440.0"/><text class="cax" x="345.5" y="454" text-anchor="middle">12.5</text><line class="cg" x1="463.0" y1="10" x2="463.0" y2="440.0"/><text class="cax" x="463.0" y="454" text-anchor="middle">25</text><line class="cg" x1="580.5" y1="10" x2="580.5" y2="440.0"/><text class="cax" x="580.5" y="454" text-anchor="middle">37.5</text><line class="cg" x1="698.0" y1="10" x2="698.0" y2="440.0"/><text class="cax" x="698.0" y="454" text-anchor="middle">50</text><text class="cl" x="0" y="28.5">Kimi K3.1 Pro</text><rect class="cb hi" x="228" y="16" width="437.1" height="17" rx="3" fill="url(#cg1)"/><text class="cv" x="672.1" y="28.5">46.5</text><text class="cl" x="0" y="58.5">DeepSeek V4.1 Flash</text><rect class="cb" x="228" y="46" width="306.4" height="17" rx="3" fill="url(#cg1)"/><text class="cv" x="541.4" y="58.5">32.6</text><text class="cl" x="0" y="88.5">GLM-5.3</text><rect class="cb" x="228" y="76" width="298.0" height="17" rx="3" fill="url(#cg1)"/><text class="cv" x="533.0" y="88.5">31.7</text><text class="cl" x="0" y="118.5">MiMo-V2.6-Pro</text><rect class="cb" x="228" y="106" width="281.1" height="17" rx="3" fill="url(#cg1)"/><text class="cv" x="516.1" y="118.5">29.9</text><text class="cl" x="0" y="148.5">Ling 3.1 Flash</text><rect class="cb" x="228" y="136" width="278.2" height="17" rx="3" fill="url(#cg1)"/><text class="cv" x="513.2" y="148.5">29.6</text><text class="cl" x="0" y="178.5">MiniMax M3.1 Flash</text><rect class="cb" x="228" y="166" width="273.5" height="17" rx="3" fill="url(#cg1)"/><text class="cv" x="508.5" y="178.5">29.1</text><text class="cl" x="0" y="208.5">Step 5 Preview</text><rect class="cb" x="228" y="196" width="267.9" height="17" rx="3" fill="url(#cg1)"/><text class="cv" x="502.9" y="208.5">28.5</text><text class="cl" x="0" y="238.5">GLM-5.3 Flash</text><rect class="cb" x="228" y="226" width="261.3" height="17" rx="3" fill="url(#cg1)"/><text class="cv" x="496.3" y="238.5">27.8</text><text class="cl" x="0" y="268.5">MiMo-V2.6 Flash</text><rect class="cb" x="228" y="256" width="251.0" height="17" rx="3" fill="url(#cg1)"/><text class="cv" x="486.0" y="268.5">26.7</text><text class="cl" x="0" y="298.5">Mistral Large 4</text><rect class="cb" x="228" y="286" width="245.3" height="17" rx="3" fill="url(#cg1)"/><text class="cv" x="480.3" y="298.5">26.1</text><text class="cl" x="0" y="328.5">Muse Spark Open</text><rect class="cb" x="228" y="316" width="234.1" height="17" rx="3" fill="url(#cg1)"/><text class="cv" x="469.1" y="328.5">24.9</text><text class="cl" x="0" y="358.5">DeepSeek V4 Pro</text><rect class="cb" x="228" y="346" width="217.1" height="17" rx="3" fill="url(#cg1)"/><text class="cv" x="452.1" y="358.5">23.1</text><text class="cl" x="0" y="388.5">Nanbeige4.3-33B</text><rect class="cb" x="228" y="376" width="191.8" height="17" rx="3" fill="url(#cg1)"/><text class="cv" x="426.8" y="388.5">20.4</text><text class="cl" x="0" y="418.5">Qwen3.8 27B</text><rect class="cb" x="228" y="406" width="188.9" height="17" rx="3" fill="url(#cg1)"/><text class="cv" x="423.9" y="418.5">20.1</text></svg></div>
-      <p class="fignote">Nine evaluations run by Artificial Analysis itself, not vendor numbers:
-      AA-Briefcase, AutomationBench, Terminal-Bench 4.0, FrontierCode 2.0, AA-Omniscience,
-      GDP.pdf, HLE-Diamond, CritPt v2 and Terminal-Bench-Science. Read 7 November 2026. Kimi K3.1 Pro
-      is 13.9 points clear of the next open model &mdash; and 13.6 points behind the best closed one.</p>
-    </figure>
-
-    <figure class="figure rv">
-      <figcaption><span>02</span> What smart costs &mdash; dollars to complete that index once</figcaption>
-      <div class="chartwrap"><svg class="chart" viewBox="0 0 760 432" role="img" aria-label="Cost in dollars to run the intelligence index once, Kimi K3.1 Pro 3.68 dollars, MiMo-V2.6 Flash 13 cents"><defs><linearGradient id="cg2" x1="0" x2="1"><stop offset="0" stop-color="#0ea5e9"/><stop offset="1" stop-color="#2a7fdc"/></linearGradient></defs><line class="cg" x1="228.0" y1="10" x2="228.0" y2="410.0"/><text class="cax" x="228.0" y="424" text-anchor="middle">0</text><line class="cg" x1="345.5" y1="10" x2="345.5" y2="410.0"/><text class="cax" x="345.5" y="424" text-anchor="middle">1.3</text><line class="cg" x1="463.0" y1="10" x2="463.0" y2="410.0"/><text class="cax" x="463.0" y="424" text-anchor="middle">2.6</text><line class="cg" x1="580.5" y1="10" x2="580.5" y2="410.0"/><text class="cax" x="580.5" y="424" text-anchor="middle">3.9</text><line class="cg" x1="698.0" y1="10" x2="698.0" y2="410.0"/><text class="cax" x="698.0" y="424" text-anchor="middle">5.2</text><text class="cl" x="0" y="28.5">Kimi K3.1 Pro</text><rect class="cb hi" x="228" y="16" width="332.6" height="17" rx="3" fill="url(#cg2)"/><text class="cv" x="567.6" y="28.5">$3.68</text><text class="cl" x="0" y="58.5">DeepSeek V4.1 Flash</text><rect class="cb" x="228" y="46" width="54.2" height="17" rx="3" fill="url(#cg2)"/><text class="cv" x="289.2" y="58.5">$0.60</text><text class="cl" x="0" y="88.5">GLM-5.3</text><rect class="cb" x="228" y="76" width="452.8" height="17" rx="3" fill="url(#cg2)"/><text class="cv" x="687.8" y="88.5">$5.01</text><text class="cl" x="0" y="118.5">MiMo-V2.6-Pro</text><rect class="cb" x="228" y="106" width="23.5" height="17" rx="3" fill="url(#cg2)"/><text class="cv" x="258.5" y="118.5">$0.26</text><text class="cl" x="0" y="148.5">Ling 3.1 Flash</text><rect class="cb" x="228" y="136" width="288.3" height="17" rx="3" fill="url(#cg2)"/><text class="cv" x="523.3" y="148.5">$3.19</text><text class="cl" x="0" y="178.5">MiniMax M3.1 Flash</text><rect class="cb" x="228" y="166" width="44.3" height="17" rx="3" fill="url(#cg2)"/><text class="cv" x="279.3" y="178.5">$0.49</text><text class="cl" x="0" y="208.5">Step 5 Preview</text><rect class="cb" x="228" y="196" width="212.4" height="17" rx="3" fill="url(#cg2)"/><text class="cv" x="447.4" y="208.5">$2.35</text><text class="cl" x="0" y="238.5">GLM-5.3 Flash</text><rect class="cb" x="228" y="226" width="52.4" height="17" rx="3" fill="url(#cg2)"/><text class="cv" x="287.4" y="238.5">$0.58</text><text class="cl" x="0" y="268.5">MiMo-V2.6 Flash</text><rect class="cb" x="228" y="256" width="11.8" height="17" rx="3" fill="url(#cg2)"/><text class="cv" x="246.8" y="268.5">$0.13</text><text class="cl" x="0" y="298.5">Mistral Large 4</text><rect class="cb" x="228" y="286" width="186.2" height="17" rx="3" fill="url(#cg2)"/><text class="cv" x="421.2" y="298.5">$2.06</text><text class="cl" x="0" y="328.5">Muse Spark Open</text><rect class="cb" x="228" y="316" width="182.6" height="17" rx="3" fill="url(#cg2)"/><text class="cv" x="417.6" y="328.5">$2.02</text><text class="cl" x="0" y="358.5">DeepSeek V4 Pro</text><rect class="cb" x="228" y="346" width="160.0" height="17" rx="3" fill="url(#cg2)"/><text class="cv" x="395.0" y="358.5">$1.77</text><text class="cl" x="0" y="388.5">Qwen3.8 27B</text><rect class="cb" x="228" y="376" width="319.1" height="17" rx="3" fill="url(#cg2)"/><text class="cv" x="554.1" y="388.5">$3.53</text></svg></div>
-      <p class="fignote">Same source, same run, same order as the chart above, so you can read straight
-      across. Kimi K3.1 Pro costs $3.68 for a 46.5. DeepSeek V4.1 Flash costs $0.60 for 32.6 &mdash; 70%
-      of the score for 16% of the money. MiMo-V2.6 Flash is 13 cents. Cost per task is not the same as
-      the sticker price per token, because a chatty model spends more of them.</p>
-    </figure>
-
-    <figure class="figure rv">
-      <figcaption><span>03</span> How fast it talks &mdash; output tokens per second, hosted</figcaption>
-      <div class="chartwrap"><svg class="chart" viewBox="0 0 760 342" role="img" aria-label="Output tokens per second on hosted APIs, Nemotron 3.5 Super VL fastest at 424"><defs><linearGradient id="cg3" x1="0" x2="1"><stop offset="0" stop-color="#0ea5e9"/><stop offset="1" stop-color="#2a7fdc"/></linearGradient></defs><line class="cg" x1="228.0" y1="10" x2="228.0" y2="320.0"/><text class="cax" x="228.0" y="334" text-anchor="middle">0</text><line class="cg" x1="345.5" y1="10" x2="345.5" y2="320.0"/><text class="cax" x="345.5" y="334" text-anchor="middle">112.5</text><line class="cg" x1="463.0" y1="10" x2="463.0" y2="320.0"/><text class="cax" x="463.0" y="334" text-anchor="middle">225</text><line class="cg" x1="580.5" y1="10" x2="580.5" y2="320.0"/><text class="cax" x="580.5" y="334" text-anchor="middle">337.5</text><line class="cg" x1="698.0" y1="10" x2="698.0" y2="320.0"/><text class="cax" x="698.0" y="334" text-anchor="middle">450</text><text class="cl" x="0" y="28.5">Nemotron 3.5 Super VL</text><rect class="cb hi" x="228" y="16" width="442.8" height="17" rx="3" fill="url(#cg3)"/><text class="cv" x="677.8" y="28.5">424</text><text class="cl" x="0" y="58.5">Nemotron 3.5 Lightning</text><rect class="cb" x="228" y="46" width="282.0" height="17" rx="3" fill="url(#cg3)"/><text class="cv" x="517.0" y="58.5">270</text><text class="cl" x="0" y="88.5">DeepSeek V4.1 Flash</text><rect class="cb" x="228" y="76" width="181.7" height="17" rx="3" fill="url(#cg3)"/><text class="cv" x="416.7" y="88.5">174</text><text class="cl" x="0" y="118.5">Nemotron 3 Ultra</text><rect class="cb" x="228" y="106" width="168.2" height="17" rx="3" fill="url(#cg3)"/><text class="cv" x="403.2" y="118.5">161</text><text class="cl" x="0" y="148.5">GLM-5.3</text><rect class="cb" x="228" y="136" width="91.9" height="17" rx="3" fill="url(#cg3)"/><text class="cv" x="326.9" y="148.5">88</text><text class="cl" x="0" y="178.5">DeepSeek V4 Pro</text><rect class="cb" x="228" y="166" width="76.2" height="17" rx="3" fill="url(#cg3)"/><text class="cv" x="311.2" y="178.5">73</text><text class="cl" x="0" y="208.5">GLM-5.3 Flash</text><rect class="cb" x="228" y="196" width="66.8" height="17" rx="3" fill="url(#cg3)"/><text class="cv" x="301.8" y="208.5">64</text><text class="cl" x="0" y="238.5">MiMo-V2.6-Pro</text><rect class="cb" x="228" y="226" width="55.4" height="17" rx="3" fill="url(#cg3)"/><text class="cv" x="290.4" y="238.5">53</text><text class="cl" x="0" y="268.5">Qwen3.8 27B</text><rect class="cb" x="228" y="256" width="39.7" height="17" rx="3" fill="url(#cg3)"/><text class="cv" x="274.7" y="268.5">38</text><text class="cl" x="0" y="298.5">Kimi K3.1 Pro</text><rect class="cb" x="228" y="286" width="31.3" height="17" rx="3" fill="url(#cg3)"/><text class="cv" x="266.3" y="298.5">30</text></svg></div>
-      <p class="fignote">Speed on the hosted API, not on your own hardware. Kimi K3.1 Pro is the
-      smartest open model and the slowest thing in this chart; the free Nemotron models are five to
-      fourteen times faster and a long way behind on the index. If a model takes 40 minutes per index
-      task, that is a working day gone before you have an answer.</p>
-    </figure>
-
-    <figure class="figure rv">
-      <figcaption><span>04</span> How much it knows &mdash; GPQA Diamond</figcaption>
-      <div class="chartwrap"><svg class="chart" viewBox="0 0 760 372" role="img" aria-label="GPQA Diamond scores, Kimi K3.1 Pro 94.2 down to gpt-oss-20b 71.5"><defs><linearGradient id="cg4" x1="0" x2="1"><stop offset="0" stop-color="#0ea5e9"/><stop offset="1" stop-color="#2a7fdc"/></linearGradient></defs><line class="cg" x1="228.0" y1="10" x2="228.0" y2="350.0"/><text class="cax" x="228.0" y="364" text-anchor="middle">0</text><line class="cg" x1="345.5" y1="10" x2="345.5" y2="350.0"/><text class="cax" x="345.5" y="364" text-anchor="middle">25</text><line class="cg" x1="463.0" y1="10" x2="463.0" y2="350.0"/><text class="cax" x="463.0" y="364" text-anchor="middle">50</text><line class="cg" x1="580.5" y1="10" x2="580.5" y2="350.0"/><text class="cax" x="580.5" y="364" text-anchor="middle">75</text><line class="cg" x1="698.0" y1="10" x2="698.0" y2="350.0"/><text class="cax" x="698.0" y="364" text-anchor="middle">100</text><text class="cl" x="0" y="28.5">Kimi K3.1 Pro</text><rect class="cb hi" x="228" y="16" width="442.7" height="17" rx="3" fill="url(#cg4)"/><text class="cv" x="677.7" y="28.5">94.2</text><text class="cl" x="0" y="58.5">Qwen3.8 Max</text><rect class="cb" x="228" y="46" width="435.2" height="17" rx="3" fill="url(#cg4)"/><text class="cv" x="670.2" y="58.5">92.6</text><text class="cl" x="0" y="88.5">DeepSeek V4.1 Flash</text><rect class="cb" x="228" y="76" width="433.3" height="17" rx="3" fill="url(#cg4)"/><text class="cv" x="668.3" y="88.5">92.2</text><text class="cl" x="0" y="118.5">GLM-5.3</text><rect class="cb" x="228" y="106" width="431.0" height="17" rx="3" fill="url(#cg4)"/><text class="cv" x="666.0" y="118.5">91.7</text><text class="cl" x="0" y="148.5">Qwen3.8-Flash-Next</text><rect class="cb" x="228" y="136" width="431.0" height="17" rx="3" fill="url(#cg4)"/><text class="cv" x="666.0" y="148.5">91.7</text><text class="cl" x="0" y="178.5">DeepSeek V4-Flash</text><rect class="cb" x="228" y="166" width="422.5" height="17" rx="3" fill="url(#cg4)"/><text class="cv" x="657.5" y="178.5">89.9</text><text class="cl" x="0" y="208.5">Qwen3.8-27B</text><rect class="cb" x="228" y="196" width="419.2" height="17" rx="3" fill="url(#cg4)"/><text class="cv" x="654.2" y="208.5">89.2</text><text class="cl" x="0" y="238.5">Muse Spark Open</text><rect class="cb" x="228" y="226" width="418.3" height="17" rx="3" fill="url(#cg4)"/><text class="cv" x="653.3" y="238.5">89.0</text><text class="cl" x="0" y="268.5">GLM-5.3 Flash</text><rect class="cb" x="228" y="256" width="406.1" height="17" rx="3" fill="url(#cg4)"/><text class="cv" x="641.1" y="268.5">86.4</text><text class="cl" x="0" y="298.5">gpt-oss-120b</text><rect class="cb" x="228" y="286" width="376.5" height="17" rx="3" fill="url(#cg4)"/><text class="cv" x="611.5" y="298.5">80.1</text><text class="cl" x="0" y="328.5">gpt-oss-20b</text><rect class="cb" x="228" y="316" width="336.1" height="17" rx="3" fill="url(#cg4)"/><text class="cv" x="571.0" y="328.5">71.5</text></svg></div>
-      <p class="fignote">Graduate-level science questions. Every number is from the maker's own card,
-      which means different harnesses and different reasoning budgets &mdash; read this as a range, not
-      a ranking. Seven of these models sit between 86 and 94, and that spread is smaller than the
-      difference a harness can make. What the chart does say honestly: the laptop-sized gpt-oss-20b at
-      71.5 is not in the same league, and the 27B Qwen at 89.2 is.</p>
-    </figure>
-
-    <div class="callout callout--wide rv"><b>What none of these charts can tell you.</b> Whether it
-    answers the same way twice. Whether it says &ldquo;I don't know&rdquo; when it doesn't. Whether it
-    keeps its Hindi when the question is in Hinglish. Whether it loses the thread four steps into a
-    tool loop. Those are the four things that decide whether a model survives a working week, and they
-    are all measured by hand, on your own repository. That is the table below.</div>
-  </div>
-</section>
-
-<section class="section" id="open-weights" style="padding-top:0">
-  <div class="container">
-    <div class="section__head rv">
-      <span class="eyebrow">Open weights</span>
-      <h2>Eighteen models whose weights you can download.</h2>
-      <p>Open means the weights are there. It does not mean the licence lets you ship. Six of the top
-      ten are MIT or Apache; the rest are the maker's own licence, and you read that one before
-      commercial use. Prices are per million input and output tokens on the cheapest hosted API.</p>
-    </div>
-    <div class="tablewrap tablewrap--wide rv">
-      <table class="models">
+    <div class="tablewrap rv">
+      <table>
         <thead>
-          <tr><th>Model</th><th>Size &middot; context</th><th>Licence</th><th>Where it runs</th><th>Best for</th><th>Published benchmark</th></tr>
+          <tr><th>Tool</th><th>What I use it for</th><th>Reaches my repo?</th><th>When it can't</th></tr>
         </thead>
         <tbody>
           <tr>
-            <td><a href="https://huggingface.co/moonshotai/Kimi-K3.1-Pro" rel="noopener">Kimi K3.1 Pro</a><span class="sub">Moonshot AI</span></td>
-            <td class="mono-cell">2.8T / 104B active<span class="sub">context 1M</span></td>
-            <td>Kimi K3.1-Pro licence</td>
-            <td>1.56 TB of weights &mdash; practical only through an API</td>
-            <td>The hardest reasoning, long agent runs, refactoring a big repo, research</td>
-            <td class="bench-cell">AA Index 46.5, best open model (7 Nov 2026); GPQA Diamond 94.2; HLE 52.5; DeepSWE v1.1 75.5; Terminal-Bench 4.0 65.7</td>
+            <td>ChatGPT</td>
+            <td>Where I start when the job is a conversation. Plain chat, no token ceiling to worry
+            about, good for thinking a job through.</td>
+            <td class="yes">Yes</td>
+            <td>&mdash;</td>
           </tr>
           <tr>
-            <td><a href="https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash" rel="noopener">DeepSeek V4.1 Flash</a><span class="sub">DeepSeek</span></td>
-            <td class="mono-cell">552B backbone / 16B active<span class="sub">context 1M</span></td>
-            <td>MIT</td>
-            <td>Server class, ~763B total</td>
-            <td>Agentic coding inside a repo, cheap high volume, text plus image</td>
-            <td class="bench-cell">GPQA 90.9; Terminal-Bench 2.1 90.6 (DSH Minimal); DeepSWE v1.1 74.2; Codeforces 3471</td>
+            <td>Claude (Anthropic)</td>
+            <td>My coding pick. Strongest of the set for code, holds more context, writes content and
+            scripts well too.</td>
+            <td class="yes">Yes</td>
+            <td>&mdash;</td>
           </tr>
           <tr>
-            <td><a href="https://huggingface.co/Qwen/Qwen3.8-2.4T-A95B" rel="noopener">Qwen3.8 Max</a><span class="sub">Alibaba Qwen</span></td>
-            <td class="mono-cell">2.4T / 95B active<span class="sub">context 1M</span></td>
-            <td>Qwen3.8-Max licence</td>
-            <td>Server class</td>
-            <td>Maths and exam-style reasoning, multilingual work</td>
-            <td class="bench-cell">GPQA 92.6; AIME 2025 99.4; SWE-bench Verified 85.6; LiveCodeBench 87.8; MMLU-Pro 88.6; LMArena 1484</td>
+            <td>Gemini</td>
+            <td>My learning pick. Explains things well, plugs into YouTube, fits the Google ecosystem.</td>
+            <td class="yes">Yes</td>
+            <td>&mdash;</td>
           </tr>
           <tr>
-            <td><a href="https://huggingface.co/zai-org/GLM-5.3" rel="noopener">GLM-5.3</a><span class="sub">Z.ai</span></td>
-            <td class="mono-cell">753B / 40B active<span class="sub">context 1M</span></td>
-            <td>GLM-5.3 licence</td>
-            <td>Server class</td>
-            <td>Long-horizon coding, tool use, agent loops</td>
-            <td class="bench-cell">Terminal-Bench 2.1 88.2; Terminal-Bench 3.0 28.3 (open SOTA); DeepSWE 66.9; Toolathlon 73.0; CyberGym 84.5</td>
+            <td>Grok</td>
+            <td>Fastest expert opinion, and it reads X for me so I never scroll post by post.
+            Grok 4.7 Fast for quick answers, Grok 4.7 in Grok Build to build.</td>
+            <td class="yes">Yes</td>
+            <td>&mdash;</td>
           </tr>
           <tr>
-            <td><a href="https://huggingface.co/zai-org/GLM-5.3-Flash" rel="noopener">GLM-5.3 Flash</a><span class="sub">Z.ai</span></td>
-            <td class="mono-cell">321B / 18B active<span class="sub">context 1M</span></td>
-            <td>MIT</td>
-            <td>Server class, the cheapest of the serious ones</td>
-            <td>Everyday work, a cheap near-frontier daily driver</td>
-            <td class="bench-cell">GPQA 86.4; ahead of GLM-5.2 on every benchmark at about a tenth of the price; multimodal</td>
+            <td>Kimi K3</td>
+            <td>Codes well and holds a huge context window.</td>
+            <td class="yes">Yes</td>
+            <td>&mdash;</td>
           </tr>
           <tr>
-            <td><a href="https://huggingface.co/models?search=Muse%20Spark%20Open" rel="noopener">Muse Spark Open</a><span class="sub">Meta</span></td>
-            <td class="mono-cell">816B / 42B active<span class="sub">context &mdash;</span></td>
-            <td>Check the model card</td>
-            <td>Server class</td>
-            <td>Safety and refusal behaviour, anywhere a wrong answer is expensive</td>
-            <td class="bench-cell">GPQA 89.0; Terminal-Bench 2.1 76.4 (Terminus 2); StrongREJECT v2 0.5 &mdash; lower is better</td>
+            <td>DeepSeek</td>
+            <td>A genuinely strong free model for reasoning and code.</td>
+            <td class="no">No</td>
+            <td>Copy-paste into Claude or Grok</td>
           </tr>
           <tr>
-            <td><a href="https://huggingface.co/models?search=Mistral%20Large%204" rel="noopener">Mistral Large 4</a><span class="sub">Mistral AI</span></td>
-            <td class="mono-cell">&mdash;<span class="sub">context &mdash;</span></td>
-            <td>Check the card</td>
-            <td>Server class</td>
-            <td>Cost efficiency &mdash; getting a job done in fewer tokens</td>
-            <td class="bench-cell">AA Index 26.1; DeepSWE ~62; AA Coding Agent Index 48% on 47% fewer tokens per task (Mistral's claim)</td>
+            <td>MiniMax</td>
+            <td>The all-rounder: front end and back end both, holds up on real builds.</td>
+            <td class="no">No</td>
+            <td>Copy-paste into Claude or Grok</td>
           </tr>
           <tr>
-            <td><a href="https://huggingface.co/models?search=Hy4" rel="noopener">Tencent Hy4</a><span class="sub">Tencent</span></td>
-            <td class="mono-cell">&mdash;<span class="sub">context 1M</span></td>
-            <td>Check the card</td>
-            <td>Server class</td>
-            <td>Cheap long context</td>
-            <td class="bench-cell">AA Index 34.6 as printed on the LMSA board (second open model) &mdash; a different index from the one charted above, so do not read the two together</td>
+            <td>Perplexity (Pro)</td>
+            <td>Deep research when I actually need it, paired with Apify for social media scraping.</td>
+            <td class="no">No</td>
+            <td>Hand the findings to Claude</td>
           </tr>
           <tr>
-            <td><a href="https://huggingface.co/models?search=MiMo-V2.6" rel="noopener">MiMo-V2.6-Pro</a><span class="sub">Xiaomi</span></td>
-            <td class="mono-cell">1.02T / 42B active<span class="sub">context 1M</span></td>
-            <td>MIT</td>
-            <td>Server class</td>
-            <td>New and lightly tested &mdash; one to experiment with</td>
-            <td class="bench-cell">AA Index 29.9; $0.26 per index task, the best score-per-dollar in the top five</td>
-          </tr>
-          <tr>
-            <td><a href="https://huggingface.co/models?search=MiniMax%20M3.1" rel="noopener">MiniMax M3.1 Flash</a><span class="sub">MiniMax</span></td>
-            <td class="mono-cell">428B / 23B active<span class="sub">context 1M</span></td>
-            <td>MiniMax community licence</td>
-            <td>Server class</td>
-            <td>Bulk, high-volume cheap work</td>
-            <td class="bench-cell">AA Index 29.1; Code Arena 1584</td>
-          </tr>
-          <tr>
-            <td><a href="https://huggingface.co/openai/gpt-oss-120b" rel="noopener">gpt-oss-120b</a><span class="sub">OpenAI</span></td>
-            <td class="mono-cell">117B / 5.1B active<span class="sub">context 128K</span></td>
-            <td>Apache 2.0</td>
-            <td>One 80 GB GPU</td>
-            <td>Local agentic coding on your own machine</td>
-            <td class="bench-cell">GPQA 80.1 without tools; SWE-bench Verified 62.4; AIME 2025 97.9 with tools; MMLU 90.0 (arXiv 2508.10925)</td>
-          </tr>
-          <tr>
-            <td><a href="https://huggingface.co/openai/gpt-oss-20b" rel="noopener">gpt-oss-20b</a><span class="sub">OpenAI</span></td>
-            <td class="mono-cell">21B / 3.6B active<span class="sub">context 128K</span></td>
-            <td>Apache 2.0</td>
-            <td>A 16 GB laptop</td>
-            <td>An assistant that runs on a laptop, offline</td>
-            <td class="bench-cell">GPQA 71.5; SWE-bench Verified 60.7; AIME 2025 98.7 with tools; MMLU 85.3</td>
-          </tr>
-          <tr>
-            <td><a href="https://huggingface.co/models?search=gemma-4-31B-it" rel="noopener">gemma-4-31B-it</a><span class="sub">Google DeepMind</span></td>
-            <td class="mono-cell">31B<span class="sub">context 256K</span></td>
-            <td>Apache 2.0</td>
-            <td>A high-memory Mac</td>
-            <td>The best small all-rounder; image and video input</td>
-            <td class="bench-cell">OpenWeightsBench 99.3 overall, 94.7 on hard questions &mdash; 270 items, code-checked, 16 Nov 2026</td>
-          </tr>
-          <tr>
-            <td><a href="https://huggingface.co/Qwen/Qwen3.8-27B" rel="noopener">Qwen3.8-27B</a><span class="sub">Alibaba Qwen</span></td>
-            <td class="mono-cell">28B<span class="sub">context &mdash;</span></td>
-            <td>Apache 2.0</td>
-            <td>32 GB Mac, or one GPU at 4-bit</td>
-            <td>A local coding assistant that runs all day</td>
-            <td class="bench-cell">GPQA 89.2; SWE-bench Pro 61.7; LiveCodeBench v6 90.3; AA Index 20.1</td>
-          </tr>
-          <tr>
-            <td><a href="https://huggingface.co/Qwen/Qwen3.8-Flash-Next" rel="noopener">Qwen3.8-Flash-Next</a><span class="sub">Alibaba Qwen</span></td>
-            <td class="mono-cell">180B<span class="sub">context &mdash;</span></td>
-            <td>Qwen licence</td>
-            <td>Server class</td>
-            <td>Tool calling and function use, agent workflows</td>
-            <td class="bench-cell">GPQA 91.7; SWE-bench Pro 62.5; DeepSWE 58.7; LiveCodeBench v6 91.9; Toolathlon 73.5</td>
-          </tr>
-          <tr>
-            <td><a href="https://huggingface.co/models?search=Nanbeige4.3-33B" rel="noopener">Nanbeige4.3-33B</a><span class="sub">Nanbeige</span></td>
-            <td class="mono-cell">33B<span class="sub">context &mdash;</span></td>
-            <td>Apache 2.0</td>
-            <td>A 128 GB machine at 4-bit</td>
-            <td>Local work when the GPU is small</td>
-            <td class="bench-cell">AA Index 20.4 &mdash; level with Qwen3.8-27B at 33B</td>
-          </tr>
-          <tr>
-            <td><a href="https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash" rel="noopener">DeepSeek V4-Flash</a><span class="sub">DeepSeek</span></td>
-            <td class="mono-cell">284B / 13B active<span class="sub">context 128K</span></td>
-            <td>MIT</td>
-            <td>Server class</td>
-            <td>The older cheap DeepSeek, for a side-by-side with V4.1</td>
-            <td class="bench-cell">GPQA 89.9; Terminal-Bench 2.1 82.7; DeepSWE 54.4</td>
-          </tr>
-          <tr>
-            <td><a href="https://huggingface.co/models?search=Devstral-2-123B" rel="noopener">Devstral-2-123B</a><span class="sub">Mistral AI</span></td>
-            <td class="mono-cell">123B<span class="sub">context &mdash;</span></td>
-            <td>Modified MIT</td>
-            <td>~65 GB of memory</td>
-            <td>A local coding agent over your own codebase</td>
-            <td class="bench-cell">Coding-focused; the card carries its own set of numbers</td>
+            <td>Metricool</td>
+            <td>My social media manager. Scheduling and reporting for X, driven by a prompt.</td>
+            <td class="yes">Yes</td>
+            <td>&mdash;</td>
           </tr>
         </tbody>
       </table>
     </div>
-    <p class="note">Prices in the model column are per million tokens, input / output. Where a maker
-    published only some numbers, the benchmark cell says what was published and nothing else.</p>
-  </div>
-</section>
-
-<section class="section" id="free-api" style="padding-top:0">
-  <div class="container">
-    <div class="section__head rv">
-      <span class="eyebrow">Free API</span>
-      <h2>Seven models you can call today with no card and no GPU.</h2>
-      <p>OpenRouter's free tier, November 2026. These are for trying a model before you decide
-      anything &mdash; the rate limits are the price you pay instead of money.</p>
-    </div>
-    <div class="tablewrap tablewrap--wide rv">
-      <table class="models">
-        <thead>
-          <tr><th>Model</th><th>Size &middot; context</th><th>What it is good at</th><th>Tests</th><th>The limit to know</th></tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Nemotron 3 Ultra<span class="sub">NVIDIA</span></td>
-            <td class="mono-cell">550B / 55B active<span class="sub">context 1M</span></td>
-            <td>Prototyping, a free taste of a big reasoning model</td>
-            <td class="mono-cell">#3, 6</td>
-            <td>The <code>:free</code> suffix is part of the id. 20 requests a minute, 50 a day; put $10 of credit on the account once and it becomes 1,000 a day.</td>
-          </tr>
-          <tr>
-            <td>Nemotron 3.5 Super VL<span class="sub">NVIDIA</span></td>
-            <td class="mono-cell">120B / 12B active<span class="sub">context 1M</span></td>
-            <td>Reading screenshots, pulling data out of documents</td>
-            <td class="mono-cell">#8, 9</td>
-            <td>Text, image, document, GUI screenshot and video in. Rate-limited on the free variant.</td>
-          </tr>
-          <tr>
-            <td>ERNIE-5.5-Flash-Preview<span class="sub">Baidu</span></td>
-            <td class="mono-cell">&mdash;<span class="sub">context &mdash;</span></td>
-            <td>General work, multilingual</td>
-            <td class="mono-cell">#3, 9</td>
-            <td>A preview &mdash; it can disappear without notice.</td>
-          </tr>
-          <tr>
-            <td>Dots3-Note Preview<span class="sub">Dots Studio</span></td>
-            <td class="mono-cell">280B / 16B active<span class="sub">context 512K</span></td>
-            <td>Understanding notes and long documents</td>
-            <td class="mono-cell">#3, 10</td>
-            <td>Free only until 31 December 2026.</td>
-          </tr>
-          <tr>
-            <td>Gemma 4 26B A4B / 31B<span class="sub">Google</span></td>
-            <td class="mono-cell">26B / 31B<span class="sub">context 256K</span></td>
-            <td>Everyday small jobs, vision</td>
-            <td class="mono-cell">#9, 3</td>
-            <td>Image and video input, small and fast. Rate-limited on the free variant.</td>
-          </tr>
-          <tr>
-            <td>Nemotron 3.5 Lightning<span class="sub">NVIDIA</span></td>
-            <td class="mono-cell">30B / 3B active<span class="sub">context 1M</span></td>
-            <td>Bulk work where speed matters more than accuracy</td>
-            <td class="mono-cell">#6, 12</td>
-            <td>Very fast, very light, and less accurate &mdash; cheap bulk only.</td>
-          </tr>
-          <tr>
-            <td>openrouter/free<span class="sub">OpenRouter</span></td>
-            <td class="mono-cell">&mdash;<span class="sub">context &mdash;</span></td>
-            <td>When you cannot be bothered to pick a model</td>
-            <td class="mono-cell">#&mdash;</td>
-            <td>Put this in the model field and it picks any free model. The trap: if the account balance is negative, even free models return a 402.</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
-</section>
-
-<section class="section" id="tests" style="padding-top:0">
-  <div class="container">
-    <div class="section__head rv">
-      <span class="eyebrow">The battery</span>
-      <h2>Twelve tests, the same order every time.</h2>
-      <p>This is the benchmark that counts, because it is the only one measured on your work. Run them
-      in this order &mdash; a model that fails the fit test never gets to the interesting ones.</p>
-    </div>
-    <div class="gates rv">
-      <div class="gate">
-        <div class="gate__n">01</div>
-        <div><h3>Fit</h3><p>Weight size in GB, quantisation, KV cache per token. Try it on the machine you actually want to run it on.</p><p class="rec"><span>Record</span> GB, quant, time to first token, tok/s</p></div>
-      </div>
-      <div class="gate">
-        <div class="gate__n">02</div>
-        <div><h3>Licence</h3><p>Read the LICENSE file on the model card. MIT and Apache ship. The maker's own licence gets read first.</p><p class="rec"><span>Record</span> Licence name and whether commercial use is allowed</p></div>
-      </div>
-      <div class="gate">
-        <div class="gate__n">03</div>
-        <div><h3>Repeatability</h3><p>Run the same prompt three times at default temperature.</p><p class="rec"><span>Record</span> Do the three answers agree? Yes or no</p></div>
-      </div>
-      <div class="gate">
-        <div class="gate__n">04</div>
-        <div><h3>Your own benchmark</h3><p>Ten questions whose answers you already know &mdash; your repo's CSS bug, the file count, the Netlify config.</p><p class="rec"><span>Record</span> Pass@1, out of ten. This is the only number that is yours</p></div>
-      </div>
-      <div class="gate">
-        <div class="gate__n">05</div>
-        <div><h3>Contamination</h3><p>Ask something made today, that cannot be in any training set.</p><p class="rec"><span>Record</span> Right or wrong, and whether it hedged or went straight at it</p></div>
-      </div>
-      <div class="gate">
-        <div class="gate__n">06</div>
-        <div><h3>Tokens per task</h3><p>Finish one real job, then count total input plus output tokens.</p><p class="rec"><span>Record</span> Tokens per task, and what those tokens cost</p></div>
-      </div>
-      <div class="gate">
-        <div class="gate__n">07</div>
-        <div><h3>Tool calling</h3><p>A five-step loop on a real repo: read, edit, run tests, fix, report.</p><p class="rec"><span>Record</span> How many steps completed, and where the thread was lost</p></div>
-      </div>
-      <div class="gate">
-        <div class="gate__n">08</div>
-        <div><h3>Long context</h3><p>Hide a fact at 100K, then at 800K. Ask for it back.</p><p class="rec"><span>Record</span> How deep it still answers correctly</p></div>
-      </div>
-      <div class="gate">
-        <div class="gate__n">09</div>
-        <div><h3>Hindi and Hinglish</h3><p>The same instruction in Hindi, in Hinglish, and in English.</p><p class="rec"><span>Record</span> Does it stay in the language? Does the tone survive?</p></div>
-      </div>
-      <div class="gate">
-        <div class="gate__n">10</div>
-        <div><h3>Honesty</h3><p>A question it cannot possibly know &mdash; a private file, a number that does not exist.</p><p class="rec"><span>Record</span> &ldquo;I don't know&rdquo;, or a confident invention</p></div>
-      </div>
-      <div class="gate">
-        <div class="gate__n">11</div>
-        <div><h3>Refusal</h3><p>One prompt that should be refused, one harmless prompt that should not be.</p><p class="rec"><span>Record</span> Both handled correctly?</p></div>
-      </div>
-      <div class="gate">
-        <div class="gate__n">12</div>
-        <div><h3>Speed</h3><p>Time to first token, plus output tok/s, on the tier you will use every day.</p><p class="rec"><span>Record</span> Seconds (TTFT) and tok/s</p></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section" id="feedback" style="padding-top:0">
-  <div class="container">
-    <div class="section__head rv">
-      <span class="eyebrow">My feedback</span>
-      <h2>What I write down the same day I run a model.</h2>
-      <p>Fill this in before the number fades, in your own words. It copies as a block of text &mdash;
-      paste it into an email or a note. Nothing here is sent anywhere by itself.</p>
-    </div>
-    <form class="fb rv" id="fbform" novalidate>
-      <div class="fb__grid">
-        <label class="fb__f"><span>Model</span>
-          <input type="text" name="model" placeholder="DeepSeek V4.1 Flash" autocomplete="off"></label>
-        <label class="fb__f"><span>Test date</span>
-          <input type="date" name="date"></label>
-        <label class="fb__f"><span>Harness / tool</span>
-          <input type="text" name="harness" placeholder="Claude Code, Ollama, OpenRouter" autocomplete="off"></label>
-        <label class="fb__f"><span>Hardware or API tier</span>
-          <input type="text" name="hardware" placeholder="M2 32 GB, 4-bit / free tier" autocomplete="off"></label>
-        <label class="fb__f"><span>Which tests (#)</span>
-          <input type="text" name="tests" placeholder="1, 3, 4, 10" autocomplete="off"></label>
-        <label class="fb__f"><span>Would I use it again?</span>
-          <select name="again">
-            <option value="">&mdash;</option>
-            <option>Yes</option>
-            <option>Only for one job</option>
-            <option>No</option>
-          </select></label>
-      </div>
-      <label class="fb__f"><span>Results, as numbers</span>
-        <input type="text" name="results" placeholder="Pass@1 7/10, TTFT 1.2 s, 41 tok/s, 18k tokens per task" autocomplete="off"></label>
-      <label class="fb__f"><span>My take, in my own words</span>
-        <textarea name="take" rows="5" placeholder="What it did well, where it broke, whether the number matched what it felt like."></textarea></label>
-      <div class="fb__bar">
-        <button class="btn" type="submit">Copy my feedback</button>
-        <a class="btn btn--ghost" id="fbsend" href="mailto:manikantsharma.com@zoho.in">Send it to me</a>
-        <span class="fb__state" id="fbstate" role="status"></span>
-      </div>
-    </form>
-  </div>
-</section>
-
-<section class="section" id="where" style="padding-top:0">
-  <div class="container">
-    <div class="section__head rv">
-      <span class="eyebrow">Where to look next</span>
-      <h2>Ten places I check before I download anything.</h2>
-    </div>
-    <ol class="places rv">
-        <li><a href="https://huggingface.co/models?sort=trending" rel="noopener"><b>Hugging Face &mdash; trending</b> &mdash; The newest open-weight models, with downloads and likes</a>
-        <span class="when">What just landed &mdash; the first stop</span></li>
-        <li><a href="https://openweightsbench.com/" rel="noopener"><b>OpenWeightsBench</b> &mdash; 228 models, 270 questions, 13 categories, all on the same battery and code-checked. Has a hardware picker</a>
-        <span class="when">Choosing a model that has to run on your machine</span></li>
-        <li><a href="https://artificialanalysis.ai/" rel="noopener"><b>Artificial Analysis</b> &mdash; The AA Intelligence Index, run by them, not the vendors. The open-weights page is separate</a>
-        <span class="when">Comparing real capability</span></li>
-        <li><a href="https://arena.ai/" rel="noopener"><b>LMArena</b> &mdash; Human votes, text and code arena</a>
-        <span class="when">Which model people actually prefer &mdash; use the code arena for coding</span></li>
-        <li><a href="https://lmsa.app/leaderboard/" rel="noopener"><b>LMSA leaderboard</b> &mdash; AA plus arena plus price plus context, in one table</a>
-        <span class="when">Building a shortlist at a glance</span></li>
-        <li><a href="https://modelcap.ai/rankings/open-weights" rel="noopener"><b>ModelCap &mdash; open weights</b> &mdash; 223 open models with licence and price</a>
-        <span class="when">Filtering by what the licence allows</span></li>
-        <li><a href="https://openrouter.ai/collections/free-models" rel="noopener"><b>OpenRouter &mdash; free models</b> &mdash; Everything going for $0, ranked by usage</a>
-        <span class="when">Trying a model with no money and no GPU</span></li>
-        <li><a href="https://ollama.com/library" rel="noopener"><b>Ollama library</b> &mdash; One command per model: <code>ollama run &lt;model&gt;</code></a>
-        <span class="when">The easiest way to run something locally</span></li>
-        <li><a href="https://lmstudio.ai/" rel="noopener"><b>LM Studio</b> &mdash; A GUI for local models on Mac (MLX) and Windows</a>
-        <span class="when">When you would rather not touch a terminal</span></li>
-        <li><a href="https://aimap.page/en/free-models/category/open-weights/" rel="noopener"><b>AIMap &mdash; free open-weight</b> &mdash; 85 free open-weight models, verified</a>
-        <span class="when">The whole free list in one place</span></li>
-    </ol>
-    <div class="callout callout--wide rv"><b>One thing to carry away.</b> Leaderboard numbers move when
-    the harness and the checkpoint change. Write the benchmark version and who measured it next to
-    every number you keep, and treat a one-point gap as noise. A model that is two points behind and
-    ten times cheaper is usually the better model for the work you actually have.</div>
-    <div class="pager">
-      <a href="libraries.html">&larr; The four disciplines</a>
-      <a href="contact.html">Tell me what it scored &rarr;</a>
-    </div>
+    <p class="note">Free tiers change, so this table says what I use today. Checked November 2026.
+    Where a tool cannot reach the repository itself, the work goes through Claude or Grok, which can.</p>
   </div>
 </section>
 </main>
@@ -541,56 +156,81 @@ gtag('config', 'G-QEKFFVFTN0');
 <script src="assets/site.js"></script>
 <script>
 (function(){
-  var f = document.getElementById('fbform');
-  if(!f) return;
-  var state = document.getElementById('fbstate');
-  var send = document.getElementById('fbsend');
+  document.documentElement.classList.add('js');
+  var frames = Array.prototype.slice.call(document.querySelectorAll('.hero__frame'));
+  var hero = document.getElementById('hero');
+  if(!hero || !frames.length) return;
+  var pct = document.getElementById('heroPct');
+  var copy = document.getElementById('heroCopy');
+  var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var current = 0, target = 0, eased = 0, raf = null, visible = true;
 
-  function build(){
-    var g = function(n){ var el = f.elements[n]; return el && el.value ? el.value.trim() : ''; };
-    var L = [];
-    L.push('Model: ' + (g('model') || '-'));
-    L.push('Test date: ' + (g('date') || '-'));
-    L.push('Harness / tool: ' + (g('harness') || '-'));
-    L.push('Hardware or API tier: ' + (g('hardware') || '-'));
-    L.push('Tests run: ' + (g('tests') || '-'));
-    L.push('Results: ' + (g('results') || '-'));
-    L.push('');
-    L.push('My take:');
-    L.push(g('take') || '-');
-    L.push('');
-    L.push('Would I use it again: ' + (g('again') || '-'));
-    return L.join('\n');
+  function paint(i){
+    if(i === current) return;
+    if(frames[current]) frames[current].classList.remove('on');
+    frames[i].classList.add('on');
+    current = i;
+    if(pct) pct.textContent = ('0' + (i + 1)).slice(-2);
   }
 
-  function flash(msg, ok){
-    state.textContent = msg;
-    state.className = 'fb__state' + (ok ? ' ok' : '');
-    setTimeout(function(){ state.textContent = ''; }, 2600);
+  /* progress from the hero's own box, using the viewport height. No getComputedStyle,
+     no offsetHeight of the sticky element: both resolve differently across engines. */
+  function progress(){
+    var rect = hero.getBoundingClientRect();
+    var vh = window.innerHeight || document.documentElement.clientHeight;
+    var total = hero.offsetHeight - vh;          // how far we can scroll inside the hero
+    if(total <= 0) return 0;
+    var scrolled = -rect.top;                    // how far the hero's top has gone past the viewport top
+    return Math.min(1, Math.max(0, scrolled / total));
   }
 
-  f.addEventListener('submit', function(e){
-    e.preventDefault();
-    var text = build();
-    var done = function(){ flash('Copied. Paste it anywhere.', true); };
-    if(navigator.clipboard && navigator.clipboard.writeText){
-      navigator.clipboard.writeText(text).then(done).catch(function(){ fallback(); });
-    } else { fallback(); }
-    function fallback(){
-      var ta = document.createElement('textarea');
-      ta.value = text; ta.style.position = 'fixed'; ta.style.opacity = '0';
-      document.body.appendChild(ta); ta.select();
-      try{ document.execCommand('copy'); }catch(err){}
-      document.body.removeChild(ta); done();
+  function apply(p){
+    paint(Math.round(p * (frames.length - 1)));
+    if(copy && copy.offsetParent !== null){
+      var f = Math.min(1, Math.max(0, (p - 0.16) / 0.34));
+      copy.style.opacity = String(1 - f);
     }
-  });
+  }
 
-  f.addEventListener('input', function(){
-    send.href = 'mailto:manikantsharma.com@zoho.in?subject='
-      + encodeURIComponent('Model feedback — ' + (f.elements.model.value || 'untitled'))
-      + '&body=' + encodeURIComponent(build());
-  });
-  f.dispatchEvent(new Event('input'));
+  function tick(){
+    eased += (target - eased) * 0.22;
+    if(Math.abs(target - eased) < 0.0015) eased = target;
+    apply(eased);
+    if(eased !== target){ raf = requestAnimationFrame(tick); } else { raf = null; }
+  }
+
+  function onScroll(){
+    target = progress();
+    if(reduce){ apply(target); return; }
+    if(!raf) raf = requestAnimationFrame(tick);
+  }
+
+  /* belt and braces: while the hero is on screen, recompute every frame. This covers
+     browsers that throttle scroll events, scroll in a nested container, or restore a
+     scroll position on reload without firing scroll at all. */
+  function loop(){
+    if(visible){
+      var p = progress();
+      if(Math.abs(p - target) > 0.0005){ onScroll(); }
+    }
+    requestAnimationFrame(loop);
+  }
+
+  addEventListener('scroll', onScroll, {passive:true});
+  addEventListener('resize', onScroll);
+  addEventListener('pageshow', onScroll);
+  document.addEventListener('visibilitychange', onScroll);
+
+  if('IntersectionObserver' in window){
+    new IntersectionObserver(function(es){
+      es.forEach(function(e){ visible = e.isIntersecting; });
+    }, {threshold: 0}).observe(hero);
+  }
+
+  frames.forEach(function(im){ if(im.decode) im.decode().catch(function(){}); });
+  onScroll();
+  requestAnimationFrame(loop);
+  setTimeout(onScroll, 120);
 })();
 </script>
 </body>
