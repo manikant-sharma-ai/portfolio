@@ -368,3 +368,97 @@ main{position:relative;z-index:1}
   .hero__frames{min-height:52vh}
   .btn:hover,.card:hover,.wcard:hover,.link:hover{transform:none}
 }
+
+/* ---------- tools page: models, benchmarks, feedback ---------- */
+.stats--page{margin-top:38px;margin-bottom:54px;padding-top:22px;border-top:1px solid var(--line);gap:44px}
+.stats--page strong{font-size:1.6rem;color:var(--cyan)}
+
+.section__head{max-width:70ch}
+.section__head .eyebrow{margin-bottom:6px}
+.section__head h2{font-size:clamp(1.5rem,2.8vw,2.1rem)}
+.section__head p{color:var(--dim);margin-top:16px;line-height:1.78;font-size:.97rem}
+
+.tablewrap--wide{overflow-x:auto}
+.tablewrap--wide table{min-width:940px}
+table.models{font-size:.85rem}
+table.models th,table.models td{padding:14px 16px}
+table.models td:first-child{white-space:normal;font-weight:600;line-height:1.35}
+table.models td:first-child a{border-bottom:1px solid rgba(14,165,233,.3)}
+table.models td:first-child a:hover{color:var(--cyan);border-bottom-color:var(--cyan)}
+table.models .sub{display:block;margin-top:5px;font-family:var(--mono);font-size:9.5px;
+  letter-spacing:.06em;color:var(--dim2);font-weight:400;line-height:1.6}
+table.models .mono-cell{font-family:var(--mono);font-size:10.5px;letter-spacing:.02em;color:#c9d6e4}
+table.models .bench-cell{color:var(--dim);font-size:.8rem;line-height:1.6;min-width:250px}
+table.models code{font-family:var(--mono);font-size:.92em;color:#7dd3fc}
+
+/* ---------- charts ---------- */
+.figure{margin:52px 0 0;padding:0;border:1px solid var(--line);border-radius:var(--r);
+  background:var(--surface);overflow:hidden}
+.figure figcaption{display:flex;gap:14px;align-items:baseline;padding:18px 22px;
+  border-bottom:1px solid var(--line);background:rgba(255,255,255,.02);
+  font-size:.95rem;font-weight:500;letter-spacing:-.01em;line-height:1.4}
+.figure figcaption span{font-family:var(--mono);font-size:10px;letter-spacing:.14em;
+  color:var(--cyan);flex:none;padding-top:2px}
+.figure .fignote{margin:0;padding:16px 22px 20px;color:#8ea1b8;font-size:.82rem;line-height:1.72;
+  border-top:1px solid var(--line)}
+.chartwrap{padding:20px 14px 6px;overflow-x:auto}
+.chartwrap svg{display:block;width:100%;min-width:520px;height:auto}
+.chart .cl{font-family:var(--sans);font-size:12.5px;fill:#c9d6e4}
+.chart .cv{font-family:var(--mono);font-size:11.5px;fill:var(--text)}
+.chart .cax{font-family:var(--mono);font-size:9.5px;fill:var(--dim2)}
+.chart .cg{stroke:rgba(255,255,255,.07);stroke-width:1}
+.chart .cb{opacity:.62}
+.chart .cb.hi{opacity:1}
+
+.callout--wide{margin-top:40px;max-width:76ch}
+
+/* ---------- tests: record line ---------- */
+.gate .rec{display:flex;gap:10px;align-items:baseline;font-family:var(--mono);font-size:11px;
+  letter-spacing:.01em;color:#8ea1b8;margin-top:9px;line-height:1.7;max-width:60ch}
+.gate .rec span{flex:none;color:var(--cyan);text-transform:uppercase;letter-spacing:.14em;
+  font-size:9px;padding-top:2px}
+
+/* ---------- places list ---------- */
+.places{margin:38px 0 0;padding:0;list-style:none;border-top:1px solid var(--line);counter-reset:pl}
+.places li{display:grid;grid-template-columns:1fr auto;gap:8px 20px;align-items:baseline;
+  padding:16px 0;border-bottom:1px solid var(--line);counter-increment:pl}
+.places li::before{content:counter(pl,decimal-leading-zero);grid-column:1/-1;
+  font-family:var(--mono);font-size:9px;letter-spacing:.14em;color:var(--dim2);display:none}
+.places a{color:var(--dim);font-size:.92rem;line-height:1.6}
+.places a b{color:var(--text);font-weight:500}
+.places a:hover b{color:var(--cyan)}
+.places .when{font-family:var(--mono);font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--dim2);text-align:right;max-width:24ch;line-height:1.6}
+.places code{font-family:var(--mono);font-size:.9em;color:#7dd3fc}
+
+/* ---------- feedback form ---------- */
+.fb{margin-top:34px;border:1px solid var(--line);border-radius:var(--r);background:var(--surface);
+  padding:24px}
+.fb__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.fb__f{display:block;margin-top:16px}
+.fb__grid .fb__f{margin-top:0}
+.fb__f>span{display:block;font-family:var(--mono);font-size:9.5px;letter-spacing:.14em;
+  text-transform:uppercase;color:#8ea1b8;margin-bottom:9px}
+.fb__f input,.fb__f select,.fb__f textarea{width:100%;background:var(--bg);border:1px solid var(--line);
+  border-radius:8px;padding:11px 13px;color:var(--text);font-family:var(--sans);font-size:.92rem;
+  line-height:1.6}
+.fb__f textarea{resize:vertical;min-height:110px}
+.fb__f input:focus,.fb__f select:focus,.fb__f textarea:focus{outline:none;border-color:var(--line-hi);
+  box-shadow:0 0 0 3px rgba(14,165,233,.12)}
+.fb__f input::placeholder,.fb__f textarea::placeholder{color:#4a5a6e}
+.fb__bar{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-top:22px;padding-top:20px;
+  border-top:1px solid var(--line)}
+.fb__bar .btn{cursor:pointer;font-family:var(--mono)}
+.fb__state{font-family:var(--mono);font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--dim2)}
+.fb__state.ok{color:#5eead4}
+
+@media (max-width:860px){
+  .fb__grid{grid-template-columns:1fr 1fr}
+  .places li{grid-template-columns:1fr}
+  .places .when{text-align:left;max-width:none}
+}
+@media (max-width:560px){
+  .fb__grid{grid-template-columns:1fr}
+  .stats--page{gap:26px}
+}
