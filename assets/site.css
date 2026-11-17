@@ -389,3 +389,86 @@ main{position:relative;z-index:1}
 .empcard p{margin:0;color:var(--dim);font-size:.79rem;line-height:1.55;flex:1}
 .empcard .btn{align-self:flex-start;margin-top:2px}
 @media(max-width:640px){.empgrid{grid-template-columns:1fr}}
+
+/* ---------- tools page: charts, models table, battery notes, form ---------- */
+.stats--page{margin-top:32px;padding-top:20px;gap:34px}
+.stats--page strong{font-size:1.3rem}
+.callout--wide{max-width:none;margin-top:34px;padding:18px 22px;
+  background:rgba(14,165,233,.05);border-radius:0 var(--r) var(--r) 0}
+
+/* charts: inline SVG, one scale and one source each */
+.figure{margin:44px 0 0}
+.figure figcaption{display:flex;gap:10px;align-items:baseline;margin-bottom:16px;
+  font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:#8ea1b8}
+.figure figcaption span{color:var(--cyan)}
+.chartwrap{border:1px solid var(--line);border-radius:var(--r);background:var(--surface);
+  padding:22px 22px 14px;overflow-x:auto}
+.chart{display:block;width:100%;min-width:560px;height:auto}
+.chart .cg{stroke:rgba(255,255,255,.07);stroke-width:1}
+.chart .cax{fill:var(--dim2);font-family:var(--mono);font-size:10px}
+.chart .cl{fill:var(--dim);font-family:var(--sans);font-size:12px}
+.chart .cv{fill:var(--text);font-family:var(--mono);font-size:11px}
+.chart .cb{opacity:.8}
+.chart .cb.hi{opacity:1}
+.fignote{margin-top:14px;max-width:78ch;color:#8ea1b8;font-size:.82rem;line-height:1.7}
+
+/* open-weights and free-API tables */
+.tablewrap--wide{overflow-x:auto}
+.tablewrap--wide::-webkit-scrollbar{height:8px}
+.tablewrap--wide::-webkit-scrollbar-thumb{background:rgba(255,255,255,.14);border-radius:4px}
+table.models{min-width:1040px;font-size:.86rem}
+table.models th,table.models td{padding:14px 16px}
+table.models td:first-child{white-space:nowrap}
+table.models a{color:var(--text);border-bottom:1px solid var(--line-hi)}
+table.models a:hover{color:var(--cyan)}
+.mono-cell{font-family:var(--mono);font-size:.76rem;color:var(--dim);white-space:nowrap}
+.bench-cell{min-width:280px;font-size:.8rem;color:var(--dim)}
+.sub{display:block;margin-top:5px;font-family:var(--mono);font-size:.68rem;
+  letter-spacing:.04em;color:var(--dim2);white-space:normal}
+.rec{margin-top:12px;font-family:var(--mono);font-size:.72rem;letter-spacing:.04em;
+  color:var(--dim2);line-height:1.7}
+.rec span{margin-right:8px;color:var(--cyan);font-size:.66rem;letter-spacing:.14em;text-transform:uppercase}
+
+/* where to look next */
+.places{list-style:none;margin:44px 0 0;padding:0;border-top:1px solid var(--line);counter-reset:pl}
+.places li{counter-increment:pl;position:relative;padding:20px 0 20px 44px;
+  border-bottom:1px solid var(--line)}
+.places li::before{content:counter(pl,decimal-leading-zero);position:absolute;left:0;top:22px;
+  font-family:var(--mono);font-size:11px;letter-spacing:.12em;color:var(--cyan)}
+.places a{display:block;color:var(--dim);font-size:.94rem;line-height:1.7}
+.places a b{color:var(--text);font-weight:500}
+.places a:hover b{color:var(--cyan)}
+.when{display:block;margin-top:8px;font-family:var(--mono);font-size:.68rem;
+  letter-spacing:.1em;text-transform:uppercase;color:var(--dim2)}
+
+/* the feedback form: clipboard only, no backend */
+.fb{margin-top:34px;padding:26px;border:1px solid var(--line);border-radius:var(--r);
+  background:var(--surface)}
+.fb__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.fb__f{display:block;margin-top:16px}
+.fb__grid .fb__f{margin-top:0}
+.fb__f span{display:block;margin-bottom:8px;font-family:var(--mono);font-size:9px;
+  letter-spacing:.14em;text-transform:uppercase;color:#8ea1b8}
+.fb input,.fb select,.fb textarea{width:100%;padding:11px 13px;border:1px solid var(--line);
+  border-radius:9px;background:rgba(255,255,255,.03);color:var(--text);
+  font-family:var(--sans);font-size:.9rem}
+.fb textarea{resize:vertical;line-height:1.65}
+.fb input:focus,.fb select:focus,.fb textarea:focus{outline:none;border-color:var(--line-hi);
+  background:rgba(14,165,233,.05)}
+.fb ::placeholder{color:var(--dim2)}
+.fb__bar{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin-top:22px}
+.fb__state{font-family:var(--mono);font-size:.72rem;letter-spacing:.08em;color:var(--dim2)}
+.fb__state.ok{color:var(--cyan)}
+@media(max-width:860px){
+  .fb__grid{grid-template-columns:1fr 1fr}
+  .chart{min-width:520px}
+  .chart .cl{font-size:13px}
+  .chart .cv{font-size:12px}
+  .chart .cax{font-size:11px}
+}
+@media(max-width:640px){
+  .fb__grid{grid-template-columns:1fr}
+  .fb{padding:20px}
+  .chartwrap{padding:16px 14px 10px}
+  .places li{padding-left:34px}
+}
