@@ -15,3 +15,12 @@
 - Change since yesterday: only the sitemap re-crawl on 15 Nov. No new search data, no new visits.
 - Decision still open from 15 Nov: which library page gets the first worked example. Default prompt-library.html stands (no answer received).
 - Next: write the worked example (his own prompt, output, what broke, the fix) on prompt-library.html.
+
+## 2026-11-18 (daily brief)
+- Search Console: first impressions ever recorded on this property. 1 impression on 2026-11-14, page `/`, average position 8, 0 clicks. Date rows returned only 11-15 Nov (2-3 day lag). Query dimension still returns no rows. Property still siteOwner.
+- Sitemap: 15 submitted, 0 errors, 0 warnings, last downloaded 2026-11-15 (unchanged since yesterday).
+- GA4 (properties/564335996): 5 sessions, 3 active users, 10 pageviews for 20 Oct - 17 Nov, all source (direct)/(none). Daily: 14 Nov 1 session/3 views, 16 Nov 3 sessions/6 views, 17 Nov 1 session/1 view. Pages: `/` 5 views, `/tools.html` 4, `/index.html` 1. The 16 and 17 Nov rows appeared since yesterday's brief (GA processing lag, not new traffic today).
+- Change since yesterday: the first search impression (position 8) and the late-arriving GA rows for 16-17 Nov. Sitemap re-crawl not repeated.
+- Decision (open since 15 Nov, third day): which library page gets the first worked example. Default taken and acted on: `prompt-library.html`. Proceeding unless he says otherwise.
+- Site files intact at repo root (IndexNow key file present). No breakage found.
+- Next: write the first worked example (his own prompt, output, what broke, the fix) on `prompt-library.html`.
