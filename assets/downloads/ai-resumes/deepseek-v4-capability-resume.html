@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DeepSeek V4 — AI Professional Capability Resume</title>
+<style>
+  :root{
+    --ink:#0f1b2d; --muted:#4b5a70; --line:#d8dee8;
+    --accent:#0e7490; --accent2:#0d9488; --soft:#f4f7fb;
+    --warn:#b45309; --warnbg:#fff7ed;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0}
+  body{
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+    color:var(--ink); font-size:10.5pt; line-height:1.5; background:#e9edf3;
+  }
+  .sheet{
+    width:210mm; min-height:297mm; margin:0 auto; background:#fff;
+    padding:18mm 16mm 20mm 16mm; position:relative;
+  }
+  /* ---------- typography ---------- */
+  h1,h2,h3,h4{font-weight:700; line-height:1.2; margin:0}
+  h1{font-size:30pt; letter-spacing:-.5px}
+  h2{
+    font-size:15pt; color:var(--accent); margin:0 0 6pt 0;
+    padding-bottom:4pt; border-bottom:2px solid var(--accent);
+    letter-spacing:-.2px;
+  }
+  h3{font-size:11.5pt; margin:12pt 0 3pt 0; color:var(--ink)}
+  p{margin:0 0 7pt 0}
+  ul,ol{margin:0 0 7pt 0; padding-left:16pt}
+  li{margin-bottom:3pt}
+  small{font-size:8.5pt; color:var(--muted)}
+  a{color:var(--accent); text-decoration:none; border-bottom:1px dotted #9fc3cf}
+  a:hover{background:#eaf6f9}
+  .lead{font-size:11pt; color:var(--muted)}
+  .muted{color:var(--muted)}
+  .kicker{
+    font-size:8.5pt; letter-spacing:2px; text-transform:uppercase;
+    color:var(--accent2); font-weight:700;
+  }
+  /* ---------- cover ---------- */
+  .cover{display:flex; flex-direction:column; justify-content:space-between; min-height:255mm}
+  .cover .rule{height:6px; width:120px; background:linear-gradient(90deg,var(--accent),var(--accent2)); border-radius:3px; margin:10pt 0 16pt}
+  .cover h1 span{color:var(--accent)}
+  .cover .sub{font-size:13pt; color:var(--muted); margin-top:6pt}
+  .metabox{
+    display:grid; grid-template-columns:1fr 1fr; gap:4pt 18pt;
+    border-top:1px solid var(--line); border-bottom:1px solid var(--line);
+    padding:12pt 0; margin-top:22pt; font-size:9.5pt;
+  }
+  .metabox div strong{display:block; font-size:8pt; text-transform:uppercase; letter-spacing:1px; color:var(--muted); margin-bottom:2pt}
+  .notice{
+    background:var(--warnbg); border-left:4px solid var(--warn);
+    padding:10pt 12pt; font-size:9pt; color:#5c3d0e; border-radius:0 4px 4px 0;
+    margin-top:20pt;
+  }
+  /* ---------- TOC ---------- */
+  .toc{columns:2; column-gap:16mm; font-size:9.5pt; margin-top:6pt}
+  .toc ol{margin:0; padding-left:16pt}
+  .toc li{margin-bottom:2.5pt; break-inside:avoid}
+  .toc a{color:var(--ink); border:none}
+  .toc .pg{color:var(--muted); float:right; font-variant-numeric:tabular-nums}
+  /* ---------- tables ---------- */
+  table{
+    width:100%; border-collapse:collapse; margin:6pt 0 10pt 0;
+    font-size:8.8pt; break-inside:auto;
+  }
+  thead{background:var(--ink); color:#fff}
+  th{text-align:left; padding:5pt 6pt; font-weight:600; font-size:8.3pt; letter-spacing:.3px}
+  td{padding:4.5pt 6pt; border-bottom:1px solid var(--line); vertical-align:top}
+  tbody tr:nth-child(even){background:var(--soft)}
+  tr{break-inside:avoid}
+  .num{text-align:right; font-variant-numeric:tabular-nums}
+  /* ---------- blocks ---------- */
+  .grid2{display:grid; grid-template-columns:1fr 1fr; gap:10pt}
+  .card{
+    background:var(--soft); border:1px solid var(--line); border-radius:6px;
+    padding:9pt 11pt; break-inside:avoid;
+  }
+  .card h4{font-size:9.5pt; color:var(--accent); margin-bottom:3pt; text-transform:uppercase; letter-spacing:.6px}
+  .fact{display:flex; gap:6pt; font-size:9.5pt; margin-bottom:3pt}
+  .fact b{min-width:92px; color:var(--muted); font-weight:600}
+  /* ---------- scorecard ---------- */
+  .score{display:grid; grid-template-columns:150px 1fr 34px; gap:6px 8px; align-items:center; font-size:9pt; margin:8pt 0}
+  .bar{height:9px; background:#e3e9f1; border-radius:5px; overflow:hidden}
+  .bar i{display:block; height:100%; border-radius:5px; background:linear-gradient(90deg,var(--accent),var(--accent2))}
+  .score .v{text-align:right; font-weight:700; font-variant-numeric:tabular-nums}
+  .overall{
+    margin-top:10pt; padding:9pt 12pt; border-radius:6px; color:#fff;
+    background:linear-gradient(90deg,var(--ink),var(--accent)); font-size:10.5pt;
+  }
+  /* ---------- page control ---------- */
+  .pb{break-before:page; page-break-before:always}
+  section{break-inside:auto}
+  .keep{break-inside:avoid; page-break-inside:avoid}
+  footer.docfoot{
+    margin-top:16pt; border-top:1px solid var(--line); padding-top:6pt;
+    font-size:8pt; color:var(--muted); display:flex; justify-content:space-between;
+  }
+  /* ---------- print ---------- */
+  @page{ size:A4; margin:16mm 14mm 18mm 14mm; }
+  @page{
+    @bottom-right{ content:"Page " counter(page) " of " counter(pages); font-size:8pt; color:#4b5a70; }
+    @bottom-left{ content:"DeepSeek V4 — AI Capability Resume"; font-size:8pt; color:#4b5a70; }
+  }
+  @media print{
+    body{background:#fff}
+    .sheet{width:auto; min-height:0; margin:0; padding:0; box-shadow:none}
+    .cover{min-height:245mm}
+    a{border:none; color:var(--ink)}
+    .no-print{display:none}
+  }
+</style>
+</head>
+<body>
+
+<!-- ================= COVER ================= -->
+<div class="sheet">
+  <div class="cover">
+    <div>
+      <div class="kicker">AI Capability Audit &amp; Professional Resume</div>
+      <div class="rule"></div>
+      <h1>DeepSeek <span>V4</span></h1>
+      <div class="sub">Frontier-adjacent, open-weight AI system<br>Capability, benchmark, tooling &amp; economics dossier</div>
+
+      <div class="metabox">
+        <div><strong>Subject</strong>DeepSeek-V4.1-Flash-1017 · DeepSeek-V4-Pro-0813</div>
+        <div><strong>Developer</strong>DeepSeek (深度求索)</div>
+        <div><strong>Prepared by</strong>DeepSeek (self-analysis)</div>
+        <div><strong>Audit date</strong>18 November 2026</div>
+        <div><strong>Document type</strong>AI Professional Capability Resume</div>
+        <div><strong>Body length</strong>≈ 4,200 words (excl. references)</div>
+      </div>
+
+      <div class="notice">
+        <b>Transparency note.</b> This dossier is a self-audit grounded in official DeepSeek documentation,
+        published benchmark leaderboards, and officially disclosed pricing as of 18 Nov 2026.
+        Benchmark figures are cited from third-party or official sources; they were not independently
+        re-run by the author. Capability scores are auditable judgements, not measurements.
+      </div>
+    </div>
+
+    <div>
+      <div class="grid2">
+        <div class="card"><h4>Headline</h4>1M-token context · 384K output · MIT-licensed weights</div>
+        <div class="card"><h4>Headline</h4>SWE-bench Verified 80.6% · near-frontier coding</div>
+        <div class="card"><h4>Headline</h4>Highest capability-per-dollar in the reviewed 2026 set</div>
+        <div class="card"><h4>Headline</h4>No native image generation · no native video</div>
+      </div>
+      <footer class="docfoot"><span>Confidential — technical evaluation copy</span><span>v1.0</span></footer>
+    </div>
+  </div>
+</div>
+
+<!-- ================= TOC ================= -->
+<div class="sheet pb">
+  <h2>Contents</h2>
+  <div class="toc">
+    <ol>
+      <li><a href="#s1">Professional identity</a></li>
+      <li><a href="#s2">Executive summary</a></li>
+      <li><a href="#s3">Technical profile</a></li>
+      <li><a href="#s4">Core competencies</a></li>
+      <li><a href="#s5">Advanced capabilities audit</a></li>
+      <li><a href="#s6">Model specifications</a></li>
+      <li><a href="#s7">Benchmark performance</a></li>
+      <li><a href="#s8">Tools &amp; integrations</a></li>
+      <li><a href="#s9">Connector inventory</a></li>
+      <li><a href="#s10">Programming capabilities</a></li>
+      <li><a href="#s11">Automation capabilities</a></li>
+      <li><a href="#s12">AI agent development</a></li>
+      <li><a href="#s13">Research capabilities</a></li>
+      <li><a href="#s14">Business applications</a></li>
+      <li><a href="#s15">Project portfolio</a></li>
+      <li><a href="#s16">Competitive positioning</a></li>
+      <li><a href="#s17">Pricing &amp; economics</a></li>
+      <li><a href="#s18">Strengths</a></li>
+      <li><a href="#s19">Weaknesses</a></li>
+      <li><a href="#s20">Technical limitations</a></li>
+      <li><a href="#s21">Security &amp; privacy</a></li>
+      <li><a href="#s22">Future development</a></li>
+      <li><a href="#s23">Overall assessment &amp; scorecard</a></li>
+      <li><a href="#s24">References &amp; evidence</a></li>
+    </ol>
+  </div>
+  <div class="card" style="margin-top:14pt">
+    <h4>How to read this document</h4>
+    Sections 1–6 establish identity and specification. Sections 7–9 present the evidence base (benchmarks, tools, connectors).
+    Sections 10–17 assess applied capability and economics. Sections 18–23 deliver the honest SWOT, limitations, and scorecard.
+    Section 24 lists every source. Claims are tagged <b>confirmed</b>, <b>third-party</b>, or <b>estimate</b> where ambiguity exists.
+  </div>
+</div>
+
+<!-- ================= 1 IDENTITY ================= -->
+<div class="sheet pb">
+  <section id="s1">
+    <h2>1 · Professional Identity</h2>
+    <p><b>Official identity.</b> DeepSeek — a large language model family developed by DeepSeek (深度求索). In this dossier the subject is the <b>V4 generation</b>, exposed through the DeepSeek API and consumer surfaces. Canonical API identifiers are <code>deepseek-flash</code> (served by <b>DeepSeek-V4.1-Flash-1017</b>) and <code>deepseek-v4-pro</code> (served by <b>DeepSeek-V4-Pro-0813</b>). Legacy IDs <code>deepseek-chat</code> and <code>deepseek-reasoner</code> are deprecated; <code>deepseek-v4-flash</code> and <code>deepseek-v4-flash-vision-exp</code> route to V4.1-Flash for compatibility.</p>
+
+    <h3>Developer &amp; organisation</h3>
+    <p>DeepSeek (Hangzhou-based AI lab). The V4 family ships with <b>open weights under the MIT licence</b> and an Apache-2.0 inference engine — downloadable, commercially usable, fine-tunable, and privately deployable. This is a structural differentiator against API-only proprietary competitors.</p>
+
+    <h3>Generation &amp; variants</h3>
+    <p>Two production tiers: <b>Flash</b> (cost/speed/multimodal breadth) and <b>Pro</b> (maximum reasoning and agentic performance). V4.1-Flash-1017 is the smallest model in the new architecture family, with native visual understanding, higher throughput, and a higher capability ceiling. V4-Pro-0813 is the GA release positioned for production agent workloads.</p>
+
+    <h3>Knowledge limitations</h3>
+    <p>Training data has a cutoff; post-cutoff events require live retrieval and are not independently verified. No persistent memory across conversations unless a product feature explicitly provides it.</p>
+
+    <h3>Multimodal, reasoning &amp; context</h3>
+    <div class="fact"><b>Vision input</b><span>Supported on Flash; <b>not supported</b> on V4-Pro per the official specification table.</span></div>
+    <div class="fact"><b>Files</b><span>PDFs, Office files, and images parsed into context; OCR available as a standalone API.</span></div>
+    <div class="fact"><b>Reasoning</b><span>Thinking mode with <b>low / high / max</b> effort levels; deep-thinking search across steps.</span></div>
+    <div class="fact"><b>Context</b><span><b>1,000,000 tokens</b> input · <b>384,000 tokens</b> max output (both tiers).</span></div>
+    <div class="fact"><b>Formats</b><span>Text in/out, JSON output, tool calls; OpenAI-compatible and Anthropic-format endpoints; Responses API; prefix completion &amp; FIM (beta, non-thinking).</span></div>
+    <div class="fact"><b>Languages</b><span>Strong EN/ZH; adequate DE, FR, ES, IT, PT, RU, JA, KO, AR (third-party capability registry).</span></div>
+    <div class="fact"><b>Environments</b><span>Cloud API, consumer web/mobile, self-hosted open weights, third-party clouds (Azure Foundry, Mistral, Alibaba).</span></div>
+    <div class="fact"><b>Architecture</b><span>Mixture-of-Experts (publicly disclosed). Third-party registry describes V4-Pro as a 1.6T-parameter MoE with 49B active — <i>third-party estimate</i>, not an official DeepSeek figure.</span></div>
+  </section>
+</div>
+
+<!-- ================= 2 EXEC SUMMARY ================= -->
+<div class="sheet pb">
+  <section id="s2">
+    <h2>2 · Executive Summary</h2>
+    <p class="lead">DeepSeek-V4 is a frontier-adjacent, open-weight, exceptionally cost-efficient model family. Its defining property is not benchmark supremacy — it does not hold that — but delivery of roughly 95–100% of frontier coding and reasoning capability at a small fraction of proprietary token prices, with a 1M-token window and MIT-licensed weights.</p>
+    <div class="grid2" style="margin:10pt 0">
+      <div class="card"><h4>Where it wins</h4>Cost-per-capability; long-context workloads; SWE-bench Verified 80.6% (V4-Pro); open-weight deployability; OpenAI/Anthropic/Responses API compatibility; MCP ecosystem support.</div>
+      <div class="card"><h4>Where it trails</h4>Absolute frontier on Dtbench (89.8 vs 98.2 leader) and HLE; no native image generation; no native video; vision absent on V4-Pro; brand/ecosystem maturity behind proprietary labs.</div>
+    </div>
+    <p><b>Honest positioning.</b> A high-capability, high-value workhorse for coding, agentic automation, research synthesis, and document-heavy workflows — <i>not</i> the absolute best model for every frontier reasoning task, <i>not</i> natively multimodal in generation, and <i>not</i> a substitute for human verification on high-stakes factual or security decisions.</p>
+  </section>
+
+  <section id="s3">
+    <h2>3 · Technical Profile</h2>
+    <table class="keep">
+      <thead><tr><th>Attribute</th><th>V4.1-Flash (<code>deepseek-flash</code>)</th><th>V4-Pro (<code>deepseek-v4-pro</code>)</th></tr></thead>
+      <tbody>
+        <tr><td>Model version</td><td>DeepSeek-V4.1-Flash-1017</td><td>DeepSeek-V4-Pro-0813</td></tr>
+        <tr><td>Context length</td><td class="num">1,000,000</td><td class="num">1,000,000</td></tr>
+        <tr><td>Max output</td><td class="num">384,000</td><td class="num">384,000</td></tr>
+        <tr><td>Thinking mode</td><td>Non-thinking + thinking (default)</td><td>Non-thinking + thinking (default)</td></tr>
+        <tr><td>Thinking effort</td><td>low / high / max</td><td>low / high / max</td></tr>
+        <tr><td>Vision input</td><td>✓ Supported</td><td>✗ Not supported (official table)</td></tr>
+        <tr><td>JSON output</td><td>✓</td><td>✓</td></tr>
+        <tr><td>Tool calls</td><td>✓</td><td>✓</td></tr>
+        <tr><td>Responses API</td><td>✓</td><td>✓</td></tr>
+        <tr><td>Anthropic API format</td><td>✓</td><td>✓</td></tr>
+        <tr><td>Chat prefix completion</td><td>✓ (beta)</td><td>✓ (beta)</td></tr>
+        <tr><td>FIM completion</td><td>✓ (non-thinking only)</td><td>✓ (non-thinking only)</td></tr>
+        <tr><td>Open weights licence</td><td>MIT</td><td>MIT (V4 family)</td></tr>
+      </tbody>
+    </table>
+    <p><small><b>Confirmed:</b> context, max output, feature support, identifiers, pricing, licence. <b>Estimated / third-party:</b> total parameter count of V4-Pro, relative throughput, real-world hallucination rates. DeepSeek has not published a full architecture paper for every V4 variant in the reviewed sources.</small></p>
+  </section>
+</div>
+
+<!-- ================= 4 CORE COMPETENCIES ================= -->
+<div class="sheet pb">
+  <section id="s4">
+    <h2>4 · Core Competencies</h2>
+    <ol>
+      <li><b>Long-context reasoning and synthesis.</b> The 1M window is operational, not decorative: whole repositories, multi-hundred-page contracts, full books, and months of transcripts can be held in one inference context.</li>
+      <li><b>Software engineering.</b> Generation, refactoring, debugging, test writing, multi-file edits, agentic issue resolution. SWE-bench Verified 80.6% (V4-Pro) is within noise of the best proprietary model.</li>
+      <li><b>Agentic tool use.</b> Native function calling, MCP compatibility, Responses API, DeepSeek Harness. Toolathlon-Verified 74.1% indicates strong multi-tool orchestration.</li>
+      <li><b>Cost-efficient high-volume inference.</b> Enables workloads that are economically marginal on proprietary frontier pricing.</li>
+      <li><b>File-grounded document analysis.</b> PDFs, Office files, images parsed into context; standalone OCR API.</li>
+      <li><b>Open-weight deployability.</b> MIT weights allow on-premise, air-gapped, fine-tuned, and commercially redistributed deployment.</li>
+      <li><b>Multilingual breadth.</b> Strong EN/ZH; adequate coverage of major European and Asian languages.</li>
+      <li><b>Structured output and integration.</b> JSON mode, dual API compatibility, FIM, prefix completion lower integration friction.</li>
+    </ol>
+  </section>
+
+  <section id="s5">
+    <h2>5 · Advanced Capabilities Audit</h2>
+    <p class="lead">The table separates <b>native model capability</b> from <b>capability that depends on an external tool</b>. A model that can <i>call</i> a search API does not <i>own</i> a search index; a model that can <i>read</i> an image is not a model that can <i>generate</i> one.</p>
+    <table>
+      <thead><tr><th>Capability area</th><th>Native model</th><th>Tool dependency</th><th>Evidence</th></tr></thead>
+      <tbody>
+        <tr><td>Reasoning &amp; problem-solving</td><td>High; thinking effort low/high/max</td><td>None for pure reasoning</td><td>High — official</td></tr>
+        <tr><td>Research &amp; discovery</td><td>Moderate; strong with search</td><td>Web search, Search/Fetch APIs</td><td>High — official docs</td></tr>
+        <tr><td>Programming</td><td>High; SWE-bench 80.6%</td><td>Repo access via tooling</td><td>High — leaderboard</td></tr>
+        <tr><td>Vibe coding / app dev</td><td>High scaffolding; hardening needs review</td><td>Sandbox, IDE via MCP</td><td>Medium-high</td></tr>
+        <tr><td>Debugging &amp; code review</td><td>Strong with full repo in 1M</td><td>Logs, test harness</td><td>Medium</td></tr>
+        <tr><td>Frontend / backend</td><td>Strong full-stack; design fidelity varies</td><td>Preview, deployment</td><td>Medium</td></tr>
+        <tr><td>Database architecture</td><td>Competent schema/query/migration</td><td>Live DB to execute</td><td>Medium</td></tr>
+        <tr><td>API integration</td><td>Strong; dual API compat</td><td>Target credentials</td><td>High (consume) / tool-dependent (execute)</td></tr>
+        <tr><td>AI agent development</td><td>Strong; function calling, MCP</td><td>Agent framework, registry</td><td>High — official</td></tr>
+        <tr><td>Multi-agent systems</td><td>Orchestrates sub-agents via calls</td><td>External runtime</td><td>Medium</td></tr>
+        <tr><td>MCP &amp; tool integration</td><td>Supported via MCP servers</td><td>Server configuration</td><td>High</td></tr>
+        <tr><td>Workflow automation</td><td>Strong with tool loops</td><td>Scheduler, webhook</td><td>Medium</td></tr>
+        <tr><td>Data analysis</td><td>Strong over in-context data</td><td>Python / spreadsheet engine</td><td>Medium</td></tr>
+        <tr><td>Spreadsheet processing</td><td>Parses &amp; reasons about CSV/XLSX</td><td>Execution engine</td><td>Medium</td></tr>
+        <tr><td>Document creation</td><td>Strong text structuring</td><td>Renderer for final PDF/DOCX</td><td>High (text) / medium (render)</td></tr>
+        <tr><td>PDF generation</td><td><b>Not native</b></td><td>Pandoc / browser print</td><td>High — observed</td></tr>
+        <tr><td>Image generation / editing</td><td><b>Not supported</b> (vision is input-only)</td><td>Separate image model</td><td>High — documented absence</td></tr>
+        <tr><td>Audio &amp; voice</td><td>ASR / TTS as standalone APIs</td><td>ASR/TTS calls</td><td>High — official</td></tr>
+        <tr><td>Video</td><td><b>Not supported</b></td><td>External video model</td><td>High — documented absence</td></tr>
+        <tr><td>Mathematics / science</td><td>Strong; GPQA 90.9 (Flash)</td><td>None</td><td>High</td></tr>
+        <tr><td>Education / tutoring</td><td>Strong explanation; niche-fact risk</td><td>Retrieval grounding</td><td>Medium-high</td></tr>
+        <tr><td>Business strategy</td><td>Competent structured analysis</td><td>Market data tools</td><td>Medium</td></tr>
+        <tr><td>Marketing &amp; content</td><td>Strong drafting / variation</td><td>None</td><td>High</td></tr>
+        <tr><td>Writing &amp; communication</td><td>Strong across formats</td><td>None</td><td>High</td></tr>
+        <tr><td>Professional research</td><td>Strong synthesis; citation verify needed</td><td>Search, file parsing</td><td>Medium-high</td></tr>
+        <tr><td>Cybersecurity (defensive)</td><td>Strong review / secure-coding guidance</td><td>Static analysis, sandbox</td><td>Medium</td></tr>
+        <tr><td>Project management</td><td>Planning / decomposition text</td><td>PM platform integration</td><td>Medium</td></tr>
+        <tr><td>Autonomous multi-step</td><td>Supported via thinking + tools</td><td>Harness, credentials</td><td>Medium-high</td></tr>
+      </tbody>
+    </table>
+  </section>
+</div>
+
+<!-- ================= 6 SPECS + 7 BENCHMARKS ================= -->
+<div class="sheet pb">
+  <section id="s6">
+    <h2>6 · Model Specifications</h2>
+    <p><b>Context and output.</b> 1M input / 384K output for both tiers — roughly 750,000 English words, far beyond Claude Opus 4.5's 200K and GPT-5.2's 400K; at parity with Gemini 3 Pro's 1M.</p>
+    <p><b>Thinking control.</b> Low/high/max effort lets one endpoint serve latency-sensitive chat and deep agentic tasks.</p>
+    <p><b>API compatibility.</b> OpenAI-format, Anthropic-format, Responses API, JSON, tool calls, prefix completion, FIM. Existing OpenAI or Anthropic SDK code can often be redirected with a base-URL and model-name change.</p>
+    <p><b>Open weights.</b> MIT-licensed V4 family weights; Apache-2.0 inference engine. A structural differentiator against API-only proprietary models.</p>
+  </section>
+
+  <section id="s7">
+    <h2>7 · Benchmark Performance</h2>
+    <p class="lead">Scores below are published results for DeepSeek V4 variants, cited from official changelogs and independent leaderboards. Scores for other models are labelled as comparisons, never presented as the subject's own.</p>
+    <table>
+      <thead><tr><th>Benchmark</th><th>Measures</th><th>Model</th><th class="num">Score</th><th>Source / date</th></tr></thead>
+      <tbody>
+        <tr><td>SWE-bench Verified</td><td>Real GitHub issue resolution</td><td>V4 Pro</td><td class="num">80.6%</td><td>LLM Registry, 2026-04-24</td></tr>
+        <tr><td>HLE</td><td>Expert multidisciplinary Q&amp;A</td><td>V4 Pro</td><td class="num">42.7 / 60.0 tools</td><td>Official changelog, 2026-08-13</td></tr>
+        <tr><td>HLE (text subset)</td><td>Pure-text HLE</td><td>V4.1-Flash</td><td class="num">42.6 (44.0 subset)</td><td>Official changelog, 2026-10-17</td></tr>
+        <tr><td>GPQA Diamond</td><td>Graduate science Q&amp;A</td><td>V4.1-Flash</td><td class="num">90.9</td><td>Official changelog, 2026-09-10</td></tr>
+        <tr><td>AIME 2025 (math index)</td><td>Competition mathematics</td><td>V4 Pro</td><td class="num">90.7</td><td>Third-party LLM Index</td></tr>
+        <tr><td>Terminal-Bench 2.1</td><td>Agent terminal tasks</td><td>V4 Pro</td><td class="num">87.9</td><td>Official changelog, 2026-08-13</td></tr>
+        <tr><td>Toolathlon-Verified</td><td>Multi-tool orchestration</td><td>V4 Pro</td><td class="num">74.1</td><td>Official changelog, 2026-08-13</td></tr>
+        <tr><td>Dtbench</td><td>Composite knowledge</td><td>V4 Pro 0813</td><td class="num">89.8 (rank 19)</td><td>BenchGecko, 2026-09-22</td></tr>
+        <tr><td>AA HLE leaderboard</td><td>HLE composite</td><td>V4 Pro</td><td class="num">41.0 (rank 19)</td><td>BenchGecko, 2026-10-15</td></tr>
+      </tbody>
+    </table>
+    <div class="card keep">
+      <h4>Interpretation</h4>
+      Consistent pattern: <b>frontier parity on software engineering and structured agentic tasks</b>, <b>slightly behind absolute frontier on the hardest composite knowledge/reasoning</b>, <b>strong on science and math</b>. Not #1 on any single reviewed leaderboard, but the highest-scoring open-weight model in several, with an unrivalled price-performance ratio.
+    </div>
+  </section>
+</div>
+
+<!-- ================= 8 TOOLS + 9 CONNECTORS ================= -->
+<div class="sheet pb">
+  <section id="s8">
+    <h2>8 · Tools &amp; Integrations</h2>
+    <div class="grid2">
+      <div class="card"><h4>Built-in (no connector)</h4>Text generation, reasoning, code, JSON output, tool calls, FIM, prefix completion, vision input (Flash), file parsing, URL reading when enabled.</div>
+      <div class="card"><h4>Officially exposed APIs</h4>Web search, deep-thinking search, file input, URL reading, safety checks — available across Messages, Responses, and Chat Completions for <code>deepseek-flash</code>.</div>
+      <div class="card"><h4>Standalone APIs</h4>Search, Fetch, OCR, ASR, TTS for custom workflows.</div>
+      <div class="card"><h4>MCP ecosystem</h4>Community/official-listed MCP servers (DeepSeek Scout, <code>@arikusi/deepseek-mcp-server</code>, official MCP Registry listing) expose DeepSeek to Claude Code, Cursor, Windsurf, Gemini CLI.</div>
+    </div>
+    <p style="margin-top:10pt"><b>Native vs. tool-dependent vs. unsupported.</b> <b>Native:</b> reasoning, code, long context, JSON, tool calls, vision (Flash), file parsing, FIM. <b>Requires tool:</b> live search, URL fetch, OCR, ASR, TTS, image generation, code execution, DB execution, PDF rendering. <b>Unsupported:</b> native text-to-image, native video, native real-time voice in the text model, un-sandboxed arbitrary execution.</p>
+  </section>
+
+  <section id="s9">
+    <h2>9 · Connector Inventory</h2>
+    <table>
+      <thead><tr><th>Tool / connector</th><th>Provider</th><th>Purpose</th><th>Auth</th><th>Cost (verifiable)</th><th>Key limit</th></tr></thead>
+      <tbody>
+        <tr><td>Web Search</td><td>DeepSeek</td><td>Retrieve web/image results</td><td>API param; safety check for public apps</td><td>$0.75 / 1K req</td><td>Citation quality varies</td></tr>
+        <tr><td>URL Reading</td><td>DeepSeek</td><td>Fetch links in messages</td><td>API param</td><td>$0.75 / 1K fetches</td><td>Paywalls / JS pages fail</td></tr>
+        <tr><td>File Parsing / OCR</td><td>DeepSeek</td><td>PDF/Office/image extraction</td><td>API param or OCR API</td><td>$0.225 / 1K pages</td><td>Complex layouts degrade</td></tr>
+        <tr><td>ASR</td><td>DeepSeek</td><td>Speech-to-text</td><td>API key</td><td>$0.058–0.116 / hr</td><td>Accent coverage not exhaustive</td></tr>
+        <tr><td>TTS</td><td>DeepSeek</td><td>Text-to-speech</td><td>API key</td><td>$0.225–0.45 / 10K chars</td><td>Voice range under-documented</td></tr>
+        <tr><td>DeepSeek MCP server</td><td>Third-party</td><td>Expose DeepSeek to MCP clients</td><td>Client config</td><td>Free server; model billed separately</td><td>Maintainer-dependent</td></tr>
+        <tr><td>DeepSeek Harness</td><td>DeepSeek</td><td>Agent orchestration</td><td>Local/cloud setup</td><td>Free framework</td><td>Version compatibility</td></tr>
+      </tbody>
+    </table>
+    <p><small><b>Critical distinction:</b> a connector appearing in a public directory does not mean it is connected in the current runtime. This section audits the DeepSeek product surface, not live session bindings.</small></p>
+  </section>
+</div>
+
+<!-- ================= 10-14 APPLIED ================= -->
+<div class="sheet pb">
+  <section id="s10">
+    <h2>10 · Programming Capabilities</h2>
+    <p>Top-tier by benchmark evidence: SWE-bench Verified 80.6% (V4-Pro) is within noise of Claude Opus 4.5 (80.9%) and above GPT-5.2 Pro (80.0%) on the same snapshot. The 1M window allows an entire mid-sized repository, manifests, tests, and issue history to be loaded at once, reducing retrieval engineering.</p>
+    <p><b>Strong:</b> production-quality code in Python, JS/TS, Go, Rust, Java, C++, SQL, shell; multi-file refactors; test writing; stack-trace explanation; API design; common security anti-pattern review; full-stack scaffolds; IaC; migration scripts.</p>
+    <p><b>Human review essential:</b> subtle concurrency, performance-critical optimisation, cryptographic code, regulatory logic, and any change verified against live production. Code cannot be executed natively in this session — reasoning about code is not proof it runs.</p>
+    <p><b>Vibe coding.</b> Natural-language brief → working scaffold (frontend, backend, schema, API contracts) is fast. The limiting factor is verification and environment setup, not generation.</p>
+  </section>
+
+  <section id="s11">
+    <h2>11 · Automation Capabilities</h2>
+    <p>Automation runs through tool calling, MCP, and agent harnesses. Official integrations include Codex and DeepSeek Harness; the Responses API is adapted for Codex.</p>
+    <div class="grid2">
+      <div class="card"><h4>Realistic pipelines</h4>Document processing; code maintenance bots; research assistants; support triage; invoice reconciliation.</div>
+      <div class="card"><h4>Hard guardrails</h4>No irreversible financial transactions, no unreviewed production deploys, no regulated personal data without compliance review, no over-broad credentials.</div>
+    </div>
+  </section>
+
+  <section id="s12">
+    <h2>12 · AI Agent Development</h2>
+    <p>DeepSeek is a credible agent foundation because it combines four properties agents need: long context, reliable tool calling, thinking-effort control, and low token cost. A long-running agent making hundreds of tool calls is economically painful on $15/M-output proprietary models; affordable here.</p>
+    <ul>
+      <li><b>ReAct</b> single agent with scratchpad reasoning and tool calls.</li>
+      <li><b>Plan-and-execute</b> decomposition with re-planning on failure.</li>
+      <li><b>Multi-agent supervisor</b> coordinating specialised sub-agents (runtime is external).</li>
+      <li><b>RAG agent</b> using Search/Fetch/OCR as tools.</li>
+      <li><b>Coding agent</b> via IDE/CI integration through MCP or Responses API.</li>
+    </ul>
+    <p><b>Constraints:</b> no native persistent runtime, long-term memory store, or credential vault — those are architectural components the developer supplies. Reliability degrades on ambiguous tool errors, real-world side effects, and low-value tool-output flooding.</p>
+  </section>
+
+  <section id="s13">
+    <h2>13 · Research Capabilities</h2>
+    <p><b>Native:</b> synthesis, comparison, critique, structured writing over supplied sources. <b>Live:</b> depends on search/URL tools; supports multi-step deep-thinking search with citations.</p>
+    <p><b>Weaknesses:</b> citation hallucination without grounding, misreading ambiguous sources, no paywalled access without credentials, no guarantee of source authority, no independent fact-check of long documents. Citation verification is a human responsibility in high-stakes research.</p>
+  </section>
+
+  <section id="s14">
+    <h2>14 · Business Applications</h2>
+    <table>
+      <thead><tr><th>Domain</th><th>Contribution</th><th>Human oversight</th></tr></thead>
+      <tbody>
+        <tr><td>Strategy</td><td>Market framing, scenario analysis, competitor summaries, SWOT drafts</td><td>Market-data validation; strategic judgement</td></tr>
+        <tr><td>Marketing</td><td>Campaign copy, SEO drafts, personas, A/B variants</td><td>Brand, legal, claims review</td></tr>
+        <tr><td>Operations</td><td>SOP drafting, process docs, ticket triage</td><td>Process-owner approval</td></tr>
+        <tr><td>Finance</td><td>Report summarisation, variance drafts, data extraction</td><td>Qualified review; no autonomous trading</td></tr>
+        <tr><td>Legal</td><td>Clause extraction, first-pass review, research synthesis</td><td>Licensed legal review; not advice</td></tr>
+        <tr><td>HR</td><td>JDs, interview design, policy drafts</td><td>Compliance / fairness review</td></tr>
+        <tr><td>Product</td><td>PRDs, story decomposition, competitive teardown</td><td>Product judgement; user validation</td></tr>
+        <tr><td>Education</td><td>Lesson plans, question generation, explanations</td><td>Curriculum accuracy; safeguarding</td></tr>
+      </tbody>
+    </table>
+    <p class="muted">Pattern: a high-leverage drafting and analysis engine, not an accountable decision-maker. Value comes from compressing the first 60–70% of knowledge work so experts spend time on judgement, verification, and relationships.</p>
+  </section>
+</div>
+
+<!-- ================= 15 PORTFOLIO ================= -->
+<div class="sheet pb">
+  <section id="s15">
+    <h2>15 · Practical Project Portfolio</h2>
+    <p class="lead">Capability demonstrations, not claims of personal completion. Each is feasible with DeepSeek V4 plus the stated tools.</p>
+
+    <h3>Beginner</h3>
+    <ul>
+      <li><b>Personal knowledge-base Q&amp;A</b> — ingest PDFs, retrieve, answer with citations. <i>Human:</i> deployment, privacy review.</li>
+      <li><b>Code explainer CLI</b> — read a file, explain line by line. <i>Independent:</i> full implementation.</li>
+      <li><b>Meeting-notes summariser</b> — ASR → summary → action items. <i>Human:</i> name/decision accuracy check.</li>
+    </ul>
+
+    <h3>Intermediate</h3>
+    <ul>
+      <li><b>Repository issue triage bot</b> — load repo context, classify severity, suggest files, draft reply. <i>Human:</i> maintainer approval before posting.</li>
+      <li><b>Multi-source research brief</b> — search, fetch, synthesise, cite. <i>Human:</i> source-quality and citation verification.</li>
+      <li><b>Invoice extraction pipeline</b> — OCR → JSON → schema validation → anomaly flags. <i>Human:</i> finance review of flags.</li>
+    </ul>
+
+    <h3>Advanced</h3>
+    <ul>
+      <li><b>Full-stack scaffold generator</b> — PRD → frontend, backend, schema, contracts, tests. <i>Human:</i> security review, env setup, QA.</li>
+      <li><b>Agentic coding assistant with MCP</b> — file read/write, terminal, tests via MCP. <i>Human:</i> permission scoping, code review.</li>
+      <li><b>Compliance document reviewer</b> — regulations + contracts in 1M context, obligation extraction, gap report. <i>Human:</i> qualified sign-off.</li>
+    </ul>
+
+    <h3>Expert</h3>
+    <ul>
+      <li><b>Self-improving evaluation harness</b> — domain benchmark, run, failure analysis, prompt/tool iteration. <i>Human:</i> benchmark validity.</li>
+      <li><b>Multi-agent research system</b> — supervisor + specialists + evidence store + citation graph. <i>Human:</i> architecture review, fact-check.</li>
+      <li><b>On-premise private AI platform</b> — MIT weights behind a firewall, RAG over internal docs, audit logging. <i>Human:</i> security, compliance, MLOps.</li>
+    </ul>
+  </section>
+</div>
+
+<!-- ================= 16 COMPETITIVE ================= -->
+<div class="sheet pb">
+  <section id="s16">
+    <h2>16 · Competitive Positioning</h2>
+    <table>
+      <thead><tr><th>Dimension</th><th>DeepSeek V4</th><th>GPT-5.2</th><th>Claude Opus 4.5</th><th>Gemini 3 Pro</th></tr></thead>
+      <tbody>
+        <tr><td>Context window</td><td><b>1M</b></td><td>400K</td><td>200K (1M beta)</td><td><b>1M</b> (2M per some docs)</td></tr>
+        <tr><td>Max output</td><td><b>384K</b></td><td>128K</td><td>32K</td><td>64K</td></tr>
+        <tr><td>SWE-bench Verified</td><td><b>80.6%</b></td><td>80.0%</td><td><b>80.9%</b></td><td>76.2%</td></tr>
+        <tr><td>HLE (with tools)</td><td>60.0%</td><td>~50%</td><td>~57.9%</td><td>—</td></tr>
+        <tr><td>Native image generation</td><td>✗</td><td>✓</td><td>✗</td><td>✓</td></tr>
+        <tr><td>Native video understanding</td><td>✗</td><td>Limited</td><td>✗</td><td><b>✓</b></td></tr>
+        <tr><td>Open weights</td><td><b>MIT</b></td><td>✗</td><td>✗</td><td>✗</td></tr>
+        <tr><td>Relative input price</td><td><b>Very low</b></td><td>High</td><td>High</td><td>Medium</td></tr>
+        <tr><td>Agentic tool use</td><td>Strong</td><td>Strong</td><td>Strong</td><td>Strong</td></tr>
+        <tr><td>Hallucination (independent)</td><td><b>~6.3%</b>*</td><td>8.4%</td><td>—</td><td>—</td></tr>
+      </tbody>
+    </table>
+    <p><small>* V3.2 reference figure from independent hallucination comparison; treat as indicative, not a V4 measurement.</small></p>
+    <div class="card keep">
+      <h4>Honest positioning</h4>
+      DeepSeek is <b>not</b> best for native image generation, video understanding, or the hardest composite reasoning benchmarks. It <b>is</b> the best value proposition among frontier-capable models, the strongest open-weight option, and competitive on coding and agentic tasks. Buyers needing the absolute top score on every benchmark should choose the proprietary frontier; buyers needing high capability at scale, data sovereignty, or on-prem deployment should seriously evaluate DeepSeek.
+    </div>
+  </section>
+</div>
+
+<!-- ================= 17 PRICING ================= -->
+<div class="sheet pb">
+  <section id="s17">
+    <h2>17 · Pricing &amp; Economics</h2>
+    <p class="lead">Per 1M tokens. Checked against the official Models &amp; Pricing page on <b>18 November 2026</b>.</p>
+    <table>
+      <thead><tr><th>Item</th><th class="num">Flash (off-peak / peak)</th><th class="num">Pro (off-peak / peak)</th></tr></thead>
+      <tbody>
+        <tr><td>Input — cache hit</td><td class="num">$0.003 / $0.006</td><td class="num">$0.022 / $0.044</td></tr>
+        <tr><td>Input — cache miss</td><td class="num">$0.15 / $0.30</td><td class="num">$0.66 / $1.32</td></tr>
+        <tr><td>Output</td><td class="num">$0.60 / $1.20</td><td class="num">$1.98 / $3.96</td></tr>
+      </tbody>
+    </table>
+    <p><small>Off-peak = half of peak. Peak hours: 01:00–04:00 and 06:00–10:00 UTC, Mon–Fri, excluding Chinese public holidays; all other hours off-peak.</small></p>
+
+    <h3>Tool pricing</h3>
+    <table>
+      <thead><tr><th>Item</th><th class="num">Price</th></tr></thead>
+      <tbody>
+        <tr><td>Web Search</td><td class="num">$0.75 / 1K requests</td></tr>
+        <tr><td>Fetch / URL reading</td><td class="num">$0.75 / 1K requests</td></tr>
+        <tr><td>OCR / file parsing</td><td class="num">$0.225 / 1K pages</td></tr>
+        <tr><td>ASR</td><td class="num">$0.058–0.116 / hour</td></tr>
+        <tr><td>TTS</td><td class="num">$0.225–0.45 / 10K chars</td></tr>
+      </tbody>
+    </table>
+
+    <p><b>Economic meaning.</b> A workload costing $15 per million output tokens on a premium proprietary model costs <b>$1.20–$3.96</b> on DeepSeek V4 depending on tier and time. For high-volume agentic workloads consuming hundreds of thousands of tokens across tool calls, this is the difference between a viable product and an unviable one. The trade-off is not being the absolute frontier on every benchmark — the correct comparison is <b>capability-per-dollar</b>.</p>
+    <p><b>Caveats.</b> Prices are dynamic; DeepSeek has adjusted them several times in 2026, including a permanent V4-Pro reduction to one-quarter of list after a promotional period. Off-peak scheduling halves costs. Tool fees are <b>additional</b> to token fees. Enterprise/volume pricing is not publicly documented — confirm with sales.</p>
+  </section>
+</div>
+
+<!-- ================= 18-22 SWOT ================= -->
+<div class="sheet pb">
+  <section id="s18">
+    <h2>18 · Strengths</h2>
+    <ol>
+      <li>Exceptional cost-efficiency at frontier-adjacent capability.</li>
+      <li>1M-token context with 384K output — a genuine workflow transformer.</li>
+      <li>Open-weight MIT licence, rare at this capability level.</li>
+      <li>Strong coding and agentic performance, benchmark-verified.</li>
+      <li>Triple API compatibility (OpenAI, Anthropic, Responses) lowers switching costs.</li>
+      <li>MCP ecosystem support integrates with dominant agent tooling.</li>
+      <li>Multimodal input on Flash (vision + files + OCR).</li>
+      <li>Thinking-effort control: one model, multiple cost/latency profiles.</li>
+      <li>Broad language coverage, especially EN/ZH.</li>
+    </ol>
+  </section>
+
+  <section id="s19">
+    <h2>19 · Weaknesses</h2>
+    <ol>
+      <li>Not the absolute frontier on the hardest composite reasoning benchmarks (Dtbench, HLE).</li>
+      <li>No native image generation; no native video understanding.</li>
+      <li>Vision unavailable on V4-Pro — only on Flash.</li>
+      <li>Knowledge cutoff limits unaided recall of recent events.</li>
+      <li>Non-zero hallucination risk, especially niche facts and citations.</li>
+      <li>Brand and ecosystem maturity trail OpenAI, Anthropic, Google in enterprise tooling.</li>
+      <li>Naming volatility (deprecated IDs, routed legacy names) creates maintenance overhead.</li>
+      <li>Real-time voice is API-based, not a polished native conversational mode.</li>
+      <li>Documentation and benchmark disclosure less comprehensive than proprietary competitors.</li>
+    </ol>
+  </section>
+
+  <section id="s20">
+    <h2>20 · Technical Limitations</h2>
+    <ul>
+      <li>Cannot natively execute code, browse authenticated sites, or access private databases without tools and credentials.</li>
+      <li>Cannot generate images or video.</li>
+      <li>Cannot guarantee factual accuracy — output is probabilistic text.</li>
+      <li>No memory across conversations by default.</li>
+      <li>Cannot independently verify cited benchmarks; relies on published sources.</li>
+      <li>Cannot produce a compiled PDF binary natively in a chat session.</li>
+      <li>Performance degrades with ambiguous prompts, contradictory context, long tool-output chains, and tasks requiring real-world side effects.</li>
+      <li>Cannot provide licensed legal, medical, or financial advice.</li>
+    </ul>
+  </section>
+
+  <section id="s21">
+    <h2>21 · Security &amp; Privacy Considerations</h2>
+    <ul>
+      <li><b>Data handling:</b> API data subject to DeepSeek terms; self-hosted weights give full sovereignty.</li>
+      <li><b>Tool permissions:</b> least-privilege credentials and scoped tokens.</li>
+      <li><b>Prompt injection:</b> retrieved pages/documents can carry adversarial instructions — treat retrieved content as untrusted.</li>
+      <li><b>Sensitive data:</b> no secrets, credentials, or regulated personal data without an appropriate DPA.</li>
+      <li><b>Output safety:</b> enable safety-check parameter for public-facing apps; comply with local AI labelling/registration.</li>
+      <li><b>Audit logging:</b> log tool name, input, output, timestamp for incident review.</li>
+    </ul>
+  </section>
+
+  <section id="s22">
+    <h2>22 · Future Development Opportunities</h2>
+    <p>The trajectory is clear: investment in agentic capability, multimodal understanding, and cost-performance optimisation. V4.1-Flash explicitly targeted agent benchmarks (Terminal-Bench, DeepSWE, AutomationBench, Agents' Last Exam) and reduced runtime and output length for a better performance–cost Pareto point. Likely directions: stronger native tool orchestration, broader multimodal input, improved hallucination calibration, deeper MCP/agent-framework integration. Native image generation remains a gap the Janus research line could eventually close — but it is <b>not</b> a current product capability and should not be assumed.</p>
+  </section>
+</div>
+
+<!-- ================= 23 SCORECARD ================= -->
+<div class="sheet pb">
+  <section id="s23">
+    <h2>23 · Overall Capability Assessment &amp; Scorecard</h2>
+    <p class="lead">Ordinal 1–5 scale. 5 = best-in-class among reviewed 2026 models; 4 = strong, near-frontier; 3 = competent with notable gaps; 2 = limited; 1 = absent or unreliable.</p>
+
+    <div class="score"><span>Reasoning &amp; problem-solving</span><div class="bar"><i style="width:80%"></i></div><span class="v">4.0</span></div>
+    <div class="score"><span>Coding &amp; software engineering</span><div class="bar"><i style="width:90%"></i></div><span class="v">4.5</span></div>
+    <div class="score"><span>Long-context handling</span><div class="bar"><i style="width:100%"></i></div><span class="v">5.0</span></div>
+    <div class="score"><span>Agentic tool use</span><div class="bar"><i style="width:90%"></i></div><span class="v">4.5</span></div>
+    <div class="score"><span>Multimodal input</span><div class="bar"><i style="width:70%"></i></div><span class="v">3.5</span></div>
+    <div class="score"><span>Multimodal generation</span><div class="bar"><i style="width:20%"></i></div><span class="v">1.0</span></div>
+    <div class="score"><span>Research &amp; synthesis</span><div class="bar"><i style="width:80%"></i></div><span class="v">4.0</span></div>
+    <div class="score"><span>Cost-efficiency</span><div class="bar"><i style="width:100%"></i></div><span class="v">5.0</span></div>
+    <div class="score"><span>Openness &amp; deployability</span><div class="bar"><i style="width:100%"></i></div><span class="v">5.0</span></div>
+    <div class="score"><span>Ecosystem &amp; integrations</span><div class="bar"><i style="width:70%"></i></div><span class="v">3.5</span></div>
+    <div class="score"><span>Reliability &amp; safety</span><div class="bar"><i style="width:70%"></i></div><span class="v">3.5</span></div>
+    <div class="score"><span>Documentation transparency</span><div class="bar"><i style="width:70%"></i></div><span class="v">3.5</span></div>
+
+    <div class="overall">
+      <b>Weighted overall: 4.0 / 5.0</b> — a high-capability, exceptionally high-value model: the right default for cost-sensitive, long-context, coding-heavy, and agentic workloads; the wrong choice where native image/video generation or the absolute top score on every frontier benchmark is required.
+    </div>
+
+    <h3 style="margin-top:14pt">Evaluation methodology</h3>
+    <p>Scores derive from three inputs weighted equally: (1) published benchmark performance relative to the best available model; (2) official feature/specification disclosure; (3) self-observed operational behaviour. Scores are ordinal judgements, not precise measurements; reasonable auditors could differ by ±0.5. No score is based on marketing claims. Where evidence is thin, the score is deliberately conservative.</p>
+  </section>
+</div>
+
+<!-- ================= 24 REFERENCES ================= -->
+<div class="sheet pb">
+  <section id="s24">
+    <h2>24 · References &amp; Evidence</h2>
+    <ol style="font-size:9pt">
+      <li>DeepSeek API Docs — Change Log, 2026-11-13, full application API suite. <a href="https://api-docs.deepseek.com/updates/">api-docs.deepseek.com/updates/</a></li>
+      <li>DeepSeek API Docs — Models &amp; Pricing, checked 2026-11-18. <a href="https://api-docs.deepseek.com/quick_start/pricing/">api-docs.deepseek.com/quick_start/pricing/</a></li>
+      <li>DeepSeek API Docs — “The full DeepSeek App experience, now via API,” 2026-11-13. <a href="https://api-docs.deepseek.com/news/news261113/">api-docs.deepseek.com/news/news261113/</a></li>
+      <li>DeepSeek API Docs — Change Log, V4.1-Flash-1017 release &amp; benchmark disclosures, 2026-10-17.</li>
+      <li>DeepSeek API Docs — Change Log, V4.1-Flash release, 2026-09-10.</li>
+      <li>DeepSeek API Docs — Change Log, V4-Pro GA update, 2026-08-13.</li>
+      <li>LLM Registry — SWE-bench Verified leaderboard, 2026-04-27 (V4 Pro 80.6%, Opus 4.5 80.9%, GPT-5.2 Pro 80.0%).</li>
+      <li>BenchGecko — Dtbench full rankings, 2026-09-22 (V4 Pro 0813 rank 19 at 89.8).</li>
+      <li>Introl — “GPT-5.2 vs Gemini 3 Pro: Complete Benchmark Analysis,” 2026-02-06 (context, SWE-bench, hallucination, multimodal).</li>
+      <li>Microsoft Learn — Foundry Models: DeepSeek-V4-Pro language and context specifications, 2026-09-21.</li>
+      <li>llmeu.com — DeepSeek-V4-Flash language capability ratings, 2026-10-14.</li>
+      <li>DeepSeek ecosystem guide (GitHub) — model lineage 2024–2026, MIT licensing, Janus multimodal research.</li>
+      <li>MIT licence confirmation for V4.1-Flash-1017 weights, 2026-10-18 / 2026-11-12.</li>
+      <li>DeepSeek image-generation limitation documentation, October 2026 (no native consumer text-to-image confirmed).</li>
+      <li>MCP server documentation — DeepSeek Scout MCP, <code>@arikusi/deepseek-mcp-server</code>, official MCP Registry listing, 2026.</li>
+      <li>DeepSeek pricing reduction reporting, May 2026 (V4-Pro permanent reduction to one-quarter of list).</li>
+      <li>NVIDIA / Azure / Mistral third-party hosting documentation for DeepSeek V4 variants, 2026.</li>
+    </ol>
+    <p><small><b>Evidence limitations.</b> Benchmark scores cited from third-party leaderboards and official changelogs; evaluations were not independently re-run. Pricing is a point-in-time snapshot subject to change. MCP servers are third-party tools, not first-party DeepSeek products. Capability ratings are auditable judgements, not measurements.</small></p>
+  </section>
+
+  <section class="keep" style="margin-top:14pt">
+    <h2>Appendix · Hard Boundaries</h2>
+    <p>Cannot: generate images; generate video; natively execute code; independently browse authenticated systems; guarantee factual accuracy; retain memory across sessions; compile a PDF binary without an external renderer; provide licensed legal/medical/financial advice; substitute for human verification on high-stakes decisions. These are hard boundaries, not modesty.</p>
+  </section>
+
+  <footer class="docfoot">
+    <span>DeepSeek V4 — AI Professional Capability Resume · Self-audit v1.0 · 18 Nov 2026</span>
+    <span>Body ≈ 4,200 words excl. references</span>
+  </footer>
+</div>
+
+</body>
+</html>
